@@ -4,16 +4,13 @@ import AppCTA from '../components/AppCTA.astro';
 import VlogCard from '../components/VlogCard.astro';
 import { getCollection } from 'astro:content';
 
-const allVlogs = await getCollection('vlog', ({ data }) => {
-  return import.meta.env.PROD ? true : true;
-});
-
+const allVlogs = await getCollection('vlog');
 allVlogs.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
-const pageSize = 10;
+const pageSize = 6;
 const vlogs = allVlogs.slice(0, pageSize);
 
-const siteTitle = 'Poker Vlog | Free Poker Tracker & Daily Strategy';
+const siteTitle = 'Texas Hold\'em Vlog | Free Poker Tracker & Strategy';
 const description = 'Master Texas Hold\'em with our free poker tracker. Session tracking, bankroll management, and daily strategy vlogs. Download the best poker logger and start winning today.';
 ---
 
@@ -22,154 +19,93 @@ const description = 'Master Texas Hold\'em with our free poker tracker. Session 
   description={description}
   canonicalURL={new URL(import.meta.env.BASE_URL || '/', Astro.site).href}
 >
-  <!-- Hero Section -->
-  <section class="hero-gradient relative overflow-hidden">
-    <!-- Decorative suits -->
-    <span class="suit-spade suit-corner-tl absolute text-8xl opacity-5 select-none" aria-hidden="true"></span>
-    <span class="suit-heart suit-corner-tr absolute text-8xl opacity-5 select-none" aria-hidden="true"></span>
-    <span class="suit-diamond absolute bottom-10 right-20 text-6xl opacity-5 select-none" aria-hidden="true"></span>
-    <span class="suit-club absolute bottom-20 left-16 text-7xl opacity-5 select-none" aria-hidden="true"></span>
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Texas Hold'em Vlog</h1>
+    <p class="hero-subtitle">Strategy, hand analysis, and stories from the felt.</p>
 
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 text-center relative z-10">
-      <div class="inline-flex items-center gap-2 bg-poker-gold/10 border border-poker-gold/20 rounded-full px-4 py-1.5 mb-6">
-        <span class="w-2 h-2 rounded-full bg-poker-gold animate-pulse"></span>
-        <span class="text-xs font-medium text-poker-gold uppercase tracking-wider">New Content Daily</span>
+    <div class="hero-actions">
+      <a href="#vlogs" class="btn btn-primary">Latest Vlogs</a>
+      <a href="https://apps.apple.com/us/app/bpt-best-poker-tracker/id6778269945" class="btn btn-outline" target="_blank" rel="noopener noreferrer">Get BPT Tracker</a>
+    </div>
+
+    <hr class="hero-divider" />
+
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-value">{allVlogs.length}+</div>
+        <div class="hero-stat-label">Strategy Vlogs</div>
       </div>
-
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-4">
-        Master <span class="text-poker-gold">Poker</span>.<br class="sm:hidden" /> Crush the Tables.
-      </h1>
-
-      <p class="text-gray-400 text-lg sm:text-xl max-w-2xl mx-auto mb-8 leading-relaxed">
-        Professional Texas Hold'em strategy, hand analysis, and the best
-        <strong class="text-white">free poker tracker</strong> with
-        session logging, bankroll management, and actionable insights.
-      </p>
-
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-        <a
-          href="https://apps.apple.com/us/app/bpt-best-poker-tracker/id6778269945"
-          class="cta-button text-base sm:text-lg px-8 py-3.5"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          Download App
-        </a>
-        <a href="#latest" class="cta-button-secondary text-base sm:text-lg px-8 py-3.5">
-          View Latest Vlogs
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </a>
+      <div class="hero-stat">
+        <div class="hero-stat-value" style="color:var(--c-accent)">Free</div>
+        <div class="hero-stat-label">Poker Tracker</div>
       </div>
-
-      <!-- Stats row -->
-      <div class="grid grid-cols-3 gap-6 sm:gap-12 mt-16 max-w-lg mx-auto">
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-white">{allVlogs.length}+</div>
-          <div class="text-xs text-gray-500 mt-1">Strategy Vlogs</div>
-        </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-poker-gold">Free</div>
-          <div class="text-xs text-gray-500 mt-1">Poker Tracker</div>
-        </div>
-        <div>
-          <div class="text-2xl sm:text-3xl font-bold text-white">24/7</div>
-          <div class="text-xs text-gray-500 mt-1">Updates</div>
-        </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">24/7</div>
+        <div class="hero-stat-label">Updates</div>
       </div>
     </div>
   </section>
 
-  <!-- App CTA Banner -->
-  <AppCTA variant="banner" />
-
-  <!-- Features Section -->
-  <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
-    <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-        Everything You Need to Win
-      </h2>
-      <p class="text-gray-400 text-lg max-w-2xl mx-auto">
-        Our <strong class="text-poker-gold">free poker tracker</strong> combines
-        session tracking, bankroll management, and hand logging into one powerful app.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+  <!-- Features Banner -->
+  <div class="main-content">
+    <section class="features-banner">
+      <div class="features-grid">
+        <div class="feature-item">
+          <span class="feature-icon">&spades;</span>
+          <h3>Free Poker Tracker</h3>
+          <p>Completely free session tracking with win rates, hourly, and detailed stats — no account required.</p>
         </div>
-        <h3 class="font-bold text-white mb-2">Poker Session Tracker</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">Log every session with detailed stats. Track win rates, hours played, and hourly rates across cash games and tournaments.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <div class="feature-item">
+          <span class="feature-icon" style="color:hsl(0,60%,55%)">&hearts;</span>
+          <h3>Poker Session Tracker</h3>
+          <p>Log every session with stakes, location, duration, and results. Track your progress over time.</p>
         </div>
-        <h3 class="font-bold text-white mb-2">Poker Bankroll Tracker</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">Monitor your bankroll in real time. Set stop-loss limits, track ROI, and visualize your growth with interactive charts.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+        <div class="feature-item">
+          <span class="feature-icon">&diams;</span>
+          <h3>Poker Bankroll Tracker</h3>
+          <p>Real-time bankroll monitoring with charts, stop-loss alerts, and ROI analysis at a glance.</p>
         </div>
-        <h3 class="font-bold text-white mb-2">Poker Logger</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">Record every hand with position, action, and result. Tag hands for review and identify leaks in your game automatically.</p>
       </div>
+    </section>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+    <!-- App CTA -->
+    <AppCTA variant="banner" />
+
+    <!-- Vlog List -->
+    <section id="vlogs" class="vlog-list">
+      <h2 class="section-heading">Latest Vlogs</h2>
+      {
+        vlogs.map(vlog => <VlogCard vlog={vlog} />)
+      }
+
+      {allVlogs.length > pageSize && (
+        <div style="text-align:center;margin-top:var(--s8)">
+          <a href={`${import.meta.env.BASE_URL}archive`} class="btn btn-outline">
+            View All {allVlogs.length} Vlogs &rarr;
+          </a>
         </div>
-        <h3 class="font-bold text-white mb-2">Daily Strategy Vlogs</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">New content every day covering GTO concepts, exploitative play, hand reviews, and tournament strategy.</p>
-      </div>
+      )}
+    </section>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+    <!-- Bottom CTA -->
+    <section class="cta-banner">
+      <div class="cta-banner-inner">
+        <div>
+          <h3>Power Your Game with BPT</h3>
+          <p>Download the best free poker tracker with session logging, bankroll management, and detailed hand analysis.</p>
         </div>
-        <h3 class="font-bold text-white mb-2">Community & Support</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">Join thousands of serious players. Share hands, discuss strategy, and get feedback from experienced regs.</p>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+        <div class="cta-banner-buttons">
+          <a href="https://apps.apple.com/us/app/bpt-best-poker-tracker/id6778269945" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            App Store
+          </a>
+          <a href="https://bpt.lanzn.com/iZfRr3tgy9sf" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18c0 .55.45 1 1 1h1v3.5a1.5 1.5 0 003 0V19h2v3.5a1.5 1.5 0 003 0V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.96 5.96 0 0012 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.983 5.983 0 006 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
+            Android
+          </a>
         </div>
-        <h3 class="font-bold text-white mb-2">Free & Private</h3>
-        <p class="text-sm text-gray-400 leading-relaxed">Your data stays on your device. No account required. The best <strong>free poker tracker</strong> built by players, for players.</p>
       </div>
-    </div>
-  </section>
-
-  <!-- Latest Vlogs -->
-  <section id="latest" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
-    <div class="flex items-center justify-between mb-8">
-      <div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Latest Vlogs</h2>
-        <p class="text-gray-500 text-sm mt-1">Daily poker strategy, hand analysis, and more</p>
-      </div>
-      <a href={`${import.meta.env.BASE_URL}archive`} class="text-sm text-poker-gold hover:text-amber-300 transition-colors font-medium">
-        View All &rarr;
-      </a>
-    </div>
-
-    <div class="space-y-6">
-      {vlogs.map(vlog => (
-        <VlogCard vlog={vlog} />
-      ))}
-    </div>
-
-    {allVlogs.length > pageSize && (
-      <div class="mt-10 text-center">
-        <a href={`${import.meta.env.BASE_URL}archive`} class="cta-button-secondary text-sm">
-          View All {allVlogs.length} Vlogs
-        </a>
-      </div>
-    )}
-  </section>
+    </section>
+  </div>
 </BaseLayout>

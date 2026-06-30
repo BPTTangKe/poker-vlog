@@ -1,7 +1,7 @@
 {
   "name": "poker-vlog",
-  "version": "1.0.0",
-  "description": "德州扑克每日 Vlog 官网 - 基于 Astro 构建",
+  "version": "2.0.0",
+  "description": "Texas Hold'em Poker Vlog - Strategy, hand analysis, and stories from the felt",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
@@ -16,9 +16,7 @@
   "dependencies": {
     "@astrojs/rss": "^4.0.11",
     "@astrojs/sitemap": "^3.3.0",
-    "@astrojs/tailwind": "^6.0.2",
     "astro": "^5.12.2",
-    "tailwindcss": "^3.4.17",
     "openai": "^4.79.1",
     "snoowrap": "^1.23.0",
     "twitter-api-v2": "^1.18.2"
