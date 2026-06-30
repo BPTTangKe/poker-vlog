@@ -3,9 +3,10 @@ import type { CollectionEntry } from 'astro:content';
 
 export interface Props {
   vlog: CollectionEntry<'vlog'>;
+  isLatest?: boolean;
 }
 
-const { vlog } = Astro.props;
+const { vlog, isLatest = false } = Astro.props;
 const { title, date, tags } = vlog.data;
 const slug = vlog.id.replace(/\.md$/, '');
 
@@ -15,15 +16,28 @@ function formatDate(d: Date): string {
 }
 ---
 
-<article class="vlog-card">
-  <time class="vlog-card-date" datetime={date.toISOString()}>{formatDate(date)}</time>
-  <h2 class="vlog-card-title">
-    <a href={`${import.meta.env.BASE_URL}vlog/${slug}`}>{title}</a>
-  </h2>
-  {tags.length > 0 && (
-    <div class="vlog-card-tags">
-      {tags.map(tag => <span class="tag">{tag}</span>)}
+<a href={`${import.meta.env.BASE_URL}vlog/${slug}`} class="vlog-card-wrapper">
+  <article class="vlog-card">
+    <img
+      src={`${import.meta.env.BASE_URL}images/${slug}.svg`}
+      alt={title}
+      class="vlog-card-thumb"
+      width="80"
+      height="80"
+      loading="lazy"
+    />
+    <div class="vlog-card-body">
+      <div class="vlog-card-header">
+        <time class="vlog-card-date" datetime={date.toISOString()}>{formatDate(date)}</time>
+        {isLatest && <span class="latest-badge">Latest</span>}
+      </div>
+      <h2 class="vlog-card-title">{title}</h2>
+      {tags.length > 0 && (
+        <div class="vlog-card-tags">
+          {tags.map(tag => <span class="tag">{tag}</span>)}
+        </div>
+      )}
+      <p class="vlog-card-excerpt">{vlog.data.excerpt}</p>
     </div>
-  )}
-  <p class="vlog-card-excerpt">{vlog.data.excerpt}</p>
-</article>
+  </article>
+</a>

@@ -21,6 +21,12 @@ const description = 'Master Texas Hold\'em with our free poker tracker. Session 
 >
   <!-- Hero -->
   <section class="hero">
+    <div class="hero-decoration">
+      <span class="hero-decoration-suit suit-spade">&spades;</span>
+      <span class="hero-decoration-suit suit-heart">&hearts;</span>
+      <span class="hero-decoration-suit suit-diamond">&diams;</span>
+      <span class="hero-decoration-suit suit-club">&clubs;</span>
+    </div>
     <h1>Texas Hold'em Vlog</h1>
     <p class="hero-subtitle">Strategy, hand analysis, and stories from the felt.</p>
 
@@ -52,31 +58,35 @@ const description = 'Master Texas Hold\'em with our free poker tracker. Session 
     <section class="features-banner">
       <div class="features-grid">
         <div class="feature-item">
-          <span class="feature-icon">&spades;</span>
+          <span class="feature-icon"><span class="feature-icon-bg">&spades;</span></span>
           <h3>Free Poker Tracker</h3>
           <p>Completely free session tracking with win rates, hourly, and detailed stats — no account required.</p>
         </div>
         <div class="feature-item">
-          <span class="feature-icon" style="color:hsl(0,60%,55%)">&hearts;</span>
+          <span class="feature-icon"><span class="feature-icon-bg" style="--icon-color: hsl(0,60%,55%)">&hearts;</span></span>
           <h3>Poker Session Tracker</h3>
           <p>Log every session with stakes, location, duration, and results. Track your progress over time.</p>
         </div>
         <div class="feature-item">
-          <span class="feature-icon">&diams;</span>
+          <span class="feature-icon"><span class="feature-icon-bg">&diams;</span></span>
           <h3>Poker Bankroll Tracker</h3>
           <p>Real-time bankroll monitoring with charts, stop-loss alerts, and ROI analysis at a glance.</p>
         </div>
       </div>
     </section>
 
+    <hr class="section-divider" />
+
     <!-- App CTA -->
     <AppCTA variant="banner" />
+
+    <hr class="section-divider" />
 
     <!-- Vlog List -->
     <section id="vlogs" class="vlog-list">
       <h2 class="section-heading">Latest Vlogs</h2>
       {
-        vlogs.map(vlog => <VlogCard vlog={vlog} />)
+        vlogs.map((vlog, i) => <VlogCard vlog={vlog} isLatest={i === 0} />)
       }
 
       {allVlogs.length > pageSize && (
@@ -87,6 +97,8 @@ const description = 'Master Texas Hold\'em with our free poker tracker. Session 
         </div>
       )}
     </section>
+
+    <hr class="section-divider" />
 
     <!-- Bottom CTA -->
     <section class="cta-banner">

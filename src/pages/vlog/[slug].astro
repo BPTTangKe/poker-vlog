@@ -2,6 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import AppCTA from '../../components/AppCTA.astro';
 import Breadcrumb from '../../components/Breadcrumb.astro';
+import VlogCard from '../../components/VlogCard.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -22,14 +23,18 @@ function formatDate(d: Date): string {
   return `${months[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
 }
 
-/* approximate read time based on excerpt length */
 const readTime = Math.max(1, Math.round(excerpt.length / 1200));
+
+/* Get related vlogs (2 most recent excluding current) */
+const allVlogs = await getCollection('vlog');
+allVlogs.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+const relatedVlogs = allVlogs.filter(v => v.id !== vlog.id).slice(0, 2);
 ---
 
 <BaseLayout
   title={title}
   description={seo_description || excerpt}
-  image={image || undefined}
+  image={image || `${import.meta.env.BASE_URL}images/${slug}.svg`}
   type="article"
   publishedTime={date.toISOString()}
   tags={tags}
@@ -39,6 +44,15 @@ const readTime = Math.max(1, Math.round(excerpt.length / 1200));
     <Breadcrumb items={[{ label: title }]} />
 
     <article>
+      <!-- Cover Image -->
+      <img
+        src={`${import.meta.env.BASE_URL}images/${slug}.svg`}
+        alt={title}
+        class="article-cover"
+        width="720"
+        height="400"
+      />
+
       <header class="article-header">
         <div class="article-meta">
           <time datetime={date.toISOString()}>{formatDate(date)}</time>
@@ -73,6 +87,16 @@ const readTime = Math.max(1, Math.round(excerpt.length / 1200));
         )}
 
         <AppCTA />
+
+        <!-- Related Reading -->
+        {relatedVlogs.length > 0 && (
+          <section class="related-reading">
+            <h3 class="related-heading">Related Reading</h3>
+            <div class="related-grid">
+              {relatedVlogs.map(rv => <VlogCard vlog={rv} />)}
+            </div>
+          </section>
+        )}
 
         <nav>
           <a href={import.meta.env.BASE_URL || '/'} class="back-link">
