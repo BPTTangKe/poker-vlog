@@ -3,93 +3,111 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import AppCTA from '../components/AppCTA.astro';
 import Breadcrumb from '../components/Breadcrumb.astro';
 
-const title = '关于我 & Poker Vlog App';
-const description = '了解德州扑克 Vlog 的博主和 Poker Vlog App，获取每日策略分析、手牌复盘和职业牌手指导。';
+const title = 'About & Poker Tracker App';
+const description = 'Learn about the best free poker tracker app. Session tracking, bankroll management, and professional poker strategy from an experienced player.';
 ---
 
 <BaseLayout
-  title="关于"
+  title="About"
   description={description}
   canonicalURL={new URL(`${import.meta.env.BASE_URL}about`, Astro.site).href}
 >
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <Breadcrumb items={[{ label: '关于' }]} />
 
-    <h1 class="text-3xl sm:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-8">
       {title}
     </h1>
 
     <section class="prose-content mb-12">
-      <h2>关于博主</h2>
+      <h2>About Me</h2>
       <p>
-        我是一名职业德州扑克玩家和内容创作者。从 2018 年开始打扑克，经历了从娱乐玩家
-        到在 NL200 稳定盈利的整个过程。我的扑克旅程充满了起伏、破产、重建和成长，
-        现在我想通过这个 Vlog 把学到的每一课都分享给你。
+        I'm a professional Texas Hold'em player and content creator. I started playing poker in 2018
+        and navigated the full journey - from a recreational player losing at micro stakes to beating NL200 consistently.
+        Every upswing, downswing, and hard lesson is now shared through this vlog.
       </p>
       <p>
-        我的扑克哲学很简单：<strong>过程优于结果</strong>。只要你在每一手牌中做了正确的决策，
-        长期来看你一定会赢。这个 Vlog 的内容涵盖了从入门策略到高级 GTO 分析的全部内容，
-        适合各个水平的扑克玩家。
+        My poker philosophy: <strong>process over results</strong>. Make the right decision every hand,
+        and the money follows. This vlog covers everything from beginner fundamentals to advanced GTO concepts.
       </p>
 
-      <h2>关于 Poker Vlog App</h2>
+      <h2>About BPT - Best Poker Tracker</h2>
       <p>
-        Poker Vlog App 是这个 Vlog 的移动端伴侣。它将每日内容直接推送到你的手机，
-        同时提供以下独家功能：
+        <strong>BPT</strong> is the ultimate <strong>free poker tracker</strong> built for serious players.
+        It combines a <strong>poker session tracker</strong>, <strong>poker bankroll tracker</strong>,
+        and <strong>poker logger</strong> into one intuitive app.
       </p>
       <ul>
-        <li><strong>每日推送</strong>：最新策略文章、锦标赛复盘和手牌分析</li>
-        <li><strong>手牌追踪</strong>：记录和分析你的每手牌</li>
-        <li><strong>胜率计算器</strong>：实时计算手牌对局胜率</li>
-        <li><strong>社区互动</strong>：与其他扑克爱好者讨论策略</li>
-        <li><strong>离线阅读</strong>：下载内容，随时随地在没有网络时学习</li>
+        <li><strong>Poker Session Tracker</strong> — Log sessions with stakes, location, duration, and results. Track win rates and hourly.</li>
+        <li><strong>Poker Bankroll Tracker</strong> — Real-time bankroll monitoring with charts, stop-loss alerts, and ROI analysis.</li>
+        <li><strong>Poker Logger</strong> — Record hands with position, action, and outcome. Tag for review, identify leaks.</li>
+        <li><strong>Strategy Feed</strong> — Daily strategy articles, tournament recaps, and hand analysis delivered to your phone.</li>
+        <li><strong>Offline Access</strong> — Download content and track sessions without an internet connection.</li>
       </ul>
 
-      <h2>为什么选择 Poker Vlog App？</h2>
+      <h2>Why BPT?</h2>
       <p>
-        市面上有很多扑克工具，但大多要么太复杂（只适合职业玩家），要么太浅显
-        （对提升水平没有帮助）。Poker Vlog App 找到了两者之间的甜蜜点——
-        <strong>为认真想提升水平的玩家提供实用、可执行的内容</strong>。
-      </p>
-      <p>
-        无论你是在 $1/$2 现场局磨练的娱乐玩家，还是想在 NL100 线上局升级的
-        reg，这个 App 都有适合你的内容。
+        Most poker tools are either too complex (pro-only) or too shallow (no real improvement).
+        <strong>BPT finds the sweet spot</strong> — actionable, practical content for players who are
+        serious about moving up in stakes. Whether you're grinding $1/$2 live or battling NL100 online,
+        this <strong>poker tracker</strong> has what you need.
       </p>
     </section>
 
-    <div class="bg-gradient-to-br from-poker-felt to-poker-green-light rounded-2xl p-8 sm:p-10 text-white text-center">
-      <h3 class="text-2xl sm:text-3xl font-heading font-bold mb-4">
-        准备好升级你的扑克水平了吗？
+    <!-- App Download CTA -->
+    <div class="bg-gradient-to-br from-poker-felt to-poker-green rounded-2xl p-8 sm:p-10 text-white text-center relative overflow-hidden">
+      <span class="suit-spade suit-corner-tl absolute text-8xl opacity-5 select-none" aria-hidden="true"></span>
+      <h3 class="text-2xl sm:text-3xl font-extrabold mb-4 relative z-10">
+        Ready to Level Up?
       </h3>
-      <p class="text-green-100 mb-6 max-w-lg mx-auto">
-        下载 Poker Vlog App，每天获取最新策略推送、手牌分析和职业指导。
+      <p class="text-green-200/80 mb-6 max-w-lg mx-auto relative z-10">
+        Download <strong>BPT - Best Poker Tracker</strong> — the best free poker tracker with session logging and bankroll management.
       </p>
-      <a
-        href="APP_STORE_URL"
-        class="cta-button text-base mx-auto"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        <span>下载 App</span>
-      </a>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3 relative z-10">
+        <a
+          href="https://apps.apple.com/us/app/bpt-best-poker-tracker/id6778269945"
+          class="cta-button text-base"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+          App Store
+        </a>
+        <a
+          href="https://bpt.lanzn.com/iZfRr3tgy9sf"
+          class="cta-button-secondary text-base"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M6 18c0 .55.45 1 1 1h1v3.5a1.5 1.5 0 003 0V19h2v3.5a1.5 1.5 0 003 0V19h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zm-4.97-5.84l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48A5.96 5.96 0 0012 1c-.96 0-1.86.23-2.66.63L7.85.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31A5.983 5.983 0 006 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/></svg>
+          Android APK
+        </a>
+      </div>
+      <p class="text-green-200/50 text-xs mt-3 relative z-10">Android password: BPTT</p>
     </div>
 
+    <!-- Bottom Cards -->
     <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
       <div class="card p-6">
-        <div class="text-3xl mb-3">📊</div>
-        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">策略分析</h4>
-        <p class="text-sm text-gray-500 dark:text-gray-400">每日深度策略文章和手牌分析</p>
+        <div class="feature-icon mx-auto">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+        </div>
+        <h4 class="font-bold text-white mb-2">Strategy Analysis</h4>
+        <p class="text-sm text-gray-400">Daily deep dives into hand analysis and poker theory</p>
       </div>
       <div class="card p-6">
-        <div class="text-3xl mb-3">🧠</div>
-        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">心理训练</h4>
-        <p class="text-sm text-gray-500 dark:text-gray-400">Tilt 管理、情绪控制和心理博弈</p>
+        <div class="feature-icon mx-auto">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+        </div>
+        <h4 class="font-bold text-white mb-2">Mental Game</h4>
+        <p class="text-sm text-gray-400">Tilt control, emotional discipline, and peak performance</p>
       </div>
       <div class="card p-6">
-        <div class="text-3xl mb-3">🎯</div>
-        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">职业指导</h4>
-        <p class="text-sm text-gray-500 dark:text-gray-400">从资金管理到升级路径的全流程指导</p>
+        <div class="feature-icon mx-auto">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        </div>
+        <h4 class="font-bold text-white mb-2">Bankroll Growth</h4>
+        <p class="text-sm text-gray-400">Proven bankroll management and strategic stake progression</p>
       </div>
     </div>
   </div>

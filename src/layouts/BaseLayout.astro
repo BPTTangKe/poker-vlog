@@ -25,41 +25,46 @@ const {
 
 const siteURL = Astro.site?.origin ?? '';
 const pageURL = canonicalURL ?? Astro.url.href;
+const fullTitle = `${title} | Free Poker Tracker & Strategy`;
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{title} | 德州扑克 Vlog</title>
+    <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    <meta name="keywords" content="free poker tracker, poker tracker, poker session tracker, poker bankroll tracker, poker logger, poker strategy, texas holdem" />
     <link rel="canonical" href={pageURL} />
 
     <!-- Open Graph -->
     <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
-    <meta property="og:title" content={title} />
+    <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={pageURL} />
-    <meta property="og:site_name" content="德州扑克 Vlog" />
+    <meta property="og:site_name" content="Poker Vlog" />
     {image && <meta property="og:image" content={new URL(image, siteURL).href} />}
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
+    <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
     {image && <meta name="twitter:image" content={new URL(image, siteURL).href} />}
 
     <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="德州扑克 Vlog RSS" href={`${Astro.site}${import.meta.env.BASE_URL}rss.xml`} />
+    <link rel="alternate" type="application/rss+xml" title="Poker Vlog RSS" href={`${Astro.site}${import.meta.env.BASE_URL}rss.xml`} />
 
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
   </head>
-  <body class="min-h-screen flex flex-col">
+  <body class="min-h-screen flex flex-col bg-[#0a0f0a] text-gray-200">
     <script is:inline>
       (function() {
         const theme = localStorage.getItem('theme');
-        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        if (theme === 'light') {
+          document.documentElement.classList.remove('dark');
+          document.body.classList.add('light');
+        } else {
           document.documentElement.classList.add('dark');
         }
       })();
@@ -89,7 +94,7 @@ const pageURL = canonicalURL ?? Astro.url.href;
           },
           publisher: {
             '@type': 'Organization',
-            name: '德州扑克 Vlog',
+            name: 'Poker Vlog',
           },
           url: pageURL,
           ...(tags.length > 0 && { keywords: tags.join(', ') }),

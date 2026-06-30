@@ -15,14 +15,6 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        heading: ['Playfair Display', 'Georgia', 'serif'],
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            maxWidth: '75ch',
-          },
-        },
       },
     },
   },

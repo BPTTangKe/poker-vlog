@@ -13,56 +13,81 @@ function formatDate(d: Date): string {
   return `${year}-${month}-${day}`;
 }
 
-const description = '按日期归档所有德州扑克 Vlog 文章，方便查找和回顾往期内容。';
+function formatYear(d: Date): string {
+  return String(d.getFullYear());
+}
+
+// Group by year
+const byYear: Record<string, typeof allVlogs> = {};
+for (const vlog of allVlogs) {
+  const year = formatYear(vlog.data.date);
+  if (!byYear[year]) byYear[year] = [];
+  byYear[year].push(vlog);
+}
+
+const description = 'Browse all poker vlog articles in chronological order. Strategy, hand analysis, and tournament recaps.';
 ---
 
 <BaseLayout
-  title="文章归档"
+  title="Archive | Poker Vlog"
   description={description}
   canonicalURL={new URL(`${import.meta.env.BASE_URL}archive`, Astro.site).href}
 >
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <Breadcrumb items={[{ label: '归档' }]} />
 
-    <h1 class="text-3xl sm:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-2">
-      文章归档
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white mb-2">
+      Archive
     </h1>
-    <p class="text-gray-500 dark:text-gray-400 mb-8">共 {allVlogs.length} 篇文章</p>
+    <p class="text-gray-500 mb-10">{allVlogs.length} articles and counting</p>
 
-    <div class="space-y-3">
-      {allVlogs.map(vlog => {
-        const slug = vlog.id.replace(/\.md$/, '');
-        return (
-          <article class="card p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            <div class="flex-1 min-w-0">
-              <h2 class="font-semibold text-gray-900 dark:text-white truncate">
-                <a
-                  href={`${import.meta.env.BASE_URL}vlog/${slug}`}
-                  class="hover:text-poker-gold transition-colors"
-                >
-                  {vlog.data.title}
-                </a>
-              </h2>
-              <div class="flex items-center gap-3 mt-1">
-                <time datetime={vlog.data.date.toISOString()} class="text-sm text-gray-500 dark:text-gray-400">
-                  {formatDate(vlog.data.date)}
-                </time>
-                <div class="flex flex-wrap gap-1">
-                  {vlog.data.tags.slice(0, 2).map(tag => (
-                    <span class="tag-badge text-xs">{tag}</span>
-                  ))}
-                </div>
+    <!-- Timeline -->
+    <div class="relative">
+      <div class="timeline-line"></div>
+
+      <div class="space-y-12">
+        {Object.entries(byYear).map(([year, vlogs]) => (
+          <div class="relative">
+            <!-- Year marker -->
+            <div class="flex items-center gap-4 mb-6">
+              <div class="timeline-dot"></div>
+              <h2 class="text-2xl font-extrabold text-poker-gold">{year}</h2>
+            </div>
+
+            <!-- Articles for this year -->
+            <div class="ml-10 sm:ml-0">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                {vlogs.map(vlog => {
+                  const slug = vlog.id.replace(/\.md$/, '');
+                  return (
+                    <article class="card p-4 sm:p-5 hover:-translate-y-1 transition-all duration-300">
+                      <time datetime={vlog.data.date.toISOString()} class="text-xs text-gray-500 font-mono">
+                        {formatDate(vlog.data.date)}
+                      </time>
+                      <h3 class="font-bold text-white mt-1.5 mb-2 leading-snug">
+                        <a
+                          href={`${import.meta.env.BASE_URL}vlog/${slug}`}
+                          class="hover:text-poker-gold transition-colors"
+                        >
+                          {vlog.data.title}
+                        </a>
+                      </h3>
+                      <p class="text-sm text-gray-500 line-clamp-2 mb-3">
+                        {vlog.data.excerpt}
+                      </p>
+                      <div class="flex flex-wrap gap-1.5">
+                        {vlog.data.tags.slice(0, 3).map(tag => (
+                          <span class="tag-badge text-xs">{tag}</span>
+                        ))}
+                      </div>
+                    </article>
+                  );
+                })}
               </div>
             </div>
-            <a
-              href={`${import.meta.env.BASE_URL}vlog/${slug}`}
-              class="text-sm text-poker-gold hover:underline flex-shrink-0 self-start sm:self-center"
-            >
-              阅读 →
-            </a>
-          </article>
-        );
-      })}
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 </BaseLayout>

@@ -6,8 +6,8 @@ export async function GET(context: { site: URL | string }) {
   vlogs.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
 
   return rss({
-    title: '德州扑克每日 Vlog',
-    description: '每日德州扑克 vlog，专业手牌分析、锦标赛复盘、GTO 策略入门和资金管理指南。',
+    title: 'Poker Vlog | Free Poker Tracker & Strategy',
+    description: 'Master Texas Hold\'em with our free poker tracker. Daily strategy vlogs, session tracking, bankroll management, and poker logger.',
     site: context.site instanceof URL ? context.site : new URL(String(context.site)),
     items: vlogs.map(vlog => ({
       title: vlog.data.title,
@@ -16,7 +16,7 @@ export async function GET(context: { site: URL | string }) {
       link: `/vlog/${vlog.id.replace(/\.md$/, '')}`,
       categories: vlog.data.tags,
     })),
-    customData: `<language>zh-CN</language>`,
+    customData: `<language>en</language>`,
     stylesheet: '/rss/styles.xsl',
   });
 }
