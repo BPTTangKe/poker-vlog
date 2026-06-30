@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppCTA from '../components/AppCTA.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+
+const title = '关于我 & Poker Vlog App';
+const description = '了解德州扑克 Vlog 的博主和 Poker Vlog App，获取每日策略分析、手牌复盘和职业牌手指导。';
+---
+
+<BaseLayout
+  title="关于"
+  description={description}
+  canonicalURL={new URL(`${import.meta.env.BASE_URL}about`, Astro.site).href}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <Breadcrumb items={[{ label: '关于' }]} />
+
+    <h1 class="text-3xl sm:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-8">
+      {title}
+    </h1>
+
+    <section class="prose-content mb-12">
+      <h2>关于博主</h2>
+      <p>
+        我是一名职业德州扑克玩家和内容创作者。从 2018 年开始打扑克，经历了从娱乐玩家
+        到在 NL200 稳定盈利的整个过程。我的扑克旅程充满了起伏、破产、重建和成长，
+        现在我想通过这个 Vlog 把学到的每一课都分享给你。
+      </p>
+      <p>
+        我的扑克哲学很简单：<strong>过程优于结果</strong>。只要你在每一手牌中做了正确的决策，
+        长期来看你一定会赢。这个 Vlog 的内容涵盖了从入门策略到高级 GTO 分析的全部内容，
+        适合各个水平的扑克玩家。
+      </p>
+
+      <h2>关于 Poker Vlog App</h2>
+      <p>
+        Poker Vlog App 是这个 Vlog 的移动端伴侣。它将每日内容直接推送到你的手机，
+        同时提供以下独家功能：
+      </p>
+      <ul>
+        <li><strong>每日推送</strong>：最新策略文章、锦标赛复盘和手牌分析</li>
+        <li><strong>手牌追踪</strong>：记录和分析你的每手牌</li>
+        <li><strong>胜率计算器</strong>：实时计算手牌对局胜率</li>
+        <li><strong>社区互动</strong>：与其他扑克爱好者讨论策略</li>
+        <li><strong>离线阅读</strong>：下载内容，随时随地在没有网络时学习</li>
+      </ul>
+
+      <h2>为什么选择 Poker Vlog App？</h2>
+      <p>
+        市面上有很多扑克工具，但大多要么太复杂（只适合职业玩家），要么太浅显
+        （对提升水平没有帮助）。Poker Vlog App 找到了两者之间的甜蜜点——
+        <strong>为认真想提升水平的玩家提供实用、可执行的内容</strong>。
+      </p>
+      <p>
+        无论你是在 $1/$2 现场局磨练的娱乐玩家，还是想在 NL100 线上局升级的
+        reg，这个 App 都有适合你的内容。
+      </p>
+    </section>
+
+    <div class="bg-gradient-to-br from-poker-felt to-poker-green-light rounded-2xl p-8 sm:p-10 text-white text-center">
+      <h3 class="text-2xl sm:text-3xl font-heading font-bold mb-4">
+        准备好升级你的扑克水平了吗？
+      </h3>
+      <p class="text-green-100 mb-6 max-w-lg mx-auto">
+        下载 Poker Vlog App，每天获取最新策略推送、手牌分析和职业指导。
+      </p>
+      <a
+        href="APP_STORE_URL"
+        class="cta-button text-base mx-auto"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span>下载 App</span>
+      </a>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+      <div class="card p-6">
+        <div class="text-3xl mb-3">📊</div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">策略分析</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">每日深度策略文章和手牌分析</p>
+      </div>
+      <div class="card p-6">
+        <div class="text-3xl mb-3">🧠</div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">心理训练</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Tilt 管理、情绪控制和心理博弈</p>
+      </div>
+      <div class="card p-6">
+        <div class="text-3xl mb-3">🎯</div>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-2">职业指导</h4>
+        <p class="text-sm text-gray-500 dark:text-gray-400">从资金管理到升级路径的全流程指导</p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

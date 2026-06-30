@@ -1,0 +1,100 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/global.css';
+
+export interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: string;
+  publishedTime?: string;
+  tags?: string[];
+}
+
+const {
+  title,
+  description,
+  image = '/og-default.png',
+  canonicalURL,
+  type = 'website',
+  publishedTime,
+  tags = [],
+} = Astro.props;
+
+const siteURL = Astro.site?.origin ?? '';
+const pageURL = canonicalURL ?? Astro.url.href;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title} | 德州扑克 Vlog</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={pageURL} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content={type === 'article' ? 'article' : 'website'} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={pageURL} />
+    <meta property="og:site_name" content="德州扑克 Vlog" />
+    {image && <meta property="og:image" content={new URL(image, siteURL).href} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {image && <meta name="twitter:image" content={new URL(image, siteURL).href} />}
+
+    <!-- RSS -->
+    <link rel="alternate" type="application/rss+xml" title="德州扑克 Vlog RSS" href={`${Astro.site}${import.meta.env.BASE_URL}rss.xml`} />
+
+    <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <script is:inline>
+      (function() {
+        const theme = localStorage.getItem('theme');
+        if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+
+    <Header />
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <Footer />
+
+    {
+      publishedTime && type === 'article' && (
+        <script type="application/ld+json" set:html={JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Article',
+          headline: title,
+          description: description,
+          image: image ? new URL(image, siteURL).href : undefined,
+          datePublished: publishedTime,
+          dateModified: publishedTime,
+          author: {
+            '@type': 'Person',
+            name: 'Poker Vlogger',
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: '德州扑克 Vlog',
+          },
+          url: pageURL,
+          ...(tags.length > 0 && { keywords: tags.join(', ') }),
+        })} />
+      )
+    }
+  </body>
+</html>

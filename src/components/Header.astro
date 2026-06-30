@@ -1,0 +1,83 @@
+---
+const navItems = [
+  { href: '/', label: '首页' },
+  { href: '/archive', label: '归档' },
+  { href: '/about', label: '关于' },
+];
+
+const base = import.meta.env.BASE_URL || '/';
+---
+
+<header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-950/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+  <nav class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href={base} class="flex items-center gap-2 group" aria-label="首页">
+        <span class="text-2xl">♠️</span>
+        <span class="text-xl font-heading font-bold text-gray-900 dark:text-white group-hover:text-poker-gold transition-colors">
+          Poker Vlog
+        </span>
+      </a>
+
+      <div class="flex items-center gap-1 sm:gap-4">
+        <div class="hidden sm:flex items-center gap-1">
+          {navItems.map(item => (
+            <a
+              href={item.href === '/' ? base : `${base}${item.href.replace('/', '')}`}
+              class="px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-poker-gold dark:hover:text-poker-gold transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+
+        <button
+          id="themeToggle"
+          class="p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+          aria-label="切换暗色模式"
+          title="切换暗色/亮色模式"
+        >
+          <span class="dark:hidden text-lg" aria-hidden="true">🌙</span>
+          <span class="hidden dark:inline text-lg" aria-hidden="true">☀️</span>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobileMenuBtn"
+          class="sm:hidden p-2 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+          aria-label="菜单"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile nav -->
+    <div id="mobileNav" class="hidden sm:hidden pb-3">
+      {navItems.map(item => (
+        <a
+          href={item.href === '/' ? base : `${base}${item.href.replace('/', '')}`}
+          class="block px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-poker-gold rounded-lg"
+        >
+          {item.label}
+        </a>
+      ))}
+    </div>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('themeToggle')!;
+  const mobileBtn = document.getElementById('mobileMenuBtn')!;
+  const mobileNav = document.getElementById('mobileNav')!;
+
+  toggle.addEventListener('click', () => {
+    const isDark = document.documentElement.classList.toggle('dark');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  mobileBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('hidden');
+  });
+</script>

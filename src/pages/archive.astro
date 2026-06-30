@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumb from '../components/Breadcrumb.astro';
+import { getCollection } from 'astro:content';
+
+const allVlogs = await getCollection('vlog');
+allVlogs.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+function formatDate(d: Date): string {
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, '0');
+  const day = String(d.getDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+}
+
+const description = '按日期归档所有德州扑克 Vlog 文章，方便查找和回顾往期内容。';
+---
+
+<BaseLayout
+  title="文章归档"
+  description={description}
+  canonicalURL={new URL(`${import.meta.env.BASE_URL}archive`, Astro.site).href}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <Breadcrumb items={[{ label: '归档' }]} />
+
+    <h1 class="text-3xl sm:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-2">
+      文章归档
+    </h1>
+    <p class="text-gray-500 dark:text-gray-400 mb-8">共 {allVlogs.length} 篇文章</p>
+
+    <div class="space-y-3">
+      {allVlogs.map(vlog => {
+        const slug = vlog.id.replace(/\.md$/, '');
+        return (
+          <article class="card p-4 sm:p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <div class="flex-1 min-w-0">
+              <h2 class="font-semibold text-gray-900 dark:text-white truncate">
+                <a
+                  href={`${import.meta.env.BASE_URL}vlog/${slug}`}
+                  class="hover:text-poker-gold transition-colors"
+                >
+                  {vlog.data.title}
+                </a>
+              </h2>
+              <div class="flex items-center gap-3 mt-1">
+                <time datetime={vlog.data.date.toISOString()} class="text-sm text-gray-500 dark:text-gray-400">
+                  {formatDate(vlog.data.date)}
+                </time>
+                <div class="flex flex-wrap gap-1">
+                  {vlog.data.tags.slice(0, 2).map(tag => (
+                    <span class="tag-badge text-xs">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <a
+              href={`${import.meta.env.BASE_URL}vlog/${slug}`}
+              class="text-sm text-poker-gold hover:underline flex-shrink-0 self-start sm:self-center"
+            >
+              阅读 →
+            </a>
+          </article>
+        );
+      })}
+    </div>
+  </div>
+</BaseLayout>

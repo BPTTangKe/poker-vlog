@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AppCTA from '../components/AppCTA.astro';
+import VlogCard from '../components/VlogCard.astro';
+import { getCollection } from 'astro:content';
+
+const allVlogs = await getCollection('vlog', ({ data }) => {
+  return import.meta.env.PROD ? true : true;
+});
+
+allVlogs.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const pageSize = 10;
+const currentPage = 1;
+const totalPages = Math.ceil(allVlogs.length / pageSize);
+const vlogs = allVlogs.slice(0, pageSize);
+
+const siteTitle = '德州扑克每日 Vlog';
+const description = '每日德州扑克 vlog，专业手牌分析、锦标赛复盘、GTO 策略入门和资金管理指南。从新手到职业，每天进步一点。';
+---
+
+<BaseLayout
+  title={siteTitle}
+  description={description}
+  canonicalURL={new URL(import.meta.env.BASE_URL || '/', Astro.site).href}
+>
+  <AppCTA variant="banner" />
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <section>
+      <h1 class="text-3xl sm:text-4xl font-heading font-bold text-gray-900 dark:text-white mb-2">
+        最新 Vlog
+      </h1>
+      <p class="text-gray-500 dark:text-gray-400 mb-8">
+        每日德州扑克深度内容，帮你从娱乐玩家进阶为盈利牌手
+      </p>
+
+      <div class="space-y-6">
+        {vlogs.map(vlog => (
+          <VlogCard vlog={vlog} />
+        ))}
+      </div>
+
+      {totalPages > 1 && (
+        <nav class="mt-10 flex justify-center gap-2" aria-label="分页导航">
+          <span class="px-4 py-2 text-sm bg-poker-gold/10 text-poker-gold rounded-lg font-medium">
+            第 1 页 / 共 {totalPages} 页
+          </span>
+        </nav>
+      )}
+    </section>
+  </div>
+</BaseLayout>

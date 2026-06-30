@@ -1,0 +1,51 @@
+---
+export interface Props {
+  variant?: 'banner' | 'inline';
+}
+
+const { variant = 'inline' } = Astro.props;
+const appStoreUrl = 'APP_STORE_URL';
+---
+
+{
+  variant === 'banner' ? (
+    <section class="bg-gradient-to-r from-poker-felt to-poker-green-light text-white">
+      <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-heading font-bold mb-2">
+              想提升你的扑克水平？
+            </h2>
+            <p class="text-green-100 text-sm sm:text-base max-w-md">
+              下载 Poker Vlog 官方 App，获取每日策略推送、实时手牌分析和专业教练指导。
+            </p>
+          </div>
+          <a
+            href={appStoreUrl}
+            class="cta-button flex-shrink-0 text-base"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+            <span>下载 App</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <div class="my-8 p-6 bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 text-center">
+      <p class="text-gray-700 dark:text-gray-300 mb-3 font-medium">
+        喜欢这篇文章？下载 Poker Vlog App 获取更多内容
+      </p>
+      <a
+        href={appStoreUrl}
+        class="cta-button text-sm"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <span>下载 App</span>
+      </a>
+    </div>
+  )
+}
