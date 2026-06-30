@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
 
-const SITE = 'https://yourusername.github.io';
+const SITE = 'https://BPTTangKe.github.io';
 const BASE = '/poker-vlog';
 
 export default defineConfig({
