@@ -279,6 +279,68 @@ async function publishToYouTube(vlog) {
   return { platform: 'youtube', status: 'not_implemented' };
 }
 
+/**
+ * 发布到 Facebook Page
+ *
+ * 需要的参数：
+ *   FACEBOOK_PAGE_ID          - Facebook 页面 ID
+ *   FACEBOOK_PAGE_ACCESS_TOKEN - Facebook 页面 Access Token
+ *
+ * API 说明：
+ *   使用 Facebook Graph API v20.0 的 /{page-id}/feed 端点。
+ *   发布纯文本 + 链接帖子。
+ *
+ * 获取 Page Access Token 的方法：
+ *   1. 访问 https://developers.facebook.com/tools/explorer/
+ *   2. 获取 User Token（需要 pages_manage_posts 和 pages_read_engagement 权限）
+ *   3. 调用 GET /me/accounts 获取页面列表和对应的 access_token
+ *
+ * 或使用 Facebook Business Suite 的调度发布功能。
+ */
+async function publishToFacebook(vlog) {
+  log('准备发布到 Facebook...');
+
+  const pageId = process.env.FACEBOOK_PAGE_ID;
+  const pageAccessToken = process.env.FACEBOOK_PAGE_ACCESS_TOKEN;
+
+  if (!pageId || !pageAccessToken) {
+    log('Facebook API 凭证未完整配置，跳过', 'WARN');
+    return { platform: 'facebook', status: 'skipped', reason: '凭证未配置' };
+  }
+
+  if (DRY_RUN) {
+    log(`[DRY RUN] 将发布到 Facebook Page (${pageId}): "${vlog.title}" - ${SITE_URL}/vlog/${vlog.slug}`, 'WARN');
+    return { platform: 'facebook', status: 'dry_run' };
+  }
+
+  try {
+    const message = `${vlog.title}\n\n${vlog.excerpt}\n\n${SITE_URL}/vlog/${vlog.slug}`;
+    const url = `https://graph.facebook.com/v20.0/${pageId}/feed`;
+
+    const res = await fetch(url, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        message,
+        link: `${SITE_URL}/vlog/${vlog.slug}`,
+        access_token: pageAccessToken,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data.error?.message || `HTTP ${res.status}`);
+    }
+
+    log(`Facebook 发布成功: https://facebook.com/${data.id}`);
+    return { platform: 'facebook', status: 'success', postId: data.id };
+  } catch (err) {
+    log(`Facebook 发布失败: ${err.message}`, 'ERROR');
+    return { platform: 'facebook', status: 'failed', error: err.message };
+  }
+}
+
 // ─────────────────────────────────────────────────
 // 主函数
 // ─────────────────────────────────────────────────
@@ -301,6 +363,7 @@ async function main() {
   results.push(await publishToThreads(vlog));
   results.push(await publishToTikTok(vlog));
   results.push(await publishToYouTube(vlog));
+  results.push(await publishToFacebook(vlog));
 
   // 输出汇总
   log('=== 发布汇总 ===');
