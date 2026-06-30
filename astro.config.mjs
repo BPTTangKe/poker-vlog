@@ -2,8 +2,8 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 
-const SITE = 'https://BPTTangKe.github.io';
-const BASE = '/poker-vlog';
+const SITE = 'https://poker-vlog.pages.dev';
+const BASE = '/';
 
 export default defineConfig({
   site: SITE,

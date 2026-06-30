@@ -157,6 +157,7 @@ ul, ol { list-style: none; }
 .cta-inline p strong { color: var(--c-text); }
 .cta-inline-buttons { display: flex; justify-content: center; gap: var(--s3); flex-wrap: wrap; }
 .cta-inline-hint { font-size: 12px; color: var(--c-text-muted); margin-top: var(--s2); }
+.cta-banner-hint { font-size: 12px; color: var(--c-text-muted); margin-top: var(--s2); }
 @media (max-width: 639px) { .cta-banner-inner { flex-direction: column; text-align: center; } .cta-banner p { max-width: 100%; } .cta-banner-buttons { justify-content: center; } }
 
 /* ============================================
