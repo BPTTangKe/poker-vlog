@@ -95,17 +95,15 @@ async function main() {
   console.log('Opening X.com...');
 
   try {
-    await page.goto('https://x.com/home', { waitUntil: 'networkidle', timeout: 30000 });
+    await page.goto('https://x.com/home', { waitUntil: 'domcontentloaded', timeout: 60000 });
 
-    // 等待页面加载
-    await page.waitForTimeout(2000);
-
-    // 检查是否已登录（查找发推输入区）
+    // 等待发推输入区出现（X 是 SPA，需要等待动态渲染 + 登录状态恢复）
     const tweetArea = page.locator('[data-testid="tweetTextarea_0"]');
-    const isLoggedIn = await tweetArea.count() > 0;
-
-    if (!isLoggedIn) {
-      console.error('Not logged in to X. Please log in to X in Chrome first.');
+    try {
+      await tweetArea.waitFor({ state: 'visible', timeout: 30000 });
+    } catch {
+      console.error('Timed out waiting for tweet input area. Possibly not logged in or X changed UI.');
+      await page.screenshot({ path: path.join(__dirname, '..', 'tweet-error.png') });
       await context.close();
       process.exit(1);
     }
