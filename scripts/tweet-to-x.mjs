@@ -1,26 +1,26 @@
 /**
- * 通过 Playwright 浏览器自动化发推到 X (Twitter)
+ * 发推到 X (Twitter)
+ *
+ * 双模式：
+ *   1. Playwright 自动发推（需要 GUI 环境 + Chrome 已登录）
+ *   2. 降级：打开 X intent URL 预填充推文（只需手动点发送）
  *
  * 用法：
- *   node scripts/tweet-to-x.mjs [--vlog-slug <slug>]
- *
- * 需要：
- *   系统 Chrome 已登录 X 账号 @BPT_TK
- *   首次运行会复用 Chrome 的登录状态
+ *   node scripts/tweet-to-x.mjs [--vlog-slug <slug>] [--intent-only]
  */
 
 import fs from 'node:fs';
 import path from 'node:path';
 import os from 'node:os';
-import { chromium } from 'playwright';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const VLOG_DIR = path.resolve(__dirname, '..', 'src', 'content', 'vlog');
 const SITE_URL = process.env.SITE_URL || 'https://poker-vlog.pages.dev';
 
-// Chrome 用户数据目录（复用登录状态）
-const CHROME_PROFILE = path.join(os.homedir(), 'Library/Application Support/Google/Chrome');
+// 系统 Chrome 可执行路径
+const CHROME_EXE = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 function getLatestVlog(slug) {
   const files = fs.readdirSync(VLOG_DIR).filter(f => f.endsWith('.md'));
@@ -65,10 +65,84 @@ function buildTweet(vlog) {
   return `${vlog.title}\n\n${excerpt}\n\n${link}`;
 }
 
+function intentFallback(tweetText) {
+  const encoded = encodeURIComponent(tweetText);
+  const url = `https://x.com/intent/tweet?text=${encoded}`;
+  console.log('[FALLBACK] Opening X intent URL in Chrome...');
+  execSync(`open -a "Google Chrome" "${url}"`, { stdio: 'ignore' });
+  console.log('Tweet pre-filled. Please click "Post" button manually in Chrome.');
+  return { mode: 'intent_fallback', url };
+}
+
+async function playwrightMode(tweetText) {
+  const { chromium } = await import('playwright');
+  const CHROME_PROFILE = path.join(os.homedir(), 'Library/Application Support/Google/Chrome');
+
+  if (!fs.existsSync(CHROME_PROFILE)) {
+    throw new Error(`Chrome profile not found: ${CHROME_PROFILE}`);
+  }
+
+  // 如果 Chrome 正在运行，先关闭
+  let chromeWasRunning = false;
+  try {
+    execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
+    chromeWasRunning = true;
+    console.log('Closing Chrome temporarily to access profile...');
+    execSync('killall "Google Chrome"', { stdio: 'ignore' });
+    await new Promise(r => setTimeout(r, 2000));
+  } catch { /* Chrome not running, fine */ }
+
+  let context;
+  try {
+    console.log('Launching browser...');
+    const timeout = 30000;
+    const launchPromise = chromium.launchPersistentContext(CHROME_PROFILE, {
+      headless: false,
+      executablePath: CHROME_EXE,
+      viewport: { width: 1280, height: 800 },
+      timeout,
+    });
+
+    context = await Promise.race([
+      launchPromise,
+      new Promise((_, reject) => setTimeout(() => reject(new Error('PLAYWRIGHT_TIMEOUT')), timeout + 5000)),
+    ]);
+
+    const page = context.pages()[0] || await context.newPage();
+    console.log('Opening X.com...');
+
+    await page.goto('https://x.com/home', { waitUntil: 'networkidle', timeout: 30000 });
+
+    const tweetArea = page.locator('[data-testid="tweetTextarea_0"]');
+    await tweetArea.waitFor({ state: 'visible', timeout: 15000 });
+
+    console.log('Logged in. Composing tweet...');
+    await tweetArea.click();
+    await page.waitForTimeout(500);
+    await page.keyboard.type(tweetText, { delay: 10 });
+    await page.waitForTimeout(500);
+
+    const postButton = page.locator('[data-testid="tweetButtonInline"]');
+    await postButton.click();
+    await page.waitForTimeout(3000);
+
+    console.log('Tweet posted successfully!');
+    await page.screenshot({ path: path.join(__dirname, '..', 'tweet-result.png') });
+    return { mode: 'playwright', success: true };
+  } finally {
+    if (context) await context.close().catch(() => {});
+    if (chromeWasRunning) {
+      execSync('open -a "Google Chrome"', { stdio: 'ignore' });
+    }
+  }
+}
+
 async function main() {
-  const slug = process.argv.includes('--vlog-slug')
-    ? process.argv[process.argv.indexOf('--vlog-slug') + 1]
+  const args = process.argv.slice(2);
+  const slug = args.includes('--vlog-slug')
+    ? args[args.indexOf('--vlog-slug') + 1]
     : null;
+  const intentOnly = args.includes('--intent-only');
 
   const vlog = getLatestVlog(slug);
   const tweetText = buildTweet(vlog);
@@ -78,64 +152,21 @@ async function main() {
   console.log(tweetText);
   console.log('');
 
-  // 检查 Chrome profile 是否存在
-  const userDataDir = path.join(CHROME_PROFILE, 'Default');
-  if (!fs.existsSync(userDataDir)) {
-    throw new Error(`Chrome profile not found: ${userDataDir}`);
+  // 强制 intent-only 模式
+  if (intentOnly) {
+    const result = intentFallback(tweetText);
+    console.log(JSON.stringify(result));
+    return;
   }
 
-  console.log('Launching browser...');
-  const context = await chromium.launchPersistentContext(userDataDir, {
-    headless: false,
-    channel: 'chrome',
-    viewport: { width: 1280, height: 800 },
-  });
-
-  const page = context.pages()[0] || await context.newPage();
-  console.log('Opening X.com...');
-
+  // 先尝试 Playwright 自动发推，失败则降级
   try {
-    await page.goto('https://x.com/home', { waitUntil: 'domcontentloaded', timeout: 60000 });
-
-    // 等待发推输入区出现（X 是 SPA，需要等待动态渲染 + 登录状态恢复）
-    const tweetArea = page.locator('[data-testid="tweetTextarea_0"]');
-    try {
-      await tweetArea.waitFor({ state: 'visible', timeout: 30000 });
-    } catch {
-      console.error('Timed out waiting for tweet input area. Possibly not logged in or X changed UI.');
-      await page.screenshot({ path: path.join(__dirname, '..', 'tweet-error.png') });
-      await context.close();
-      process.exit(1);
-    }
-
-    console.log('Logged in. Composing tweet...');
-
-    // 点击发推输入区
-    await tweetArea.click();
-    await page.waitForTimeout(500);
-
-    // 输入推文内容
-    await page.keyboard.type(tweetText, { delay: 10 });
-    await page.waitForTimeout(500);
-
-    // 点击发推按钮
-    const postButton = page.locator('[data-testid="tweetButtonInline"]');
-    await postButton.click();
-
-    // 等待发布完成
-    await page.waitForTimeout(3000);
-
-    console.log('Tweet posted successfully!');
-
-    // 截图确认
-    await page.screenshot({ path: path.join(__dirname, '..', 'tweet-result.png') });
-    console.log('Screenshot saved to tweet-result.png');
+    const result = await playwrightMode(tweetText);
+    console.log(JSON.stringify(result));
   } catch (err) {
-    console.error('Error:', err.message);
-    await page.screenshot({ path: path.join(__dirname, '..', 'tweet-error.png') });
-    console.log('Error screenshot saved to tweet-error.png');
-  } finally {
-    await context.close();
+    console.error(`Playwright mode failed: ${err.message}`);
+    const result = intentFallback(tweetText);
+    console.log(JSON.stringify(result));
   }
 }
 
