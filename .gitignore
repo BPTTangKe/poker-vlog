@@ -1,4 +1,5 @@
 node_modules/
+x-debug.png
 dist/
 .env
 .env.local
