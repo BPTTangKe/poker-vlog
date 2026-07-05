@@ -11,7 +11,6 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
-import os from 'node:os';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
@@ -74,117 +73,91 @@ function intentFallback(tweetText) {
   return { mode: 'intent_fallback', url };
 }
 
+const CDP_PORT = 9222;
+const CDP_URL = `http://127.0.0.1:${CDP_PORT}`;
+
 /**
- * 将默认 Chrome 的登录态文件同步到专用自动化目录
- * 复制 Cookie / Login Data / Local Storage / IndexedDB 等必要认证数据
+ * 检查 Chrome 是否已在 CDP 端口监听
  */
-function syncChromeProfile(srcDir, dstDir) {
-  const srcDefault = path.join(srcDir, 'Default');
-  if (!fs.existsSync(srcDefault)) return;
+function isCdpAvailable() {
+  try {
+    const result = execSync(`curl -s -o /dev/null -w "%{http_code}" ${CDP_URL}/json/version`, {
+      encoding: 'utf-8',
+      timeout: 3000,
+    });
+    return result.trim() === '200';
+  } catch {
+    return false;
+  }
+}
 
-  fs.mkdirSync(path.join(dstDir, 'Default'), { recursive: true });
-
-  // 复制用户数据目录级别的关键文件
-  const rootFiles = ['Local State'];
-  for (const f of rootFiles) {
-    const src = path.join(srcDir, f);
-    if (fs.existsSync(src)) {
-      fs.copyFileSync(src, path.join(dstDir, f));
-    }
+/**
+ * 启动 Chrome 并开启远程调试端口
+ * 返回 { wasRunning, launched } 以便 finally 做正确的清理
+ */
+function ensureChromeWithCDP() {
+  // 先检查是否有 Chrome 进程已在 CDP 端口监听
+  if (isCdpAvailable()) {
+    console.log('Chrome CDP already available.');
+    return { wasRunning: true, launched: false };
   }
 
-  // 复制 Default 目录下的认证相关文件
-  const defaultFiles = [
-    'Cookies', 'Cookies-journal',
-    'Login Data', 'Login Data-journal',
-    'Preferences', 'Web Data', 'Web Data-journal',
-    'Network', 'Network Action Predictor', 'Network Persistent State',
-    'TransportSecurity',
-  ];
-  for (const f of defaultFiles) {
-    const src = path.join(srcDefault, f);
-    const dst = path.join(dstDir, 'Default', f);
-    if (!fs.existsSync(src)) continue;
-    try {
-      // 目录用 cp -R，文件用 copyFileSync
-      const stat = fs.statSync(src);
-      if (stat.isDirectory()) {
-        execSync(`cp -R "${src}" "${dst}"`, { stdio: 'ignore' });
-      } else {
-        fs.copyFileSync(src, dst);
+  // 检查 Chrome 是否正在运行（但没有 CDP）
+  let chromeRunning = false;
+  try {
+    execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
+    chromeRunning = true;
+    console.log('Closing existing Chrome to restart with CDP...');
+    execSync('killall "Google Chrome"', { stdio: 'ignore' });
+    // 等待进程完全退出
+    let retries = 10;
+    while (retries > 0) {
+      try {
+        execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
+        retries--;
+        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 1000);
+      } catch {
+        break;
       }
-    } catch {}
+    }
+  } catch { /* Chrome not running */ }
+
+  console.log('Launching Chrome with remote debugging...');
+  execSync(
+    `open -a "Google Chrome" --args --remote-debugging-port=${CDP_PORT}`,
+    { stdio: 'ignore' }
+  );
+
+  // 等待 CDP 就绪
+  let attempts = 0;
+  while (!isCdpAvailable() && attempts < 20) {
+    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 1000);
+    attempts++;
   }
 
-  // 复制 Local Storage（X 可能用其存储 token）
-  const localStorageSrc = path.join(srcDefault, 'Local Storage');
-  if (fs.existsSync(localStorageSrc)) {
-    try {
-      execSync(`cp -R "${localStorageSrc}" "${path.join(dstDir, 'Default', 'Local Storage')}"`, { stdio: 'ignore' });
-    } catch {}
+  if (!isCdpAvailable()) {
+    throw new Error('Chrome CDP failed to start within 20s');
   }
 
-  // 复制 Session Storage
-  const sessionStorageSrc = path.join(srcDefault, 'Session Storage');
-  if (fs.existsSync(sessionStorageSrc)) {
-    try {
-      execSync(`cp -R "${sessionStorageSrc}" "${path.join(dstDir, 'Default', 'Session Storage')}"`, { stdio: 'ignore' });
-    } catch {}
-  }
-
-  // 复制 IndexedDB（X 可能存储大量数据）
-  const indexedDBSrc = path.join(srcDefault, 'IndexedDB');
-  if (fs.existsSync(indexedDBSrc)) {
-    try {
-      execSync(`cp -R "${indexedDBSrc}" "${path.join(dstDir, 'Default', 'IndexedDB')}"`, { stdio: 'ignore' });
-    } catch {}
-  }
-
-  console.log('Synced Chrome profile data for automation.');
+  console.log('Chrome launched with CDP.');
+  return { wasRunning: chromeRunning, launched: true };
 }
 
 async function playwrightMode(tweetText) {
   const { chromium } = await import('playwright');
-  const DEFAULT_CHROME_PROFILE = path.join(os.homedir(), 'Library/Application Support/Google/Chrome');
-  // 使用非默认用户数据目录，避免 Chrome 拒绝远程调试
-  const CHROME_PROFILE = path.join(os.homedir(), '.poker-vlog-chrome-profile');
 
-  if (!fs.existsSync(DEFAULT_CHROME_PROFILE)) {
-    throw new Error(`Chrome profile not found: ${DEFAULT_CHROME_PROFILE}`);
-  }
+  const chromeState = ensureChromeWithCDP();
 
-  // 如果 Chrome 正在运行，先关闭（避免文件锁定）
-  let chromeWasRunning = false;
+  let browser;
   try {
-    execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
-    chromeWasRunning = true;
-    console.log('Closing Chrome temporarily to access profile...');
-    execSync('killall "Google Chrome"', { stdio: 'ignore' });
-    await new Promise(r => setTimeout(r, 3000));
-  } catch { /* Chrome not running, fine */ }
+    console.log('Connecting to Chrome via CDP...');
+    browser = await chromium.connectOverCDP(CDP_URL);
 
-  // 同步登录态：将默认 Chrome 的必要数据复制到专用目录
-  syncChromeProfile(DEFAULT_CHROME_PROFILE, CHROME_PROFILE);
+    // 获取已有页面或创建新页面
+    const context = browser.contexts()[0];
+    const page = context.pages().length > 0 ? context.pages()[0] : await context.newPage();
 
-  let context;
-  try {
-    console.log('Launching browser...');
-    const timeout = 30000;
-    const launchPromise = chromium.launchPersistentContext(CHROME_PROFILE, {
-      headless: false,
-      executablePath: CHROME_EXE,
-      viewport: { width: 1280, height: 800 },
-      timeout,
-    });
-
-    context = await Promise.race([
-      launchPromise,
-      new Promise((_, reject) => setTimeout(() => reject(new Error('PLAYWRIGHT_TIMEOUT')), timeout + 5000)),
-    ]);
-
-    const page = context.pages()[0] || await context.newPage();
     console.log('Opening X.com...');
-
     await page.goto('https://x.com/home', { waitUntil: 'domcontentloaded', timeout: 30000 });
     // X.com 是 SPA，等待 JS 渲染完成
     await page.waitForTimeout(5000);
@@ -195,6 +168,7 @@ async function playwrightMode(tweetText) {
       '[data-testid="tweetTextarea"]',
       '[role="textbox"][data-testid*="tweet"]',
       '[aria-label="Post text"]',
+      'div[role="textbox"][contenteditable="true"]',
       'div[role="textbox"]',
     ];
 
@@ -228,10 +202,9 @@ async function playwrightMode(tweetText) {
     await page.screenshot({ path: path.join(__dirname, '..', 'tweet-result.png') });
     return { mode: 'playwright', success: true };
   } finally {
-    if (context) await context.close().catch(() => {});
-    if (chromeWasRunning) {
-      execSync('open -a "Google Chrome"', { stdio: 'ignore' });
-    }
+    if (browser) await browser.close().catch(() => {});
+    // 如果是我们启动的 Chrome 且原本没有 Chrome，则保持运行；原本就有的保持原状
+    // Chrome 以 open -a 启动后会留在 Dock，用户可正常使用
   }
 }
 
