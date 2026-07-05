@@ -1,9 +1,10 @@
-node_modules/
-x-debug.png
-dist/
-.env
-.env.local
-.env.*.local
-.DS_Store
 *.log
+.DS_Store
 .cache/
+.env
+.env.*.local
+.env.local
+dist/
+node_modules/
+tweet-error.png
+x-debug.png
