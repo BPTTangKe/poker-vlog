@@ -115,7 +115,7 @@ function ensureChromeWithCDP() {
       try {
         execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
         retries--;
-        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 1000);
+        execSync('sleep 1');
       } catch {
         break;
       }
@@ -131,7 +131,7 @@ function ensureChromeWithCDP() {
   // 等待 CDP 就绪
   let attempts = 0;
   while (!isCdpAvailable() && attempts < 20) {
-    Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 1000);
+    execSync('sleep 1');
     attempts++;
   }
 
