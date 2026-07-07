@@ -124,19 +124,19 @@ function ensureChromeWithCDP() {
 
   console.log('Launching Chrome with remote debugging...');
   execSync(
-    `open -a "Google Chrome" --args --remote-debugging-port=${CDP_PORT}`,
+    `open -a "Google Chrome" --args --remote-debugging-port=${CDP_PORT} --no-first-run --restore-last-session=false --disable-session-crashed-bubble`,
     { stdio: 'ignore' }
   );
 
-  // 等待 CDP 就绪
+  // 等待 CDP 就绪（最多 30s）
   let attempts = 0;
-  while (!isCdpAvailable() && attempts < 20) {
+  while (!isCdpAvailable() && attempts < 30) {
     execSync('sleep 1');
     attempts++;
   }
 
   if (!isCdpAvailable()) {
-    throw new Error('Chrome CDP failed to start within 20s');
+    throw new Error('Chrome CDP failed to start within 30s');
   }
 
   console.log('Chrome launched with CDP.');
