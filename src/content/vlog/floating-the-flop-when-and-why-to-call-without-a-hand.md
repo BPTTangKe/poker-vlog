@@ -1,6 +1,6 @@
 ---
 title: "Floating the Flop: When and Why to Call Without a Hand"
-date: 2026-07-06
+date: 2026-07-16
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "strategy", "math"]
 image: ""
