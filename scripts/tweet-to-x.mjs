@@ -103,46 +103,38 @@ function ensureChromeWithCDP() {
   }
 
   // 检查 Chrome 是否正在运行（但没有 CDP）
+  // 如果 Chrome 已在运行，不强行 killall——非 GUI 环境下重启会失败
+  // 直接抛出错误让上层降级到 intent fallback
   let chromeRunning = false;
   try {
     execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
     chromeRunning = true;
-    console.log('Closing existing Chrome to restart with CDP...');
-    execSync('killall "Google Chrome"', { stdio: 'ignore' });
-    // 等待进程完全退出
-    let retries = 10;
-    while (retries > 0) {
-      try {
-        execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
-        retries--;
-        execSync('sleep 1');
-      } catch {
-        break;
-      }
-    }
-  } catch { /* Chrome not running */ }
+    console.log('Chrome is running without CDP. Skipping Playwright mode (cannot restart in headless env).');
+    throw new Error('Chrome already running without CDP — use intent fallback');
+  } catch (e) {
+    if (e.message.includes('without CDP')) throw e;
+    /* Chrome not running at all — try to launch it */
+  }
 
   console.log('Launching Chrome with remote debugging...');
-  // 使用直接可执行文件路径而非 open -a，确保 CDP 端口可靠绑定
-  // 添加 --disable-extensions 加速启动，避免扩展拖慢 CDP 端口绑定
   execSync(
-    `"${CHROME_EXE}" --remote-debugging-port=${CDP_PORT} --no-first-run --restore-last-session=false --disable-session-crashed-bubble --disable-extensions --disable-background-networking --disable-sync &>/dev/null &`,
+    `nohup "${CHROME_EXE}" --remote-debugging-port=${CDP_PORT} --no-first-run --restore-last-session=false --disable-session-crashed-bubble --disable-extensions --disable-background-networking --disable-sync > /dev/null 2>&1 &`,
     { stdio: 'ignore' }
   );
 
-  // 等待 CDP 就绪（最多 60s，大 Profile 启动较慢）
+  // 等待 CDP 就绪（最多 90s）
   let attempts = 0;
-  while (!isCdpAvailable() && attempts < 60) {
+  while (!isCdpAvailable() && attempts < 90) {
     execSync('sleep 1');
     attempts++;
   }
 
   if (!isCdpAvailable()) {
-    throw new Error('Chrome CDP failed to start within 60s');
+    throw new Error(`Chrome CDP failed to start within ${attempts}s`);
   }
 
   console.log('Chrome launched with CDP.');
-  return { wasRunning: chromeRunning, launched: true };
+  return { wasRunning: false, launched: true };
 }
 
 async function playwrightMode(tweetText) {
