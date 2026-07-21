@@ -1,6 +1,6 @@
 ---
 title: "Online vs Live Poker: Adjusting Your Strategy for Each"
-date: 2026-07-05
+date: 2026-07-20
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "live-poker", "online-poker", "math"]
 image: ""
