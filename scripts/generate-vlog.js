@@ -322,7 +322,8 @@ function slugify(title, dateStr) {
     .trim()
     .slice(0, 60);
   slug = slug.replace(/-+$/, '');
-  return slug || `poker-vlog-${dateStr}`;
+  // 嵌入日期确保每次生成的 slug 唯一，避免 Astro glob-loader 的 duplicate id 警告
+  return slug ? `${slug}-${dateStr}` : `poker-vlog-${dateStr}`;
 }
 
 // 由于 Zod 的 refine 要求 excerpt 不能超过 160 字符，这里必须截断
