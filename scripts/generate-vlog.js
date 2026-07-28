@@ -326,6 +326,102 @@ function slugify(title, dateStr) {
   return slug ? `${slug}-${dateStr}` : `poker-vlog-${dateStr}`;
 }
 
+/**
+ * 生成 SVG 封面图并写入 public/images/
+ * 标题自动拆分为主标题和副标题（以第一个 ': ' 或 '：' 分割）
+ */
+function generateCoverSvg(title, slug) {
+  const IMAGES_DIR = path.resolve(__dirname, '..', 'public', 'images');
+  if (!fs.existsSync(IMAGES_DIR)) {
+    fs.mkdirSync(IMAGES_DIR, { recursive: true });
+  }
+
+  // 拆分标题为主标题 + 副标题
+  const separatorMatch = title.match(/^(.+?)[:：]\s*(.+)$/);
+  let mainTitle, subTitle;
+  if (separatorMatch) {
+    mainTitle = separatorMatch[1].trim();
+    subTitle = separatorMatch[2].trim();
+  } else {
+    mainTitle = title;
+    subTitle = '';
+  }
+
+  // XML/HTML 转义
+  const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+  // 长标题自适应字号
+  const titleLen = mainTitle.length;
+  const fontSize = titleLen > 25 ? 42 : titleLen > 18 ? 52 : 64;
+  const subFontSize = subTitle.length > 25 ? 20 : subTitle.length > 18 ? 24 : 28;
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a472a;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0d2617;stop-opacity:1"/>
+    </linearGradient>
+    <linearGradient id="goldLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:transparent;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#e8b83a;stop-opacity:0.3"/>
+      <stop offset="50%" style="stop-color:#e8b83a;stop-opacity:0.6"/>
+      <stop offset="80%" style="stop-color:#e8b83a;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:transparent;stop-opacity:0"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <g opacity="0.03">
+    <circle cx="100" cy="100" r="200" fill="#ffffff"/>
+    <circle cx="600" cy="315" r="350" fill="#ffffff"/>
+    <circle cx="1100" cy="500" r="250" fill="#ffffff"/>
+  </g>
+
+  <rect x="200" y="80" width="800" height="2" fill="url(#goldLine)"/>
+
+  <text x="600" y="380" text-anchor="middle" font-family="serif" font-size="320"
+        fill="#e8b83a" opacity="0.06" transform="rotate(-8, 600, 380)">♠</text>
+
+  <text x="60" y="100" font-family="serif" font-size="48" fill="#e8b83a" opacity="0.15">♠</text>
+  <text x="1140" y="100" font-family="serif" font-size="48" fill="#e8b83a" opacity="0.15">♠</text>
+  <text x="60" y="600" font-family="serif" font-size="48" fill="#e8b83a" opacity="0.15">♠</text>
+  <text x="1140" y="600" font-family="serif" font-size="48" fill="#e8b83a" opacity="0.15">♠</text>
+
+  <g transform="translate(600, 200)" opacity="0.3">
+    <circle r="28" fill="none" stroke="#e8b83a" stroke-width="3"/>
+    <circle r="20" fill="none" stroke="#e8b83a" stroke-width="2"/>
+    <circle r="10" fill="none" stroke="#e8b83a" stroke-width="1.5"/>
+    <text y="8" text-anchor="middle" font-family="serif" font-size="18" fill="#e8b83a">♠</text>
+  </g>
+
+  <text x="600" y="${subTitle ? '320' : '340'}" text-anchor="middle" font-family="Georgia, serif" font-size="${fontSize}"
+        font-weight="bold" fill="#ffffff" letter-spacing="2" filter="url(#glow)">${esc(mainTitle)}</text>${subTitle ? `
+  <text x="600" y="380" text-anchor="middle" font-family="Inter, sans-serif" font-size="${subFontSize}"
+        fill="#e8b83a" letter-spacing="4" font-weight="500">${esc(subTitle)}</text>` : ''}
+
+  <rect x="300" y="460" width="600" height="1" fill="url(#goldLine)"/>
+
+  <text x="600" y="530" text-anchor="middle" font-family="Inter, sans-serif" font-size="16"
+        fill="#888888" letter-spacing="6">POKERVLOG</text>
+
+  <text x="420" y="570" font-family="serif" font-size="20" fill="#e8b83a" opacity="0.4">♠ ♥ ♦ ♣</text>
+
+  <rect x="20" y="20" width="1160" height="590" fill="none" stroke="#e8b83a" stroke-width="1" opacity="0.15" rx="12"/>
+</svg>`;
+
+  const svgPath = path.join(IMAGES_DIR, `${slug}.svg`);
+  fs.writeFileSync(svgPath, svg, 'utf-8');
+  return svgPath;
+}
+
 // 由于 Zod 的 refine 要求 excerpt 不能超过 160 字符，这里必须截断
 function escapeYaml(str) {
   return str.replace(/"/g, '\\"').replace(/\n/g, ' ');
@@ -382,12 +478,16 @@ async function main() {
     const filePath = path.join(VLOG_DIR, `${slug}.md`);
     fs.writeFileSync(filePath, fullContent, 'utf-8');
 
+    // 生成 SVG 封面图
+    const svgPath = generateCoverSvg(titleFromContent, slug);
+
     log(`vlog 已生成: ${filePath}`);
+    log(`封面图已生成: ${svgPath}`);
     log(`标题: ${titleFromContent}`);
     log(`标签: ${tags.join(', ')}`);
     log(`字数: ${content.length}`);
 
-    return { success: true, filePath, title: titleFromContent, slug };
+    return { success: true, filePath, svgPath, title: titleFromContent, slug };
   } catch (err) {
     logError(err.message);
     process.exit(1);
