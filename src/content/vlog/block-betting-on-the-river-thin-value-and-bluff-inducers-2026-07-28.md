@@ -3,7 +3,7 @@ title: "Block Betting on the River: Thin Value and Bluff Inducers"
 date: 2026-07-28
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "bluffing", "math"]
-image: ""
+image: "/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-07-28.svg"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
 

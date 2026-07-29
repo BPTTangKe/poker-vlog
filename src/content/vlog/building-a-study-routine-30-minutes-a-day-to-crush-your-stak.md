@@ -3,7 +3,7 @@ title: "Building a Study Routine: 30 Minutes a Day to Crush Your Stake"
 date: 2026-07-15
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "math"]
-image: ""
+image: "/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak.svg"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
 

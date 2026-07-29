@@ -3,7 +3,7 @@ title: "Floating the Flop: When and Why to Call Without a Hand"
 date: 2026-07-16
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "strategy", "math"]
-image: ""
+image: "/images/floating-the-flop-when-and-why-to-call-without-a-hand.svg"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
 

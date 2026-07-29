@@ -457,13 +457,15 @@ async function main() {
     // Build frontmatter — 不包含 title 因为 title 从首行 # 提取
     const titleFromContent = topic;
 
+    const imagePath = `/images/${slug}.svg`;
+
     const frontmatter = [
       '---',
       `title: "${titleFromContent}"`,
       `date: ${dateStr}`,
       `excerpt: "${seoDescription}"`,
       `tags: [${tags.map(t => `"${t}"`).join(', ')}]`,
-      `image: ""`,
+      `image: "${imagePath}"`,
       `seo_description: "${seoDescription}"`,
       '---',
     ].join('\n');

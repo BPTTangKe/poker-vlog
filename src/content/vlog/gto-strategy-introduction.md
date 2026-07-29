@@ -3,7 +3,7 @@ title: "GTO 策略入门：为什么你的扑克思维需要一次升级"
 date: 2026-06-30
 excerpt: "Game Theory Optimal (GTO) 是现代扑克的分水岭。本文用通俗的语言解释 GTO 的核心概念，以及如何用它来分析和改进你的游戏。"
 tags: ["poker-strategy", "gto", "advanced"]
-image: ""
+image: "/images/gto-strategy-introduction.svg"
 seo_description: "德州扑克GTO策略入门指南：频率与范围、混合策略、最小防守频率MDF的概念解释，以及如何在实战中利用GTO概念提升决策质量。"
 ---
 

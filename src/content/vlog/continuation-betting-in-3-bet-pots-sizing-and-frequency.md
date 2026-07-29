@@ -3,7 +3,7 @@ title: "Continuation Betting in 3-Bet Pots: Sizing and Frequency"
 date: 2026-07-11
 excerpt: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviat"
 tags: ["preflop", "3bet", "cash-game", "bankroll"]
-image: ""
+image: "/images/continuation-betting-in-3-bet-pots-sizing-and-frequency.svg"
 seo_description: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviat"
 ---
 

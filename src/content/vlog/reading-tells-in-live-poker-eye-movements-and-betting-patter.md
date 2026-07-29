@@ -3,7 +3,7 @@ title: "Reading Tells in Live Poker: Eye Movements and Betting Patterns"
 date: 2026-06-30
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "live-poker", "math"]
-image: ""
+image: "/images/reading-tells-in-live-poker-eye-movements-and-betting-patter.svg"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
 

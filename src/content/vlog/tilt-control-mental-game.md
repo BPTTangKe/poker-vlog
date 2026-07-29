@@ -3,7 +3,7 @@ title: "失控边缘：职业牌手如何管理 Tilt 和情绪波动"
 date: 2026-06-27
 excerpt: "Tilt 是扑克玩家最大的隐形敌人。从识别早期信号到建立情绪管理 routine，这篇文章分享职业牌手的实战经验。"
 tags: ["mental-game", "psychology", "tilt-control"]
-image: ""
+image: "/images/tilt-control-mental-game.svg"
 seo_description: "职业德州扑克玩家分享Tilt管理技巧：识别情绪触发点、建立赛前routine、使用STOP技术中断负面情绪循环。"
 ---
 

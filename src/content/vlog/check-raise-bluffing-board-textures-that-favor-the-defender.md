@@ -3,7 +3,7 @@ title: "Check-Raise Bluffing: Board Textures That Favor the Defender"
 date: 2026-07-13
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "bluffing", "math"]
-image: ""
+image: "/images/check-raise-bluffing-board-textures-that-favor-the-defender.svg"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
 

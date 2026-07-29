@@ -3,7 +3,7 @@ title: "Preflop 3-Bet Ranges: When to Light 3-Bet"
 date: 2026-07-14
 excerpt: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviat"
 tags: ["preflop", "3bet", "cash-game", "bankroll"]
-image: ""
+image: "/images/preflop-3-bet-ranges-when-to-light-3-bet.svg"
 seo_description: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviat"
 ---
 

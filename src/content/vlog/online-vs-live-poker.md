@@ -3,7 +3,7 @@ title: "线上 vs 现场扑克：两种完全不同的游戏"
 date: 2026-06-28
 excerpt: "线上和现场德州扑克虽然规则相同，但实际玩起来是两种截然不同的游戏。从信息收集到剥削策略，帮你理清两者的核心差异。"
 tags: ["cash-game", "live-poker", "online-poker"]
-image: ""
+image: "/images/online-vs-live-poker.svg"
 seo_description: "深度对比线上德州扑克和现场扑克的核心差异：信息获取、剥削策略、波动处理和技术工具使用，帮你双线作战。"
 ---
 
