@@ -26,6 +26,9 @@ const {
 const siteURL = Astro.site?.origin ?? '';
 const pageURL = canonicalURL ?? Astro.url.href;
 const fullTitle = `${title} | Free Poker Tracker & Strategy`;
+
+// X/Twitter 不支持 SVG 卡片图片，转换为 PNG
+const socialImage = image.replace(/\.svg$/i, '.png');
 ---
 
 <!doctype html>
@@ -42,11 +45,11 @@ const fullTitle = `${title} | Free Poker Tracker & Strategy`;
     <meta property="og:description" content={description} />
     <meta property="og:url" content={pageURL} />
     <meta property="og:site_name" content="Poker Vlog" />
-    {image && <meta property="og:image" content={new URL(image, siteURL).href} />}
+    {socialImage && <meta property="og:image" content={new URL(socialImage, siteURL).href} />}
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    {image && <meta name="twitter:image" content={new URL(image, siteURL).href} />}
+    {socialImage && <meta name="twitter:image" content={new URL(socialImage, siteURL).href} />}
     <link rel="alternate" type="application/rss+xml" title="Poker Vlog RSS" href={`${Astro.site}${import.meta.env.BASE_URL}rss.xml`} />
     <link rel="icon" type="image/svg+xml" href={`${import.meta.env.BASE_URL}favicon.svg`} />
   </head>
@@ -63,7 +66,7 @@ const fullTitle = `${title} | Free Poker Tracker & Strategy`;
           '@type': 'Article',
           headline: title,
           description: description,
-          image: image ? new URL(image, siteURL).href : undefined,
+          image: socialImage ? new URL(socialImage, siteURL).href : undefined,
           datePublished: publishedTime,
           dateModified: publishedTime,
           author: { '@type': 'Person', name: 'Poker Vlogger' },
