@@ -34,7 +34,7 @@ const relatedVlogs = allVlogs.filter(v => v.id !== vlog.id).slice(0, 2);
 <BaseLayout
   title={title}
   description={seo_description || excerpt}
-  image={image || `${import.meta.env.BASE_URL}images/${slug}.svg`}
+  image={image || `${import.meta.env.BASE_URL}images/${slug}.png`}
   type="article"
   publishedTime={date.toISOString()}
   tags={tags}
@@ -46,7 +46,7 @@ const relatedVlogs = allVlogs.filter(v => v.id !== vlog.id).slice(0, 2);
     <article>
       <!-- Cover Image -->
       <img
-        src={`${import.meta.env.BASE_URL}images/${slug}.svg`}
+        src={`${import.meta.env.BASE_URL}images/${slug}.png`}
         alt={title}
         class="article-cover"
         width="720"
