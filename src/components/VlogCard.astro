@@ -19,7 +19,7 @@ function formatDate(d: Date): string {
 <a href={`${import.meta.env.BASE_URL}vlog/${slug}`} class="vlog-card-wrapper">
   <article class="vlog-card">
     <img
-      src={`${import.meta.env.BASE_URL}images/${slug}.png`}
+      src={vlog.data.image || `${import.meta.env.BASE_URL}images/${slug}.png`}
       alt={title}
       class="vlog-card-thumb"
       width="80"
