@@ -12,6 +12,7 @@
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
@@ -422,6 +423,21 @@ function generateCoverSvg(title, slug) {
   return svgPath;
 }
 
+/**
+ * 将 SVG 封面转换为 PNG（用于社交媒体 OG 卡片，Twitter/X 等平台不支持 SVG）
+ */
+function generateCoverPng(svgPath, slug) {
+  const IMAGES_DIR = path.resolve(__dirname, '..', 'public', 'images');
+  const pngPath = path.join(IMAGES_DIR, `${slug}.png`);
+  try {
+    execSync(`rsvg-convert -w 1200 -h 630 -o "${pngPath}" "${svgPath}"`, { stdio: 'pipe' });
+    return pngPath;
+  } catch (err) {
+    log(`PNG 转换失败 (rsvg-convert): ${err.message}`);
+    return null;
+  }
+}
+
 // 由于 Zod 的 refine 要求 excerpt 不能超过 160 字符，这里必须截断
 function escapeYaml(str) {
   return str.replace(/"/g, '\\"').replace(/\n/g, ' ');
@@ -483,13 +499,17 @@ async function main() {
     // 生成 SVG 封面图
     const svgPath = generateCoverSvg(titleFromContent, slug);
 
+    // 同步生成 PNG 封面图（用于 OG/Twitter 卡片）
+    const pngPath = generateCoverPng(svgPath, slug);
+
     log(`vlog 已生成: ${filePath}`);
     log(`封面图已生成: ${svgPath}`);
+    if (pngPath) log(`PNG 封面图已生成: ${pngPath}`);
     log(`标题: ${titleFromContent}`);
     log(`标签: ${tags.join(', ')}`);
     log(`字数: ${content.length}`);
 
-    return { success: true, filePath, svgPath, title: titleFromContent, slug };
+    return { success: true, filePath, svgPath, pngPath, title: titleFromContent, slug };
   } catch (err) {
     logError(err.message);
     process.exit(1);

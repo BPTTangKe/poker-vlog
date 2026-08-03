@@ -8,3 +8,4 @@ dist/
 node_modules/
 tweet-error.png
 x-debug.png
+scripts/git-askpass.sh
