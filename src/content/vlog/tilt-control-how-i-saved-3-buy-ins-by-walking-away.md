@@ -3,7 +3,7 @@ title: "Tilt Control: How I Saved 3 Buy-ins by Walking Away"
 date: 2026-07-21
 excerpt: "Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send"
 tags: ["tournament", "cash-game", "bankroll", "mental-game"]
-image: "/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away.svg"
+image: "/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away.png"
 seo_description: "Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send"
 ---
 

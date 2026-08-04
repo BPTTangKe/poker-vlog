@@ -3,7 +3,7 @@ title: "The Mental Game: Dealing with Downswings Like a Pro"
 date: 2026-07-26
 excerpt: "Tilt has cost me more money than any bad run of cards ever could. Today I want to share the three most expensive tilt-induced mistakes I've made, and the system"
 tags: ["bankroll", "mental-game", "bad-beat"]
-image: "/images/the-mental-game-dealing-with-downswings-like-a-pro-2026-07-26.svg"
+image: "/images/the-mental-game-dealing-with-downswings-like-a-pro-2026-07-26.png"
 seo_description: "Tilt has cost me more money than any bad run of cards ever could. Today I want to share the three most expensive tilt-induced mistakes I've made, and the system"
 ---
 

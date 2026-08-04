@@ -3,7 +3,7 @@ title: "现金局中的位置优势：从 UTG 到 BTN 的完整策略指南"
 date: 2026-06-24
 excerpt: "位置是德州扑克中最重要的优势之一。本文将深入分析从枪口位到按钮位的完整打法调整策略，帮你最大化位置价值。"
 tags: ["poker-strategy", "cash-game", "position"]
-image: "/images/cash-game-position-strategy.svg"
+image: "/images/cash-game-position-strategy.png"
 seo_description: "深入分析德州扑克现金局中从UTG到BTN各位置的完整策略，包括起手牌范围、3bet频率和翻后打法调整。"
 ---
 

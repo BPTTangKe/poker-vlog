@@ -3,7 +3,7 @@ title: "Hand Review: The Biggest Pot I Ever Lost (and What I Learned)"
 date: 2026-07-27
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "hand-analysis", "math"]
-image: "/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-07-27.svg"
+image: "/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-07-27.png"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
 

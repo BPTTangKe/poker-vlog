@@ -3,7 +3,7 @@ title: "Sunday Million Deep Run: Key Hands from My Tournament"
 date: 2026-07-05
 excerpt: "Tournament poker is a different beast from cash games. The ICM pressure changes everything — especially near the bubble and final table. Here's what I've learne"
 tags: ["tournament", "cash-game", "bankroll", "strategy"]
-image: "/images/sunday-million-deep-run-key-hands-from-my-tournament.svg"
+image: "/images/sunday-million-deep-run-key-hands-from-my-tournament.png"
 seo_description: "Tournament poker is a different beast from cash games. The ICM pressure changes everything — especially near the bubble and final table. Here's what I've learne"
 ---
 

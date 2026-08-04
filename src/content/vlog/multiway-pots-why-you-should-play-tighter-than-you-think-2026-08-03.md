@@ -3,7 +3,7 @@ title: "Multiway Pots: Why You Should Play Tighter Than You Think"
 date: 2026-08-03
 excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 tags: ["bankroll", "math"]
-image: "/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-08-03.svg"
+image: "/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-08-03.png"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
 

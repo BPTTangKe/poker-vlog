@@ -429,11 +429,28 @@ function generateCoverSvg(title, slug) {
 function generateCoverPng(svgPath, slug) {
   const IMAGES_DIR = path.resolve(__dirname, '..', 'public', 'images');
   const pngPath = path.join(IMAGES_DIR, `${slug}.png`);
+
+  // 探测 rsvg-convert 路径，兼容不同环境
+  const rsvgPaths = ['/opt/homebrew/bin/rsvg-convert', '/usr/local/bin/rsvg-convert', 'rsvg-convert'];
+  let rsvgCmd = null;
+  for (const p of rsvgPaths) {
+    try {
+      execSync(`test -x "${p}" || command -v "${p}" >/dev/null 2>&1`, { stdio: 'pipe' });
+      rsvgCmd = p;
+      break;
+    } catch {}
+  }
+
+  if (!rsvgCmd) {
+    log('rsvg-convert 未找到，跳过 PNG 转换');
+    return null;
+  }
+
   try {
-    execSync(`rsvg-convert -w 1200 -h 630 -o "${pngPath}" "${svgPath}"`, { stdio: 'pipe' });
+    execSync(`"${rsvgCmd}" -w 1200 -h 630 -o "${pngPath}" "${svgPath}"`, { stdio: 'pipe' });
     return pngPath;
   } catch (err) {
-    log(`PNG 转换失败 (rsvg-convert): ${err.message}`);
+    log(`PNG 转换失败: ${err.message}`);
     return null;
   }
 }
@@ -473,7 +490,7 @@ async function main() {
     // Build frontmatter — 不包含 title 因为 title 从首行 # 提取
     const titleFromContent = topic;
 
-    const imagePath = `/images/${slug}.svg`;
+    const imagePath = `/images/${slug}.png`;
 
     const frontmatter = [
       '---',

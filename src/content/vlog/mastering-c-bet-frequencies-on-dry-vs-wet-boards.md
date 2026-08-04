@@ -3,7 +3,7 @@ title: "Mastering C-Bet Frequencies on Dry vs Wet Boards"
 date: 2026-07-08
 excerpt: "The continuation bet is the most frequently used weapon in a poker player's arsenal. But mindlessly c-betting 100% of flops is a leak that costs serious money.."
 tags: ["preflop", "cbet", "bankroll", "strategy"]
-image: "/images/mastering-c-bet-frequencies-on-dry-vs-wet-boards.svg"
+image: "/images/mastering-c-bet-frequencies-on-dry-vs-wet-boards.png"
 seo_description: "The continuation bet is the most frequently used weapon in a poker player's arsenal. But mindlessly c-betting 100% of flops is a leak that costs serious money.."
 ---
 

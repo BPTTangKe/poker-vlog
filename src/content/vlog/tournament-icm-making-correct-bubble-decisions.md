@@ -3,7 +3,7 @@ title: "Tournament ICM: Making Correct Bubble Decisions"
 date: 2026-06-30
 excerpt: "Tournament poker is a different beast from cash games. The ICM pressure changes everything — especially near the bubble and final table. Here's what I've learne"
 tags: ["tournament", "cash-game", "bankroll", "strategy"]
-image: "/images/tournament-icm-making-correct-bubble-decisions.svg"
+image: "/images/tournament-icm-making-correct-bubble-decisions.png"
 seo_description: "Tournament poker is a different beast from cash games. The ICM pressure changes everything — especially near the bubble and final table. Here's what I've learne"
 ---
 

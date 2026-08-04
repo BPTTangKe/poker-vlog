@@ -3,7 +3,7 @@ title: "2026 WSOP 主赛事深度复盘：冠军的关键三手牌"
 date: 2026-06-25
 excerpt: "复盘今年 WSOP 主赛事决赛桌上改变战局的三手关键牌，分析冠军在每个决策节点的思维过程和 GTO 偏差。"
 tags: ["tournament", "wsop", "hand-analysis"]
-image: "/images/wsop-main-event-recap.svg"
+image: "/images/wsop-main-event-recap.png"
 seo_description: "2026年WSOP主赛事决赛桌深度复盘，逐手分析冠军的三手关键牌，揭示顶级锦标赛选手的决策逻辑和GTO策略应用。"
 ---
 

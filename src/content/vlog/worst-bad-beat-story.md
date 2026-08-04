@@ -3,7 +3,7 @@ title: "我的史上最惨 Bad Beat：AA vs KK 翻前全下，胜率 81% 被翻�
 date: 2026-06-29
 excerpt: "每个扑克玩家都有自己的 bad beat 故事。今天分享我的一个经典案例，以及如何从毁灭性的坏运气中学习和成长。"
 tags: ["bad-beat", "mental-game", "cash-game"]
-image: "/images/worst-bad-beat-story.svg"
+image: "/images/worst-bad-beat-story.png"
 seo_description: "在现金局中AA对KK翻前全下被翻盘的bad beat故事，以及职业牌手如何从极端坏运气中保持心理稳定和策略一致性。"
 ---
 

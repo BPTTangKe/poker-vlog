@@ -3,7 +3,7 @@ title: "资金管理 101：为什么 90% 的扑克玩家都在破产边缘"
 date: 2026-06-26
 excerpt: "资金管理（Bankroll Management）是区分职业玩家和娱乐玩家的第一道分水岭。本文提供一套可执行的资金管理框架。"
 tags: ["bankroll", "poker-strategy", "mental-game"]
-image: "/images/bankroll-management-basics.svg"
+image: "/images/bankroll-management-basics.png"
 seo_description: "完整的德州扑克资金管理指南：计算所需买入量、下风期应对策略、升级降级规则，帮你远离破产风险。"
 ---
 
