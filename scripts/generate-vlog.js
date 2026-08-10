@@ -519,6 +519,16 @@ async function main() {
     // 同步生成 PNG 封面图（用于 OG/Twitter 卡片）
     const pngPath = generateCoverPng(svgPath, slug);
 
+    // 同步复制到根目录 images/，确保 GitHub raw 端点可直接访问（符号链接在 GitHub 上不生效）
+    const ROOT_IMAGES_DIR = path.resolve(__dirname, '..', 'images');
+    if (!fs.existsSync(ROOT_IMAGES_DIR)) {
+      fs.mkdirSync(ROOT_IMAGES_DIR, { recursive: true });
+    }
+    fs.copyFileSync(svgPath, path.join(ROOT_IMAGES_DIR, `${slug}.svg`));
+    if (pngPath) {
+      fs.copyFileSync(pngPath, path.join(ROOT_IMAGES_DIR, `${slug}.png`));
+    }
+
     log(`vlog 已生成: ${filePath}`);
     log(`封面图已生成: ${svgPath}`);
     if (pngPath) log(`PNG 封面图已生成: ${pngPath}`);
