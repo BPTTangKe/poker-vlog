@@ -36,6 +36,9 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          # GitHub Pages 部署在 /poker-vlog/ 子路径，必须覆盖 base 使资源路径带前缀
+          BASE_PATH: '/poker-vlog/'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

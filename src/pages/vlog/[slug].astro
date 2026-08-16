@@ -25,6 +25,9 @@ function formatDate(d: Date): string {
 
 const readTime = Math.max(1, Math.round(excerpt.length / 1200));
 
+/* 封面图：image 为 frontmatter 硬编码绝对路径，需拼接 BASE_URL 前缀以适配 GitHub Pages 子路径部署 */
+const coverImage = image ? `${import.meta.env.BASE_URL}${image.replace(/^\//, '')}` : `${import.meta.env.BASE_URL}images/${slug}.png`;
+
 /* Get related vlogs (2 most recent excluding current) */
 const allVlogs = await getCollection('vlog');
 allVlogs.sort((a, b) => b.data.date.getTime() - a.data.date.getTime());
@@ -46,7 +49,7 @@ const relatedVlogs = allVlogs.filter(v => v.id !== vlog.id).slice(0, 2);
     <article>
       <!-- Cover Image -->
       <img
-        src={image || `${import.meta.env.BASE_URL}images/${slug}.png`}
+        src={coverImage}
         alt={title}
         class="article-cover"
         width="720"
