@@ -29,7 +29,7 @@ AIGC:
 
 ### 2026-08-22 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
 
-![Tilt Control](images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.png)
+![Tilt Control](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.png)
 
 [Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.md)
 
