@@ -17,13 +17,13 @@ AIGC:
 
 ### 2026-08-24 — Online vs Live Poker: Adjusting Your Strategy for Each
 
-![Online vs Live Poker](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.png)
+![Online vs Live Poker](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.md)
 
 ### 2026-08-23 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
-![Building a Study Routine](images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-23.png)
+![Building a Study Routine](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-23.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-23.md)
 
@@ -35,7 +35,7 @@ AIGC:
 
 ### 2026-08-21 — Bankroll Management: How Many Buy-ins Do You Really Need?
 
-![Bankroll Management](images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-08-21.png)
+![Bankroll Management](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-08-21.png)
 
 [Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-08-21.md)
 
