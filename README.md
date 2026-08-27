@@ -15,6 +15,12 @@ AIGC:
 
 ## Latest Vlogs
 
+### 2026-08-27 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
+
+![Tilt Control](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-27.png)
+
+[Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-27.md)
+
 ### 2026-08-24 — Online vs Live Poker: Adjusting Your Strategy for Each
 
 ![Online vs Live Poker](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.png)
