@@ -15,6 +15,12 @@ AIGC:
 
 ## Latest Vlogs
 
+### 2026-08-28 — Check-Raise Bluffing: Board Textures That Favor the Defender
+
+![Check-Raise Bluffing](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-08-28.png)
+
+[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-08-28.md)
+
 ### 2026-08-27 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
 
 ![Tilt Control](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-27.png)
