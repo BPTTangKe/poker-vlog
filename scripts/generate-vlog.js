@@ -19,6 +19,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const VLOG_DIR = path.resolve(__dirname, '..', 'src', 'content', 'vlog');
 const TOPIC_FILE = '/tmp/poker-vlog-topic.txt';
 
+// README 自动更新相关
+const README_PATH = path.resolve(__dirname, '..', 'README.md');
+const README_CDN = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main';
+const README_MAX_ENTRIES = 7;
+const README_SECTION = '## Latest Vlogs';
+
 const POKER_TOPICS = [
   'Preflop 3-Bet Ranges: When to Light 3-Bet',
   'Mastering C-Bet Frequencies on Dry vs Wet Boards',
@@ -455,6 +461,55 @@ function generateCoverPng(svgPath, slug) {
   }
 }
 
+/**
+ * 在 README.md 的 Latest Vlogs 区段头部插入当日 vlog 条目，
+ * 并控制总条数不超过 README_MAX_ENTRIES。
+ * 这是 GitHub 主页封面图能及时更新的关键（脚本必须自动维护 README）。
+ */
+function updateReadme({ slug, title, dateStr }) {
+  if (!fs.existsSync(README_PATH)) {
+    log('README.md 不存在，跳过更新');
+    return;
+  }
+  let readme = fs.readFileSync(README_PATH, 'utf-8');
+
+  const sectionIdx = readme.indexOf(README_SECTION);
+  if (sectionIdx === -1) {
+    log(`README 中未找到 "${README_SECTION}" 标记，跳过更新`);
+    return;
+  }
+
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_CDN}/images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+
+  // 幂等：已存在当日条目则跳过
+  const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);
+  if (headAfterSection.includes(`### ${dateStr} — ${title}`)) {
+    log('README 已包含当日条目，跳过更新');
+    return;
+  }
+
+  // 在 Latest Vlogs 区段头部插入（即 "## Latest Vlogs" 之后、原第一个条目之前）
+  const insertPos = sectionIdx + README_SECTION.length;
+  readme = readme.slice(0, insertPos) + '\n\n' + entry.trimEnd() + readme.slice(insertPos);
+
+  // 限制条数：重写 Latest Vlogs 区段，仅保留最新的 MAX 条
+  const secStart = readme.indexOf(README_SECTION) + README_SECTION.length;
+  const nextSectionIdx = readme.indexOf('\n## ', secStart);
+  const secEnd = nextSectionIdx === -1 ? readme.length : nextSectionIdx;
+  const sectionBody = readme.slice(secStart, secEnd); // 以 \n 开头，含各 "### ..." 块
+  const blocks = sectionBody.split(/\n### /).filter(s => s.trim().length > 0);
+
+  if (blocks.length > README_MAX_ENTRIES) {
+    const trimmedBlocks = blocks.slice(0, README_MAX_ENTRIES).map(b => '### ' + b.trimEnd());
+    const newSection = '\n' + trimmedBlocks.join('\n\n') + '\n\n';
+    readme = readme.slice(0, secStart) + newSection + readme.slice(secEnd);
+    log(`README Latest Vlogs 已裁剪为 ${README_MAX_ENTRIES} 条`);
+  }
+
+  fs.writeFileSync(README_PATH, readme, 'utf-8');
+  log(`README 已更新，新增条目: ${title} (${dateStr})`);
+}
+
 // 由于 Zod 的 refine 要求 excerpt 不能超过 160 字符，这里必须截断
 function escapeYaml(str) {
   return str.replace(/"/g, '\\"').replace(/\n/g, ' ');
@@ -535,6 +590,9 @@ async function main() {
     log(`标题: ${titleFromContent}`);
     log(`标签: ${tags.join(', ')}`);
     log(`字数: ${content.length}`);
+
+    // 同步更新 README.md 的 Latest Vlogs 区段（GitHub 主页封面图自动跟进）
+    updateReadme({ slug, title: titleFromContent, dateStr });
 
     return { success: true, filePath, svgPath, pngPath, title: titleFromContent, slug };
   } catch (err) {

@@ -15,6 +15,12 @@ AIGC:
 
 ## Latest Vlogs
 
+### 2026-08-29 — Exploiting Weak Players: How to Maximize Value Against Calling Stations
+
+![Exploiting Weak Players: How to Maximize Value Against Calling Stations](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-08-29.png)
+
+[Read full article](src/content/vlog/exploiting-weak-players-how-to-maximize-value-against-callin-2026-08-29.md)
+
 ### 2026-08-28 — Check-Raise Bluffing: Board Textures That Favor the Defender
 
 ![Check-Raise Bluffing](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-08-28.png)
