@@ -14,6 +14,11 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-08-30 — Continuation Betting in 3-Bet Pots: Sizing and Frequency
+
+![Continuation Betting in 3-Bet Pots: Sizing and Frequency](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-08-30.png)
+
+[Read full article](src/content/vlog/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-08-30.md)
 
 ### 2026-08-29 — Exploiting Weak Players: How to Maximize Value Against Calling Stations
 
@@ -51,11 +56,6 @@ AIGC:
 
 [Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.md)
 
-### 2026-08-21 — Bankroll Management: How Many Buy-ins Do You Really Need?
-
-![Bankroll Management](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-08-21.png)
-
-[Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-08-21.md)
 
 ## About
 
