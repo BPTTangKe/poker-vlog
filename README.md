@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-08-31 — Online vs Live Poker: Adjusting Your Strategy for Each
+
+![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-31.png)
+
+[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-31.md)
+
 ### 2026-08-30 — Continuation Betting in 3-Bet Pots: Sizing and Frequency
 
 ![Continuation Betting in 3-Bet Pots: Sizing and Frequency](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-08-30.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Building a Study Routine](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-23.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-23.md)
-
-### 2026-08-22 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
-
-![Tilt Control](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.png)
-
-[Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.md)
 
 
 ## About
