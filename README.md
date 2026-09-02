@@ -14,6 +14,18 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-02 — Floating the Flop: When and Why to Call Without a Hand
+
+![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-02.png)
+
+[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-02.md)
+
+### 2026-09-01 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
+
+![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-01.png)
+
+[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-01.md)
+
 ### 2026-08-31 — Online vs Live Poker: Adjusting Your Strategy for Each
 
 ![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-31.png)
@@ -43,18 +55,6 @@ AIGC:
 ![Tilt Control](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-27.png)
 
 [Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-27.md)
-
-### 2026-08-24 — Online vs Live Poker: Adjusting Your Strategy for Each
-
-![Online vs Live Poker](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.png)
-
-[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.md)
-
-### 2026-08-23 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
-
-![Building a Study Routine](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-23.png)
-
-[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-23.md)
 
 
 ## About
