@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-03 — Tournament ICM: Making Correct Bubble Decisions
+
+![Tournament ICM: Making Correct Bubble Decisions](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tournament-icm-making-correct-bubble-decisions-2026-09-03.png)
+
+[Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-03.md)
+
 ### 2026-09-02 — Floating the Flop: When and Why to Call Without a Hand
 
 ![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-02.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Check-Raise Bluffing](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-08-28.png)
 
 [Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-08-28.md)
-
-### 2026-08-27 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
-
-![Tilt Control](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-27.png)
-
-[Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-27.md)
 
 
 ## About
