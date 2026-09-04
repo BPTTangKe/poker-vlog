@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-04 — Bad Beats and Variance: The Math That Keeps You Sane
+
+![Bad Beats and Variance: The Math That Keeps You Sane](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-04.png)
+
+[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-04.md)
+
 ### 2026-09-03 — Tournament ICM: Making Correct Bubble Decisions
 
 ![Tournament ICM: Making Correct Bubble Decisions](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tournament-icm-making-correct-bubble-decisions-2026-09-03.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Exploiting Weak Players: How to Maximize Value Against Calling Stations](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-08-29.png)
 
 [Read full article](src/content/vlog/exploiting-weak-players-how-to-maximize-value-against-callin-2026-08-29.md)
-
-### 2026-08-28 — Check-Raise Bluffing: Board Textures That Favor the Defender
-
-![Check-Raise Bluffing](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-08-28.png)
-
-[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-08-28.md)
 
 
 ## About
