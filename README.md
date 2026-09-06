@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-06 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
+
+![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-06.png)
+
+[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-06.md)
+
 ### 2026-09-04 — Bad Beats and Variance: The Math That Keeps You Sane
 
 ![Bad Beats and Variance: The Math That Keeps You Sane](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-04.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Continuation Betting in 3-Bet Pots: Sizing and Frequency](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-08-30.png)
 
 [Read full article](src/content/vlog/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-08-30.md)
-
-### 2026-08-29 — Exploiting Weak Players: How to Maximize Value Against Calling Stations
-
-![Exploiting Weak Players: How to Maximize Value Against Calling Stations](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-08-29.png)
-
-[Read full article](src/content/vlog/exploiting-weak-players-how-to-maximize-value-against-callin-2026-08-29.md)
 
 
 ## About
