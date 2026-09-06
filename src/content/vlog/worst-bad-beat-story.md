@@ -7,6 +7,8 @@ image: "/images/worst-bad-beat-story.png"
 seo_description: "在现金局中AA对KK翻前全下被翻盘的bad beat故事，以及职业牌手如何从极端坏运气中保持心理稳定和策略一致性。"
 ---
 
+![我的史上最惨 Bad Beat：AA vs KK 翻前全下，胜率 81% 被翻盘](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/worst-bad-beat-story.png)
+
 ## 那手牌
 
 时间回到 2025 年的一个周五晚上，$5/$10 现场现金局。我已经打了 4 个小时，水上 $2,300，状态正佳。

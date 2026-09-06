@@ -7,6 +7,8 @@ image: "/images/gto-strategy-introduction.png"
 seo_description: "德州扑克GTO策略入门指南：频率与范围、混合策略、最小防守频率MDF的概念解释，以及如何在实战中利用GTO概念提升决策质量。"
 ---
 
+![GTO 策略入门：为什么你的扑克思维需要一次升级](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-strategy-introduction.png)
+
 ## GTO 到底是什么？
 
 GTO（Game Theory Optimal，博弈论最优）策略的目标非常简洁：**一个无论对手怎么打都无法被剥削的策略**。

@@ -7,6 +7,8 @@ image: "/images/online-vs-live-poker.png"
 seo_description: "深度对比线上德州扑克和现场扑克的核心差异：信息获取、剥削策略、波动处理和技术工具使用，帮你双线作战。"
 ---
 
+![线上 vs 现场扑克：两种完全不同的游戏](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker.png)
+
 ## 同样是扑克，不同的战场
 
 很多线上玩家第一次走进扑克室时都有一个错觉："网上打 NL200 都能赢，现场 $1/$2 肯定轻松碾压。"然后他们被一个只会玩 ATC（任何两张牌）的老大爷清空了 3 个买入。

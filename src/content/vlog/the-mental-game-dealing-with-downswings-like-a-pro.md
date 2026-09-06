@@ -9,6 +9,8 @@ seo_description: "Tilt has cost me more money than any bad run of cards ever cou
 
 # The Mental Game: Dealing with Downswings Like a Pro
 
+![The Mental Game: Dealing with Downswings Like a Pro](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/the-mental-game-dealing-with-downswings-like-a-pro.png)
+
 Tilt has cost me more money than any bad run of cards ever could. Today I want to share the three most expensive tilt-induced mistakes I've made, and the system I built to stop them from happening again.
 
 ## The $2,400 Spew

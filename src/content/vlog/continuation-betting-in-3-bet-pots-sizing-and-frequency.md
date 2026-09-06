@@ -9,6 +9,8 @@ seo_description: "Preflop play is where most money is won or lost before the flo
 
 # Continuation Betting in 3-Bet Pots: Sizing and Frequency
 
+![Continuation Betting in 3-Bet Pots: Sizing and Frequency](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/continuation-betting-in-3-bet-pots-sizing-and-frequency.png)
+
 Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviating from standard charts and adding light 3-bets to your arsenal.
 
 ## The Standard 3-Bet Range

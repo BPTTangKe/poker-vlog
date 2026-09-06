@@ -7,6 +7,8 @@ image: "/images/cash-game-position-strategy.png"
 seo_description: "深入分析德州扑克现金局中从UTG到BTN各位置的完整策略，包括起手牌范围、3bet频率和翻后打法调整。"
 ---
 
+![现金局中的位置优势：从 UTG 到 BTN 的完整策略指南](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/cash-game-position-strategy.png)
+
 ## 为什么位置是扑克中最宝贵的资产
 
 在德州扑克中，位置（Position）是少数几个你可以完全控制的因素之一。坐在按钮位（Button）意味着你每一轮都在最后行动——你看到所有人的动作后再做决定。这种信息优势在长期会转化为巨大的 EV（期望值）。

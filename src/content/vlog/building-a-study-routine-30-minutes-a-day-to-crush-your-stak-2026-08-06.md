@@ -9,6 +9,8 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
+![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-08-06.png)
+
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 
 ## The Concept

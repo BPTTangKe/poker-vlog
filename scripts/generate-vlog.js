@@ -558,7 +558,11 @@ async function main() {
       '---',
     ].join('\n');
 
-    const fullContent = `${frontmatter}\n\n${content}\n`;
+    // 在正文标题后插入 CDN 封面图：GitHub 渲染该 .md 时不解析 frontmatter 的 image 字段（/images/ 域根绝对路径会 404），
+    // README 已用 jsDelivr CDN 绝对 URL 方案，此处正文同样插入 CDN 封面，保证 GitHub 上文章页封面可显示。
+    const coverLine = `![${titleFromContent}](${README_CDN}/images/${slug}.png)`;
+    const contentWithCover = content.replace(/^(# [^\n]+)(\n)/, `$1$2\n${coverLine}\n`);
+    const fullContent = `${frontmatter}\n\n${contentWithCover}\n`;
 
     // Ensure directory exists
     if (!fs.existsSync(VLOG_DIR)) {

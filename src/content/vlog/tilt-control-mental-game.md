@@ -7,6 +7,8 @@ image: "/images/tilt-control-mental-game.png"
 seo_description: "职业德州扑克玩家分享Tilt管理技巧：识别情绪触发点、建立赛前routine、使用STOP技术中断负面情绪循环。"
 ---
 
+![失控边缘：职业牌手如何管理 Tilt 和情绪波动](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-mental-game.png)
+
 ## Tilt 的真面目
 
 Tilt 不仅仅是"生气"。它是任何让你偏离最优策略（GTO/剥削性）的情绪状态。它的表现远比大多数人想象的更隐蔽：

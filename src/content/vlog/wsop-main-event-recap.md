@@ -7,6 +7,8 @@ image: "/images/wsop-main-event-recap.png"
 seo_description: "2026年WSOP主赛事决赛桌深度复盘，逐手分析冠军的三手关键牌，揭示顶级锦标赛选手的决策逻辑和GTO策略应用。"
 ---
 
+![2026 WSOP 主赛事深度复盘：冠军的关键三手牌](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/wsop-main-event-recap.png)
+
 ## 背景
 
 2026 年 WSOP 主赛事刚刚落幕，来自德国的职业牌手 Markus "The Machine" Weber 在 8,932 名参赛者中脱颖而出，赢得了 $12.4M 的头奖。今天我们来复盘他在决赛桌上改变战局的三手牌。

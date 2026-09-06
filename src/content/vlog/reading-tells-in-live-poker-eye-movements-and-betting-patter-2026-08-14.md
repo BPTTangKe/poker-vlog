@@ -9,6 +9,8 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Reading Tells in Live Poker: Eye Movements and Betting Patterns
 
+![Reading Tells in Live Poker: Eye Movements and Betting Patterns](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-08-14.png)
+
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 
 ## The Concept
