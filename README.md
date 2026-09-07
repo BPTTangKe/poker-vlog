@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-07 — Multiway Pots: Why You Should Play Tighter Than You Think
+
+![Multiway Pots: Why You Should Play Tighter Than You Think](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-07.png)
+
+[Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-07.md)
+
 ### 2026-09-06 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
 ![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-06.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-31.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-31.md)
-
-### 2026-08-30 — Continuation Betting in 3-Bet Pots: Sizing and Frequency
-
-![Continuation Betting in 3-Bet Pots: Sizing and Frequency](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-08-30.png)
-
-[Read full article](src/content/vlog/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-08-30.md)
 
 
 ## About
