@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-08 — Online vs Live Poker: Adjusting Your Strategy for Each
+
+![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-08.png)
+
+[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-08.md)
+
 ### 2026-09-07 — Multiway Pots: Why You Should Play Tighter Than You Think
 
 ![Multiway Pots: Why You Should Play Tighter Than You Think](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-07.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-01.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-01.md)
-
-### 2026-08-31 — Online vs Live Poker: Adjusting Your Strategy for Each
-
-![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-31.png)
-
-[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-31.md)
 
 
 ## About
