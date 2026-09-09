@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-09 — The Mental Game: Dealing with Downswings Like a Pro
+
+![The Mental Game: Dealing with Downswings Like a Pro](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/the-mental-game-dealing-with-downswings-like-a-pro-2026-09-09.png)
+
+[Read full article](src/content/vlog/the-mental-game-dealing-with-downswings-like-a-pro-2026-09-09.md)
+
 ### 2026-09-08 — Online vs Live Poker: Adjusting Your Strategy for Each
 
 ![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-08.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-02.png)
 
 [Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-02.md)
-
-### 2026-09-01 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
-
-![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-01.png)
-
-[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-01.md)
 
 
 ## About
