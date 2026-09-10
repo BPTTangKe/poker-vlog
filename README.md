@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-10 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
+
+![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/from-001002-to-12-my-5-year-poker-journey-2026-09-10.png)
+
+[Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-09-10.md)
+
 ### 2026-09-09 — The Mental Game: Dealing with Downswings Like a Pro
 
 ![The Mental Game: Dealing with Downswings Like a Pro](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/the-mental-game-dealing-with-downswings-like-a-pro-2026-09-09.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Tournament ICM: Making Correct Bubble Decisions](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tournament-icm-making-correct-bubble-decisions-2026-09-03.png)
 
 [Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-03.md)
-
-### 2026-09-02 — Floating the Flop: When and Why to Call Without a Hand
-
-![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-02.png)
-
-[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-02.md)
 
 
 ## About
