@@ -561,7 +561,10 @@ async function main() {
     // 在正文标题后插入 CDN 封面图：GitHub 渲染该 .md 时不解析 frontmatter 的 image 字段（/images/ 域根绝对路径会 404），
     // README 已用 jsDelivr CDN 绝对 URL 方案，此处正文同样插入 CDN 封面，保证 GitHub 上文章页封面可显示。
     const coverLine = `![${titleFromContent}](${README_CDN}/images/${slug}.png)`;
-    const contentWithCover = content.replace(/^(# [^\n]+)(\n)/, `$1$2\n${coverLine}\n`);
+    // 注意：必须用回调函数形式替换，不能把 coverLine 拼进替换模板字符串。
+    // 标题含 $ 时（如 "$0.01/$0.02"、"$1/$2"），$ + 数字会被 String.replace 当作捕获组引用解析，
+    // 导致封面图 markdown 语法被破坏，GitHub 上渲染 .md 时图片无法显示。
+    const contentWithCover = content.replace(/^(# [^\n]+)(\n)/, (_m, titleLine, newline) => `${titleLine}${newline}\n${coverLine}\n`);
     const fullContent = `${frontmatter}\n\n${contentWithCover}\n`;
 
     // Ensure directory exists
