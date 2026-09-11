@@ -93,6 +93,15 @@ else
   # 尝试推送到 origin
   if git push origin HEAD 2>&1 | tee -a "$LOG_FILE"; then
     log "Git 推送成功"
+
+    # 封面图 CDN 预热：推送后立即触发 jsDelivr 首次拉取，
+    # 消除新封面在 GitHub 上"短暂不显示"的 404 缓存窗口
+    log "预热 jsDelivr 封面图..."
+    if ! node scripts/warm-cdn.mjs 2>&1 | tee -a "$LOG_FILE"; then
+      log_error "CDN 预热存在失败项（将重试或由下次构建覆盖）"
+    else
+      log "CDN 预热完成"
+    fi
   else
     log_error "Git 推送失败，社交媒体发布将继续进行"
   fi
