@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-12 — Bankroll Management: How Many Buy-ins Do You Really Need?
+
+![Bankroll Management: How Many Buy-ins Do You Really Need?](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-09-12.png)
+
+[Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-09-12.md)
+
 ### 2026-09-11 — Floating the Flop: When and Why to Call Without a Hand
 
 ![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-11.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-06.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-06.md)
-
-### 2026-09-04 — Bad Beats and Variance: The Math That Keeps You Sane
-
-![Bad Beats and Variance: The Math That Keeps You Sane](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-04.png)
-
-[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-04.md)
 
 
 ## About
