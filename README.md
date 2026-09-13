@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-13 — Tournament ICM: Making Correct Bubble Decisions
+
+![Tournament ICM: Making Correct Bubble Decisions](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tournament-icm-making-correct-bubble-decisions-2026-09-13.png)
+
+[Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-13.md)
+
 ### 2026-09-12 — Bankroll Management: How Many Buy-ins Do You Really Need?
 
 ![Bankroll Management: How Many Buy-ins Do You Really Need?](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-09-12.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Multiway Pots: Why You Should Play Tighter Than You Think](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-07.png)
 
 [Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-07.md)
-
-### 2026-09-06 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
-
-![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-06.png)
-
-[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-09-06.md)
 
 
 ## About
