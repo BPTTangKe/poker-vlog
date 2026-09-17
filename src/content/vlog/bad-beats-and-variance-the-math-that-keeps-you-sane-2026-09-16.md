@@ -1,4 +1,10 @@
 ---
+title: "Bad Beats and Variance: The Math That Keeps You Sane"
+date: 2026-09-16
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+tags: ["bankroll", "bad-beat", "math"]
+image: "/images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.png"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
 AIGC:
     Label: "1"
     ContentProducer: 001191440300708461136T1XGW3
