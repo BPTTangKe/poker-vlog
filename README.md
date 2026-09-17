@@ -14,9 +14,27 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-17 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
+
+![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-09-17.png)
+
+[Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-09-17.md)
+
+### 2026-09-16 — Bad Beats and Variance: The Math That Keeps You Sane
+
+![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.png)
+
+[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.md)
+
+### 2026-09-16 — Floating the Flop: When and Why to Call Without a Hand
+
+![Floating the Flop: When and Why to Call Without a Hand](images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-16.png)
+
+[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-16.md)
+
 ### 2026-09-14 — Multiway Pots: Why You Should Play Tighter Than You Think
 
-![Multiway Pots: Why You Should Play Tighter Than You Think](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-14.png)
+![Multiway Pots: Why You Should Play Tighter Than You Think](images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-14.png)
 
 [Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-14.md)
 
@@ -37,24 +55,6 @@ AIGC:
 ![Floating the Flop: When and Why to Call Without a Hand](images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-11.png)
 
 [Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-11.md)
-
-### 2026-09-10 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
-
-![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-09-10.png)
-
-[Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-09-10.md)
-
-### 2026-09-09 — The Mental Game: Dealing with Downswings Like a Pro
-
-![The Mental Game: Dealing with Downswings Like a Pro](images/the-mental-game-dealing-with-downswings-like-a-pro-2026-09-09.png)
-
-[Read full article](src/content/vlog/the-mental-game-dealing-with-downswings-like-a-pro-2026-09-09.md)
-
-### 2026-09-08 — Online vs Live Poker: Adjusting Your Strategy for Each
-
-![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-08.png)
-
-[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-08.md)
 
 
 ## About

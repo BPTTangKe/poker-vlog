@@ -9,7 +9,7 @@ seo_description: "Bankroll management is the unsexy backbone of professional pok
 
 # Tilt Control: How I Saved 3 Buy-ins by Walking Away
 
-![Tilt Control: How I Saved 3 Buy-ins by Walking Away](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.png)
+![Tilt Control: How I Saved 3 Buy-ins by Walking Away](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-08-22.png)
 
 Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send you broke. Here's the system I've used to never go busto.
 

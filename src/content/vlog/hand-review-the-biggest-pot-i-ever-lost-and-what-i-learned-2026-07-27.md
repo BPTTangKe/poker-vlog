@@ -9,7 +9,7 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-07-27.png)
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-07-27.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 

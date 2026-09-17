@@ -9,7 +9,7 @@ seo_description: "Tournament poker is a different beast from cash games. The ICM
 
 # Sunday Million Deep Run: Key Hands from My Tournament
 
-![Sunday Million Deep Run: Key Hands from My Tournament](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/sunday-million-deep-run-key-hands-from-my-tournament-2026-08-04.png)
+![Sunday Million Deep Run: Key Hands from My Tournament](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/sunday-million-deep-run-key-hands-from-my-tournament-2026-08-04.png)
 
 Tournament poker is a different beast from cash games. The ICM pressure changes everything — especially near the bubble and final table. Here's what I've learned from years of MTT grinding.
 

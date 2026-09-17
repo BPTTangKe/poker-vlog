@@ -7,7 +7,7 @@ image: "/images/cash-game-position-strategy.png"
 seo_description: "深入分析德州扑克现金局中从UTG到BTN各位置的完整策略，包括起手牌范围、3bet频率和翻后打法调整。"
 ---
 
-![现金局中的位置优势：从 UTG 到 BTN 的完整策略指南](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/cash-game-position-strategy.png)
+![现金局中的位置优势：从 UTG 到 BTN 的完整策略指南](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/cash-game-position-strategy.png)
 
 ## 为什么位置是扑克中最宝贵的资产
 

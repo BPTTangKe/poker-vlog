@@ -7,7 +7,7 @@ image: "/images/bankroll-management-basics.png"
 seo_description: "完整的德州扑克资金管理指南：计算所需买入量、下风期应对策略、升级降级规则，帮你远离破产风险。"
 ---
 
-![资金管理 101：为什么 90% 的扑克玩家都在破产边缘](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-basics.png)
+![资金管理 101：为什么 90% 的扑克玩家都在破产边缘](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/bankroll-management-basics.png)
 
 ## 残酷的真相
 

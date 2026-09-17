@@ -9,7 +9,7 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
 
-![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/from-001002-to-12-my-5-year-poker-journey-2026-08-05.png)
+![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/from-001002-to-12-my-5-year-poker-journey-2026-08-05.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 

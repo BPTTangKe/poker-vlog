@@ -7,7 +7,7 @@ image: "/images/online-vs-live-poker.png"
 seo_description: "深度对比线上德州扑克和现场扑克的核心差异：信息获取、剥削策略、波动处理和技术工具使用，帮你双线作战。"
 ---
 
-![线上 vs 现场扑克：两种完全不同的游戏](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker.png)
+![线上 vs 现场扑克：两种完全不同的游戏](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/online-vs-live-poker.png)
 
 ## 同样是扑克，不同的战场
 

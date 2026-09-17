@@ -9,7 +9,7 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Bad Beats and Variance: The Math That Keeps You Sane
 
-![Bad Beats and Variance: The Math That Keeps You Sane](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bad-beats-and-variance-the-math-that-keeps-you-sane.png)
+![Bad Beats and Variance: The Math That Keeps You Sane](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/bad-beats-and-variance-the-math-that-keeps-you-sane.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 

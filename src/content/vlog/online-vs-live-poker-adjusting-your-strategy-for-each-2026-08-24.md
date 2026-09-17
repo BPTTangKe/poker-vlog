@@ -9,7 +9,7 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Online vs Live Poker: Adjusting Your Strategy for Each
 
-![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.png)
+![Online vs Live Poker: Adjusting Your Strategy for Each](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-08-24.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 

@@ -9,7 +9,7 @@ seo_description: "Preflop play is where most money is won or lost before the flo
 
 # Preflop 3-Bet Ranges: When to Light 3-Bet
 
-![Preflop 3-Bet Ranges: When to Light 3-Bet](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/preflop-3-bet-ranges-when-to-light-3-bet.png)
+![Preflop 3-Bet Ranges: When to Light 3-Bet](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/preflop-3-bet-ranges-when-to-light-3-bet.png)
 
 Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviating from standard charts and adding light 3-bets to your arsenal.
 

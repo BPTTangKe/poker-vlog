@@ -9,7 +9,7 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Multiway Pots: Why You Should Play Tighter Than You Think
 
-![Multiway Pots: Why You Should Play Tighter Than You Think](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/multiway-pots-why-you-should-play-tighter-than-you-think.png)
+![Multiway Pots: Why You Should Play Tighter Than You Think](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/multiway-pots-why-you-should-play-tighter-than-you-think.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 

@@ -9,7 +9,7 @@ seo_description: "Bankroll management is the unsexy backbone of professional pok
 
 # Bankroll Management: How Many Buy-ins Do You Really Need?
 
-![Bankroll Management: How Many Buy-ins Do You Really Need?](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-08-25.png)
+![Bankroll Management: How Many Buy-ins Do You Really Need?](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-08-25.png)
 
 Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send you broke. Here's the system I've used to never go busto.
 

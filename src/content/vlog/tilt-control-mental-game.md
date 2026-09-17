@@ -7,7 +7,7 @@ image: "/images/tilt-control-mental-game.png"
 seo_description: "职业德州扑克玩家分享Tilt管理技巧：识别情绪触发点、建立赛前routine、使用STOP技术中断负面情绪循环。"
 ---
 
-![失控边缘：职业牌手如何管理 Tilt 和情绪波动](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-mental-game.png)
+![失控边缘：职业牌手如何管理 Tilt 和情绪波动](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/tilt-control-mental-game.png)
 
 ## Tilt 的真面目
 

@@ -21,7 +21,9 @@ const TOPIC_FILE = '/tmp/poker-vlog-topic.txt';
 
 // README 自动更新相关
 const README_PATH = path.resolve(__dirname, '..', 'README.md');
-const README_CDN = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main';
+// 文章 .md 正文封面图：GitHub 网页渲染时相对路径按文件所在目录解析会 404，因此必须用绝对 URL。
+// 统一改用 GitHub 自家 raw 端点，不再依赖第三方 CDN（jsDelivr 对新 push 的文件存在缓存延迟/失效，会导致裂图）。
+const RAW_BASE = 'https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main';
 const README_MAX_ENTRIES = 7;
 const README_SECTION = '## Latest Vlogs';
 
@@ -479,7 +481,9 @@ function updateReadme({ slug, title, dateStr }) {
     return;
   }
 
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_CDN}/images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  // README 位于仓库根目录，图片直接用相对路径 images/xxx.png：
+  // GitHub 渲染时经自家 camo 代理直取仓库文件，稳定可靠，不依赖任何第三方 CDN。
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);
@@ -558,9 +562,9 @@ async function main() {
       '---',
     ].join('\n');
 
-    // 在正文标题后插入 CDN 封面图：GitHub 渲染该 .md 时不解析 frontmatter 的 image 字段（/images/ 域根绝对路径会 404），
-    // README 已用 jsDelivr CDN 绝对 URL 方案，此处正文同样插入 CDN 封面，保证 GitHub 上文章页封面可显示。
-    const coverLine = `![${titleFromContent}](${README_CDN}/images/${slug}.png)`;
+    // 在正文标题后插入封面图：GitHub 渲染该 .md 时不解析 frontmatter 的 image 字段（/images/ 域根绝对路径会 404），
+    // 故正文封面使用 GitHub raw 绝对 URL，保证 GitHub 网页上文章封面可显示。
+    const coverLine = `![${titleFromContent}](${RAW_BASE}/images/${slug}.png)`;
     // 注意：必须用回调函数形式替换，不能把 coverLine 拼进替换模板字符串。
     // 标题含 $ 时（如 "$0.01/$0.02"、"$1/$2"），$ + 数字会被 String.replace 当作捕获组引用解析，
     // 导致封面图 markdown 语法被破坏，GitHub 上渲染 .md 时图片无法显示。
