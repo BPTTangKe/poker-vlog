@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-18 — Bad Beats and Variance: The Math That Keeps You Sane
+
+![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-18.png)
+
+[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-18.md)
+
 ### 2026-09-17 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
 
 ![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-09-17.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Bankroll Management: How Many Buy-ins Do You Really Need?](images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-09-12.png)
 
 [Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-09-12.md)
-
-### 2026-09-11 — Floating the Flop: When and Why to Call Without a Hand
-
-![Floating the Flop: When and Why to Call Without a Hand](images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-11.png)
-
-[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-11.md)
 
 
 ## About
