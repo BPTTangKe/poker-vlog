@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-19 — Tournament ICM: Making Correct Bubble Decisions
+
+![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-09-19.png)
+
+[Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-19.md)
+
 ### 2026-09-18 — Bad Beats and Variance: The Math That Keeps You Sane
 
 ![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-18.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-09-13.png)
 
 [Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-13.md)
-
-### 2026-09-12 — Bankroll Management: How Many Buy-ins Do You Really Need?
-
-![Bankroll Management: How Many Buy-ins Do You Really Need?](images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-09-12.png)
-
-[Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-09-12.md)
 
 
 ## About
