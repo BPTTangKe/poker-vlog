@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-20 — Block Betting on the River: Thin Value and Bluff Inducers
+
+![Block Betting on the River: Thin Value and Bluff Inducers](images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-20.png)
+
+[Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-20.md)
+
 ### 2026-09-19 — Tournament ICM: Making Correct Bubble Decisions
 
 ![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-09-19.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Multiway Pots: Why You Should Play Tighter Than You Think](images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-14.png)
 
 [Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-14.md)
-
-### 2026-09-13 — Tournament ICM: Making Correct Bubble Decisions
-
-![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-09-13.png)
-
-[Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-13.md)
 
 
 ## About
