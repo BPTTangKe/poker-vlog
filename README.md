@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-21 — Preflop 3-Bet Ranges: When to Light 3-Bet
+
+![Preflop 3-Bet Ranges: When to Light 3-Bet](images/preflop-3-bet-ranges-when-to-light-3-bet-2026-09-21.png)
+
+[Read full article](src/content/vlog/preflop-3-bet-ranges-when-to-light-3-bet-2026-09-21.md)
+
 ### 2026-09-20 — Block Betting on the River: Thin Value and Bluff Inducers
 
 ![Block Betting on the River: Thin Value and Bluff Inducers](images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-20.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Floating the Flop: When and Why to Call Without a Hand](images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-16.png)
 
 [Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-16.md)
-
-### 2026-09-14 — Multiway Pots: Why You Should Play Tighter Than You Think
-
-![Multiway Pots: Why You Should Play Tighter Than You Think](images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-14.png)
-
-[Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-09-14.md)
 
 
 ## About
