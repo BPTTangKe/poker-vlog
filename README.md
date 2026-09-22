@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-22 — Check-Raise Bluffing: Board Textures That Favor the Defender
+
+![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.png)
+
+[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.md)
+
 ### 2026-09-21 — Preflop 3-Bet Ranges: When to Light 3-Bet
 
 ![Preflop 3-Bet Ranges: When to Light 3-Bet](images/preflop-3-bet-ranges-when-to-light-3-bet-2026-09-21.png)
@@ -49,12 +55,6 @@ AIGC:
 ![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.png)
 
 [Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.md)
-
-### 2026-09-16 — Floating the Flop: When and Why to Call Without a Hand
-
-![Floating the Flop: When and Why to Call Without a Hand](images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-16.png)
-
-[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-16.md)
 
 
 ## About
