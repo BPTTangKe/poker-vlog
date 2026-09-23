@@ -14,6 +14,12 @@ AIGC:
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-23 — GTO vs Exploitative Play: Finding the Right Balance
+
+![GTO vs Exploitative Play: Finding the Right Balance](images/gto-vs-exploitative-play-finding-the-right-balance-2026-09-23.png)
+
+[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-09-23.md)
+
 ### 2026-09-22 — Check-Raise Bluffing: Board Textures That Favor the Defender
 
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.png)
@@ -49,12 +55,6 @@ AIGC:
 ![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-09-17.png)
 
 [Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-09-17.md)
-
-### 2026-09-16 — Bad Beats and Variance: The Math That Keeps You Sane
-
-![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.png)
-
-[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.md)
 
 
 ## About

@@ -1,11 +1,13 @@
 ---
 title: "Check-Raise Bluffing: Board Textures That Favor the Defender"
 date: 2026-09-22
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
-tags: ["bankroll", "bluffing", "math"]
+excerpt: "Board texture determines when check-raise bluffing works. Learn which textures favor the defender and how to pick the right spots to fire."
+tags: ["bluffing", "check-raise", "board-texture"]
 image: "/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+seo_description: "Board texture determines when check-raise bluffing works. Learn which textures favor the defender and how to pick the right spots to fire."
 ---
+
+
 
 # Check-Raise Bluffing: Board Textures That Favor the Defender
 
@@ -39,3 +41,4 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*
