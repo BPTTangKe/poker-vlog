@@ -1,14 +1,15 @@
 ---
-title: "Block Betting on the River: Thin Value and Bluff Inducers"
-date: 2026-09-24
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok..."
-tags: ["bankroll", "bluffing", "math"]
-image: "/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-24.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok..."
+title: "Online vs Live Poker: Adjusting Your Strategy for Each"
+date: 2026-09-25
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+tags: ["bankroll", "live-poker", "online-poker", "math"]
+image: "/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.png"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
 ---
-# Block Betting on the River: Thin Value and Bluff Inducers
 
-![Block Betting on the River: Thin Value and Bluff Inducers](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-24.png)
+# Online vs Live Poker: Adjusting Your Strategy for Each
+
+![Online vs Live Poker: Adjusting Your Strategy for Each](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 
@@ -38,4 +39,3 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
-*（内容由AI生成，仅供参考）*

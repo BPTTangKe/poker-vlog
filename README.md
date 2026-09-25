@@ -1,19 +1,14 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: ab20d8aff180ed14d0ce262937a7b993_938d2e519fbc11f1a413525400287e28
-    ReservedCode1: mn/TfleyXsVjrcdvMCOqo1GSO/NAaG+T4AkDHh+dTcW/LkrPFMZP6s5ANVODrA+7j4oJp9e9DVSJ0r4/lExxJOgUEKryqePq/r2eGPNiZV8ssO4S5CtyFZRvJ5UdpxnbB8AOJtZjR0JV/FJzdU5OjIbhxwHypxVFu30602YCqfwjeMUz9jWHbNVzBgg=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: ab20d8aff180ed14d0ce262937a7b993_938d2e519fbc11f1a413525400287e28
-    ReservedCode2: mn/TfleyXsVjrcdvMCOqo1GSO/NAaG+T4AkDHh+dTcW/LkrPFMZP6s5ANVODrA+7j4oJp9e9DVSJ0r4/lExxJOgUEKryqePq/r2eGPNiZV8ssO4S5CtyFZRvJ5UdpxnbB8AOJtZjR0JV/FJzdU5OjIbhxwHypxVFu30602YCqfwjeMUz9jWHbNVzBgg=
----
-
 # Poker Vlog
 
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-25 — Online vs Live Poker: Adjusting Your Strategy for Each
+
+![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.png)
+
+[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.md)
+
 ### 2026-09-24 — Block Betting on the River: Thin Value and Bluff Inducers
 
 ![Block Betting on the River: Thin Value and Bluff Inducers](images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-24.png)
@@ -49,12 +44,6 @@ AIGC:
 ![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-09-19.png)
 
 [Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-19.md)
-
-### 2026-09-18 — Bad Beats and Variance: The Math That Keeps You Sane
-
-![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-18.png)
-
-[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-18.md)
 
 
 ## About
