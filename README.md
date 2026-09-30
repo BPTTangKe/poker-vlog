@@ -3,6 +3,18 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-09-30 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
+
+![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-09-30.png)
+
+[Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-09-30.md)
+
+### 2026-09-29 — GTO vs Exploitative Play: Finding the Right Balance
+
+![GTO vs Exploitative Play: Finding the Right Balance](images/gto-vs-exploitative-play-finding-the-right-balance-2026-09-29.png)
+
+[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-09-29.md)
+
 ### 2026-09-25 — Online vs Live Poker: Adjusting Your Strategy for Each
 
 ![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.png)
@@ -32,18 +44,6 @@
 ![Preflop 3-Bet Ranges: When to Light 3-Bet](images/preflop-3-bet-ranges-when-to-light-3-bet-2026-09-21.png)
 
 [Read full article](src/content/vlog/preflop-3-bet-ranges-when-to-light-3-bet-2026-09-21.md)
-
-### 2026-09-20 — Block Betting on the River: Thin Value and Bluff Inducers
-
-![Block Betting on the River: Thin Value and Bluff Inducers](images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-20.png)
-
-[Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-20.md)
-
-### 2026-09-19 — Tournament ICM: Making Correct Bubble Decisions
-
-![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-09-19.png)
-
-[Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-09-19.md)
 
 
 ## About
