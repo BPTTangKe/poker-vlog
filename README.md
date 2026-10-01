@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-01 — Check-Raise Bluffing: Board Textures That Favor the Defender
+
+![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-01.png)
+
+[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-01.md)
+
 ### 2026-09-30 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
 
 ![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-09-30.png)
@@ -38,12 +44,6 @@
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.png)
 
 [Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.md)
-
-### 2026-09-21 — Preflop 3-Bet Ranges: When to Light 3-Bet
-
-![Preflop 3-Bet Ranges: When to Light 3-Bet](images/preflop-3-bet-ranges-when-to-light-3-bet-2026-09-21.png)
-
-[Read full article](src/content/vlog/preflop-3-bet-ranges-when-to-light-3-bet-2026-09-21.md)
 
 
 ## About
