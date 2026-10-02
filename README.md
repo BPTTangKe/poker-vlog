@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-02 — Online vs Live Poker: Adjusting Your Strategy for Each
+
+![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-02.png)
+
+[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-02.md)
+
 ### 2026-10-01 — Check-Raise Bluffing: Board Textures That Favor the Defender
 
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-01.png)
@@ -38,12 +44,6 @@
 ![GTO vs Exploitative Play: Finding the Right Balance](images/gto-vs-exploitative-play-finding-the-right-balance-2026-09-23.png)
 
 [Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-09-23.md)
-
-### 2026-09-22 — Check-Raise Bluffing: Board Textures That Favor the Defender
-
-![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.png)
-
-[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-09-22.md)
 
 
 ## About
