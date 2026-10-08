@@ -5,17 +5,8 @@ excerpt: "Every session at the poker table teaches something new. Today I want t
 tags: ["bankroll", "strategy", "math"]
 image: "/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-09-16.png"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: ab20d8aff180ed14d0ce262937a7b993_7d104ca5b1d711f19482525400393706
-    ReservedCode1: F51OqwnQDFop4JO3KDWFAxbdJRs65uaqznNwzAguLdO/hJNtAJ3xm95jYeKgdLMJrbwDj2VFqk8JoNQ1AoOpnzkztPy0RVHVHJbpgKh/GKYvvViiQZlOV6PgqwMQfaxeVyeGFcfh+YlRfUzycbcb6IMS2ZHOEqMFkr9Hc7fQ9OskSLEWw63RLgiqYBM=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: ab20d8aff180ed14d0ce262937a7b993_7d104ca5b1d711f19482525400393706
-    ReservedCode2: F51OqwnQDFop4JO3KDWFAxbdJRs65uaqznNwzAguLdO/hJNtAJ3xm95jYeKgdLMJrbwDj2VFqk8JoNQ1AoOpnzkztPy0RVHVHJbpgKh/GKYvvViiQZlOV6PgqwMQfaxeVyeGFcfh+YlRfUzycbcb6IMS2ZHOEqMFkr9Hc7fQ9OskSLEWw63RLgiqYBM=
+
 ---
-
-
 
 # Floating the Flop: When and Why to Call Without a Hand
 

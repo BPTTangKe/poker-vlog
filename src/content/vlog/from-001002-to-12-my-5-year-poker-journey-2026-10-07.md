@@ -1,11 +1,13 @@
 ---
 title: "From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey"
 date: 2026-10-07
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
-tags: ["bankroll", "math"]
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+tags: ["bankroll", "mental-game"]
 image: "/images/from-001002-to-12-my-5-year-poker-journey-2026-10-07.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
 ---
+
+
 
 # From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
 
@@ -39,3 +41,4 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*

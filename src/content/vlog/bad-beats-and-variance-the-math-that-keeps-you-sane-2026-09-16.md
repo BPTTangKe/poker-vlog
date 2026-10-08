@@ -5,17 +5,8 @@ excerpt: "Every session at the poker table teaches something new. Today I want t
 tags: ["bankroll", "bad-beat", "math"]
 image: "/images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-09-16.png"
 seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: ab20d8aff180ed14d0ce262937a7b993_7fd2581cb1d711f197a3525400248c00
-    ReservedCode1: SUTehkFcUnkV10hU0JSrqbgfvCe054aISMPhdb7fXm+eX3VbreU3uV94myKFdgstIyWVgDLEGyeohZX+9vPCIxTyobGJfmrkCjYKHSCq3e30O/pPsPwFtd0Yyo909KxiJ0XCrHq/lbciXOOL65U5DRQSR1mkxQxePYHzML/WngyZfEB8Yy33dgbzgHs=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: ab20d8aff180ed14d0ce262937a7b993_7fd2581cb1d711f197a3525400248c00
-    ReservedCode2: SUTehkFcUnkV10hU0JSrqbgfvCe054aISMPhdb7fXm+eX3VbreU3uV94myKFdgstIyWVgDLEGyeohZX+9vPCIxTyobGJfmrkCjYKHSCq3e30O/pPsPwFtd0Yyo909KxiJ0XCrHq/lbciXOOL65U5DRQSR1mkxQxePYHzML/WngyZfEB8Yy33dgbzgHs=
+
 ---
-
-
 
 # Bad Beats and Variance: The Math That Keeps You Sane
 

@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-08 — Multiway Pots: Why You Should Play Tighter Than You Think
+
+![Multiway Pots: Why You Should Play Tighter Than You Think](images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-10-08.png)
+
+[Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-10-08.md)
+
 ### 2026-10-07 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
 
 ![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-10-07.png)
@@ -38,12 +44,6 @@
 ![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.md)
-
-### 2026-09-24 — Block Betting on the River: Thin Value and Bluff Inducers
-
-![Block Betting on the River: Thin Value and Bluff Inducers](images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-24.png)
-
-[Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-09-24.md)
 
 
 ## About
