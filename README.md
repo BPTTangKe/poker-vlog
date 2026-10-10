@@ -3,6 +3,18 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-10 — Bad Beats and Variance: The Math That Keeps You Sane
+
+![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-10-10.png)
+
+[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-10-10.md)
+
+### 2026-10-09 — Check-Raise Bluffing: Board Textures That Favor the Defender
+
+![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-09.png)
+
+[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-09.md)
+
 ### 2026-10-08 — Multiway Pots: Why You Should Play Tighter Than You Think
 
 ![Multiway Pots: Why You Should Play Tighter Than You Think](images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-10-08.png)
@@ -32,18 +44,6 @@
 ![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](images/from-001002-to-12-my-5-year-poker-journey-2026-09-30.png)
 
 [Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-09-30.md)
-
-### 2026-09-29 — GTO vs Exploitative Play: Finding the Right Balance
-
-![GTO vs Exploitative Play: Finding the Right Balance](images/gto-vs-exploitative-play-finding-the-right-balance-2026-09-29.png)
-
-[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-09-29.md)
-
-### 2026-09-25 — Online vs Live Poker: Adjusting Your Strategy for Each
-
-![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.png)
-
-[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-09-25.md)
 
 
 ## About
