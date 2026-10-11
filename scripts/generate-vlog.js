@@ -562,14 +562,10 @@ async function main() {
       '---',
     ].join('\n');
 
-    // 在正文标题后插入封面图：GitHub 渲染该 .md 时不解析 frontmatter 的 image 字段（/images/ 域根绝对路径会 404），
-    // 故正文封面使用 GitHub raw 绝对 URL，保证 GitHub 网页上文章封面可显示。
-    const coverLine = `![${titleFromContent}](${RAW_BASE}/images/${slug}.png)`;
-    // 注意：必须用回调函数形式替换，不能把 coverLine 拼进替换模板字符串。
-    // 标题含 $ 时（如 "$0.01/$0.02"、"$1/$2"），$ + 数字会被 String.replace 当作捕获组引用解析，
-    // 导致封面图 markdown 语法被破坏，GitHub 上渲染 .md 时图片无法显示。
-    const contentWithCover = content.replace(/^(# [^\n]+)(\n)/, (_m, titleLine, newline) => `${titleLine}${newline}\n${coverLine}\n`);
-    const fullContent = `${frontmatter}\n\n${contentWithCover}\n`;
+    // 注意：正文不再插入 raw.githubusercontent.com 封面图。
+    // 原因：raw 域名在中国大陆访问不稳定/常被阻断，导致 GitHub Pages 站点上文章封面 404；
+    // 站点组件（src/pages/vlog/[slug].astro）已通过 frontmatter.image 渲染正确封面（自动拼接 BASE_URL 适配子路径部署）。
+    const fullContent = `${frontmatter}\n\n${content}\n`;
 
     // Ensure directory exists
     if (!fs.existsSync(VLOG_DIR)) {

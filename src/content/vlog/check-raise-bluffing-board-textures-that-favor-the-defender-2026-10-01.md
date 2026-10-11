@@ -9,7 +9,6 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Check-Raise Bluffing: Board Textures That Favor the Defender
 
-![Check-Raise Bluffing: Board Textures That Favor the Defender](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-01.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 

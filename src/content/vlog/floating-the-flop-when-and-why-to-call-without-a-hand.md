@@ -9,7 +9,6 @@ seo_description: "Every session at the poker table teaches something new. Today 
 
 # Floating the Flop: When and Why to Call Without a Hand
 
-![Floating the Flop: When and Why to Call Without a Hand](https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images/floating-the-flop-when-and-why-to-call-without-a-hand.png)
 
 Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.
 
