@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-12 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
+
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-12.png)
+
+[Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-12.md)
+
 ### 2026-10-11 — Continuation Betting in 3-Bet Pots: Sizing and Frequency
 
 ![Continuation Betting in 3-Bet Pots: Sizing and Frequency](images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-10-11.png)
@@ -38,12 +44,6 @@
 ![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-02.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-02.md)
-
-### 2026-10-01 — Check-Raise Bluffing: Board Textures That Favor the Defender
-
-![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-01.png)
-
-[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-01.md)
 
 
 ## About
