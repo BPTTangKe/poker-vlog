@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-15 — Online vs Live Poker: Adjusting Your Strategy for Each
+
+![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.png)
+
+[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.md)
+
 ### 2026-10-14 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
 ![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.png)
@@ -38,12 +44,6 @@
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-09.png)
 
 [Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-09.md)
-
-### 2026-10-08 — Multiway Pots: Why You Should Play Tighter Than You Think
-
-![Multiway Pots: Why You Should Play Tighter Than You Think](images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-10-08.png)
-
-[Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-10-08.md)
 
 
 ## About
