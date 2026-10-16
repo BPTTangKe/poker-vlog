@@ -26,27 +26,42 @@ const PROJECT_DIR = path.resolve(__dirname, '..');
 const README_PATH = path.join(PROJECT_DIR, 'README.md');
 const VLOG_DIR = path.join(PROJECT_DIR, 'src', 'content', 'vlog');
 
-// 收集 jsDelivr 封面 URL（.png 图片，.svg 无需预热——GitHub 不内嵌渲染 SVG）
+// 收集需要预热的封面 URL（.png；.svg 无需预热——GitHub 不内嵌渲染 SVG）
+// 注意：README / 正文现在使用相对路径 images/xxx.png，GitHub camo 实际回源
+// raw.githubusercontent.com。若只匹配旧的 jsDelivr 直链会收集到 0 条，
+// 预热脚本将空转失效，新封面在 GitHub 上仍会出现"短暂 404 不显示"。
+const RAW_BASE = 'https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images';
 function collectCdnUrls() {
   const urls = new Set();
+  const names = new Set();
+
+  const scan = (text) => {
+    // 旧式 jsDelivr 直链
+    for (const m of text.matchAll(/https:\/\/cdn\.jsdelivr\.net\/gh\/[^)\s]*\.png/g)) {
+      urls.add(m[0]);
+    }
+    // README 相对引用：images/xxx.png
+    for (const m of text.matchAll(/images\/([A-Za-z0-9._-]+\.png)/g)) {
+      names.add(m[1]);
+    }
+  };
 
   // 1. 从 README Latest Vlogs 区段提取
   if (fs.existsSync(README_PATH)) {
-    const readme = fs.readFileSync(README_PATH, 'utf8');
-    for (const m of readme.matchAll(/https:\/\/cdn\.jsdelivr\.net\/gh\/[^)\s]*\.png/g)) {
-      urls.add(m[0]);
-    }
+    scan(fs.readFileSync(README_PATH, 'utf8'));
   }
 
-  // 2. 从所有 vlog md 正文提取
+  // 2. 从所有 vlog md 正文 / frontmatter 提取
   if (fs.existsSync(VLOG_DIR)) {
     for (const f of fs.readdirSync(VLOG_DIR)) {
       if (!f.endsWith('.md')) continue;
-      const md = fs.readFileSync(path.join(VLOG_DIR, f), 'utf8');
-      for (const m of md.matchAll(/https:\/\/cdn\.jsdelivr\.net\/gh\/[^)\s]*\.png/g)) {
-        urls.add(m[0]);
-      }
+      scan(fs.readFileSync(path.join(VLOG_DIR, f), 'utf8'));
     }
+  }
+
+  // 3. 相对路径 -> raw.githubusercontent 绝对 URL（GitHub camo 的回源地址）
+  for (const n of names) {
+    urls.add(`${RAW_BASE}/${n}`);
   }
 
   return [...urls];
