@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-17 — Tournament ICM: Making Correct Bubble Decisions
+
+![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
+
+[Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-10-17.md)
+
 ### 2026-10-16 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
 ![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.png)
@@ -38,12 +44,6 @@
 ![Continuation Betting in 3-Bet Pots: Sizing and Frequency](images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-10-11.png)
 
 [Read full article](src/content/vlog/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-10-11.md)
-
-### 2026-10-10 — Bad Beats and Variance: The Math That Keeps You Sane
-
-![Bad Beats and Variance: The Math That Keeps You Sane](images/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-10-10.png)
-
-[Read full article](src/content/vlog/bad-beats-and-variance-the-math-that-keeps-you-sane-2026-10-10.md)
 
 
 ## About
