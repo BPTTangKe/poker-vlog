@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://poker-vlog.pages.dev//poker-vlog/sitemap-index.xml

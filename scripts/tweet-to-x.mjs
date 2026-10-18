@@ -30,9 +30,18 @@ function getLatestVlog(slug) {
     targetFile = files.find(f => f === `${slug}.md`);
     if (!targetFile) throw new Error(`Slug "${slug}" not found`);
   } else {
+    // 以文件名末尾的 YYYY-MM-DD 为准（git checkout / 编辑器保存都会改 mtime，
+    // 仅按 mtime 排序会选错文章）；无日期后缀时回退到 mtime。
+    const dateOf = (f) => {
+      const m = f.match(/(\d{4}-\d{2}-\d{2})\.md$/);
+      if (m) return m[1];
+      const raw = fs.readFileSync(path.join(VLOG_DIR, f), 'utf-8');
+      const d = raw.match(/^date:\s*"?(\d{4}-\d{2}-\d{2})/m);
+      return d ? d[1] : '0000-00-00';
+    };
     const sorted = files
-      .map(f => ({ name: f, mtime: fs.statSync(path.join(VLOG_DIR, f)).mtimeMs }))
-      .sort((a, b) => b.mtime - a.mtime);
+      .map(f => ({ name: f, date: dateOf(f), mtime: fs.statSync(path.join(VLOG_DIR, f)).mtimeMs }))
+      .sort((a, b) => (b.date.localeCompare(a.date)) || (b.mtime - a.mtime));
     targetFile = sorted[0].name;
   }
 
