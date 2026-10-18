@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
+    "prebuild": "node scripts/ensure-frontmatter.mjs",
     "build": "astro build",
     "preview": "astro preview",
     "generate-vlog": "node scripts/generate-vlog.js",
