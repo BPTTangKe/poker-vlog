@@ -21,9 +21,9 @@ const TOPIC_FILE = '/tmp/poker-vlog-topic.txt';
 
 // README 自动更新相关
 const README_PATH = path.resolve(__dirname, '..', 'README.md');
-// 文章 .md 正文封面图：GitHub 网页渲染时相对路径按文件所在目录解析会 404，因此必须用绝对 URL。
-// 统一改用 GitHub 自家 raw 端点，不再依赖第三方 CDN（jsDelivr 对新 push 的文件存在缓存延迟/失效，会导致裂图）。
-const RAW_BASE = 'https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main';
+// README 封面图 CDN 前缀：README 用相对路径时 GitHub 会重定向到 raw.githubusercontent.com，
+// 该域名境内常被污染导致图片不显示，故改用 jsDelivr 的 GitHub 内容 CDN。
+const README_IMAGE_CDN = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main';
 const README_MAX_ENTRIES = 7;
 const README_SECTION = '## Latest Vlogs';
 
@@ -481,9 +481,11 @@ function updateReadme({ slug, title, dateStr }) {
     return;
   }
 
-  // README 位于仓库根目录，图片直接用相对路径 images/xxx.png：
-  // GitHub 渲染时经自家 camo 代理直取仓库文件，稳定可靠，不依赖任何第三方 CDN。
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  // README 位于仓库根目录，如果写相对路径 images/xxx.png，GitHub 会渲染成
+  // https://github.com/<owner>/<repo>/raw/main/images/xxx.png → 302 跳转到
+  // raw.githubusercontent.com；该域名在中国大陆常被 DNS 污染/阻断，导致图片不显示。
+  // 因此改用 jsDelivr 的 GitHub 内容 CDN 绝对地址，境内可达性明显更好，且不依赖站点部署。
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_CDN}/images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);
@@ -545,6 +547,18 @@ async function main() {
     const today = new Date();
     const dateStr = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
     const slug = slugify(topic, dateStr);
+
+    // 幂等保护：同一天重复执行脚本会随机到不同主题、产出第二篇当日文章并污染 README。
+    // 默认检测到当日已有 vlog 即跳过；确需补发时显式传 --force。
+    if (!args.includes('--force')) {
+      const todayFiles = fs.existsSync(VLOG_DIR)
+        ? fs.readdirSync(VLOG_DIR).filter(f => f.endsWith(`${dateStr}.md`))
+        : [];
+      if (todayFiles.length > 0) {
+        log(`今日已有 vlog（${todayFiles[0]}），跳过生成；如需强制生成请加 --force`);
+        return;
+      }
+    }
 
     // Build frontmatter — 不包含 title 因为 title 从首行 # 提取
     const titleFromContent = topic;

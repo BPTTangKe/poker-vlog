@@ -5,45 +5,39 @@
 ## Latest Vlogs
 ### 2026-10-18 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
-![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
+![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.md)
 
 ### 2026-10-17 — Tournament ICM: Making Correct Bubble Decisions
 
-![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
+![Tournament ICM: Making Correct Bubble Decisions](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
 
 [Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-10-17.md)
 
 ### 2026-10-16 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.png)
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.png)
 
 [Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.md)
 
 ### 2026-10-15 — Online vs Live Poker: Adjusting Your Strategy for Each
 
-![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.png)
+![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.md)
 
 ### 2026-10-14 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.png)
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.png)
 
 [Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.md)
 
 ### 2026-10-13 — Online vs Live Poker: Adjusting Your Strategy for Each
 
-![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-13.png)
+![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-13.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-13.md)
-
-### 2026-10-12 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
-
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-12.png)
-
-[Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-12.md)
 
 
 ## About
