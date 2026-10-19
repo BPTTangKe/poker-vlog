@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+
+### 2026-10-19 — Bankroll Management: How Many Buy-ins Do You Really Need?
+
+![Bankroll Management: How Many Buy-ins Do You Really Need?](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png)
+
+[Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.md)
 ### 2026-10-18 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
 ![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
