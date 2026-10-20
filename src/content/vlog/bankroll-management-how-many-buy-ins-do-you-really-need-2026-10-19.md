@@ -1,10 +1,18 @@
 ---
 title: "Bankroll Management: How Many Buy-ins Do You Really Need?"
 date: 2026-10-19
-excerpt: "Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send"
-tags: ["tournament", "cash-game", "bankroll", "mental-game"]
+excerpt: "Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send you broke. Here's the system I've used"
+tags: ["poker", "strategy"]
 image: "/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png"
-seo_description: "Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send"
+seo_description: "Bankroll management is the unsexy backbone of professional poker. You can be the best player at the table, but without proper BRM, variance will eventually send you broke. Here's the system I've used"
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_297ac74acbc211f1b307525400393706
+    ReservedCode1: Dcp6l4t6GA2Y2GVwf/5DuwD2WvOdzZ7WUZahlxTobywC3/GnFnX7TiuLaaE35TTvELtxAnED2J5ejS5Rq4rlvZTk7NeIyDASV5MMX7pygxh8OiXMWwF1TXBAHOVQilPxDakXBweEo2MtD5YP41Oi+YviQQWk0yGXU/l/G72FNd+1FyVC5csYgjAPT1Y=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_297ac74acbc211f1b307525400393706
+    ReservedCode2: Dcp6l4t6GA2Y2GVwf/5DuwD2WvOdzZ7WUZahlxTobywC3/GnFnX7TiuLaaE35TTvELtxAnED2J5ejS5Rq4rlvZTk7NeIyDASV5MMX7pygxh8OiXMWwF1TXBAHOVQilPxDakXBweEo2MtD5YP41Oi+YviQQWk0yGXU/l/G72FNd+1FyVC5csYgjAPT1Y=
 ---
 
 # Bankroll Management: How Many Buy-ins Do You Really Need?
@@ -41,3 +49,4 @@ Treat your bankroll like a business asset, not a gambling fund. The players who 
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*
