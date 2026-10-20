@@ -481,11 +481,12 @@ function updateReadme({ slug, title, dateStr }) {
     return;
   }
 
-  // README 位于仓库根目录，如果写相对路径 images/xxx.png，GitHub 会渲染成
-  // https://github.com/<owner>/<repo>/raw/main/images/xxx.png → 302 跳转到
-  // raw.githubusercontent.com；该域名在中国大陆常被 DNS 污染/阻断，导致图片不显示。
-  // 因此改用 jsDelivr 的 GitHub 内容 CDN 绝对地址，境内可达性明显更好，且不依赖站点部署。
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_CDN}/images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  // 封面一律写仓库内相对路径 images/xxx.png：
+  // 1) GitHub 渲染 README 时直接引用仓库内同一提交的文件，提交即生效，不受第三方 CDN 缓存影响；
+  // 2) jsDelivr 的 @main 引用存在索引延迟，且在首次拉取失败后会把 404 负缓存住，
+  //    导致新封面在 GitHub 上长时间"不显示"（历史上多次踩坑）。
+  // 需要 CDN 加速时由 scripts/warm-cdn.mjs 在推送后主动预热，而不是把 CDN 绝对地址写进 README。
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);

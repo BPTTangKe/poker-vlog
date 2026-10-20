@@ -5,43 +5,43 @@
 ## Latest Vlogs
 ### 2026-10-20 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
 
-![Tilt Control: How I Saved 3 Buy-ins by Walking Away](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.png)
+![Tilt Control: How I Saved 3 Buy-ins by Walking Away](images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.png)
 
 [Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.md)
 
 ### 2026-10-19 — Bankroll Management: How Many Buy-ins Do You Really Need?
 
-![Bankroll Management: How Many Buy-ins Do You Really Need?](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png)
+![Bankroll Management: How Many Buy-ins Do You Really Need?](images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png)
 
 [Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.md)
 
 ### 2026-10-18 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
-![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
+![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.md)
 
 ### 2026-10-17 — Tournament ICM: Making Correct Bubble Decisions
 
-![Tournament ICM: Making Correct Bubble Decisions](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
+![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
 
 [Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-10-17.md)
 
 ### 2026-10-16 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.png)
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.png)
 
 [Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.md)
 
 ### 2026-10-15 — Online vs Live Poker: Adjusting Your Strategy for Each
 
-![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.png)
+![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.md)
 
 ### 2026-10-14 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.png)
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.png)
 
 [Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.md)
 

@@ -69,14 +69,48 @@ function collectCdnUrls() {
 
 const log = (msg) => console.log(`[${new Date().toISOString()}] ${msg}`);
 
+/**
+ * jsDelivr 会把「首次拉取失败」的 404 结果按路径缓存住（缓存 key 含 @main 引用），
+ * 之后即使 GitHub 上文件已存在，CDN 仍持续返回
+ * "Failed to fetch ... from GitHub"，README 封面就一直不显示。
+ * 因此预热前必须显式调用 purge 接口清掉该路径的负缓存，再重新拉取。
+ */
+async function purgeJsdelivr(url) {
+  let u;
+  try {
+    u = new URL(url);
+  } catch {
+    return { purged: false, reason: 'invalid-url' };
+  }
+  if (!u.hostname.endsWith('jsdelivr.net') || !u.pathname.startsWith('/gh/')) {
+    return { purged: false, reason: 'not-jsdelivr' };
+  }
+  const purgeUrl = `https://purge.jsdelivr.net${u.pathname}`;
+  try {
+    const res = await fetch(purgeUrl, { method: 'GET', redirect: 'follow' });
+    const text = await res.text();
+    const ok = res.ok && /"status"\s*:\s*"(finished|pending)"/.test(text);
+    return { purged: ok, reason: ok ? 'ok' : `status=${res.status}` };
+  } catch (e) {
+    return { purged: false, reason: e.message };
+  }
+}
+
 async function warm(url, retries = 2) {
+  const purge = await purgeJsdelivr(url);
+  if (purge.purged) {
+    // purge 是异步的，给它一点时间把负缓存清掉再回源
+    await new Promise((r) => setTimeout(r, 3000));
+    log(`PURGE ok ${path.basename(new URL(url).pathname)}`);
+  }
+
   for (let attempt = 0; attempt <= retries; attempt++) {
     try {
       const res = await fetch(url, { method: 'GET', redirect: 'follow' });
       if (res.ok) return { url, ok: true, status: res.status, attempt };
-      await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 2000));
     } catch (e) {
-      await new Promise((r) => setTimeout(r, 1000));
+      await new Promise((r) => setTimeout(r, 2000));
     }
   }
   return { url, ok: false, status: 'ERR' };
