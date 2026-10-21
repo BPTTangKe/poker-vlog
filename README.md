@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-21 — Block Betting on the River: Thin Value and Bluff Inducers
+
+![Block Betting on the River: Thin Value and Bluff Inducers](images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.png)
+
+[Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.md)
+
 ### 2026-10-20 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
 
 ![Tilt Control: How I Saved 3 Buy-ins by Walking Away](images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.png)
@@ -38,12 +44,6 @@
 ![Online vs Live Poker: Adjusting Your Strategy for Each](images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.png)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-10-15.md)
-
-### 2026-10-14 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
-
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.png)
-
-[Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-14.md)
 
 
 ## About
