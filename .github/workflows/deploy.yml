@@ -39,6 +39,7 @@ jobs:
         env:
           # GitHub Pages 部署在 /poker-vlog/ 子路径，必须覆盖 base 使资源路径带前缀
           BASE_PATH: '/poker-vlog/'
+          SITE_URL: 'https://bpttangke.github.io'
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

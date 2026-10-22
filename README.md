@@ -5,43 +5,43 @@
 ## Latest Vlogs
 ### 2026-10-22 — GTO vs Exploitative Play: Finding the Right Balance
 
-![GTO vs Exploitative Play: Finding the Right Balance](images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-22.png)
+![GTO vs Exploitative Play: Finding the Right Balance](https://bpttangke.github.io/poker-vlog/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-22.png)
 
 [Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-10-22.md)
 
 ### 2026-10-21 — Block Betting on the River: Thin Value and Bluff Inducers
 
-![Block Betting on the River: Thin Value and Bluff Inducers](images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.png)
+![Block Betting on the River: Thin Value and Bluff Inducers](https://bpttangke.github.io/poker-vlog/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.png)
 
 [Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.md)
 
 ### 2026-10-20 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
 
-![Tilt Control: How I Saved 3 Buy-ins by Walking Away](images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.png)
+![Tilt Control: How I Saved 3 Buy-ins by Walking Away](https://bpttangke.github.io/poker-vlog/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.png)
 
 [Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.md)
 
 ### 2026-10-19 — Bankroll Management: How Many Buy-ins Do You Really Need?
 
-![Bankroll Management: How Many Buy-ins Do You Really Need?](images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png)
+![Bankroll Management: How Many Buy-ins Do You Really Need?](https://bpttangke.github.io/poker-vlog/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png)
 
 [Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.md)
 
 ### 2026-10-18 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
-![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
+![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://bpttangke.github.io/poker-vlog/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.md)
 
 ### 2026-10-17 — Tournament ICM: Making Correct Bubble Decisions
 
-![Tournament ICM: Making Correct Bubble Decisions](images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
+![Tournament ICM: Making Correct Bubble Decisions](https://bpttangke.github.io/poker-vlog/images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
 
 [Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-10-17.md)
 
 ### 2026-10-16 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
 
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.png)
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://bpttangke.github.io/poker-vlog/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.png)
 
 [Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-16.md)
 

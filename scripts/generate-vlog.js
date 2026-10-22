@@ -21,9 +21,12 @@ const TOPIC_FILE = '/tmp/poker-vlog-topic.txt';
 
 // README 自动更新相关
 const README_PATH = path.resolve(__dirname, '..', 'README.md');
-// README 封面图 CDN 前缀：README 用相对路径时 GitHub 会重定向到 raw.githubusercontent.com，
-// 该域名境内常被污染导致图片不显示，故改用 jsDelivr 的 GitHub 内容 CDN。
-const README_IMAGE_CDN = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main';
+// README 封面图地址前缀：
+// README 使用相对路径 images/xxx.png 时，GitHub 会把 <img> 重写为 /raw/main/... 并 302 到
+// raw.githubusercontent.com，该域名及 camo.githubusercontent.com 境内常被污染/阻断，
+// 导致仓库主页封面成片裂开（仓库里文件本身是存在的）。改用 GitHub Pages 绝对地址，
+// 由 Pages CDN 直出，推送后 Actions 部署完成即可访问。
+const README_IMAGE_BASE = 'https://bpttangke.github.io/poker-vlog/images';
 const README_MAX_ENTRIES = 7;
 const README_SECTION = '## Latest Vlogs';
 
@@ -481,12 +484,9 @@ function updateReadme({ slug, title, dateStr }) {
     return;
   }
 
-  // 封面一律写仓库内相对路径 images/xxx.png：
-  // 1) GitHub 渲染 README 时直接引用仓库内同一提交的文件，提交即生效，不受第三方 CDN 缓存影响；
-  // 2) jsDelivr 的 @main 引用存在索引延迟，且在首次拉取失败后会把 404 负缓存住，
-  //    导致新封面在 GitHub 上长时间"不显示"（历史上多次踩坑）。
-  // 需要 CDN 加速时由 scripts/warm-cdn.mjs 在推送后主动预热，而不是把 CDN 绝对地址写进 README。
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  // 封面写 GitHub Pages 绝对地址：GitHub 仓库页渲染 README 时不会再去 302 到
+  // raw.githubusercontent.com（境内被污染会裂图），同时也不受 jsDelivr @main 索引延迟影响。
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_BASE}/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);

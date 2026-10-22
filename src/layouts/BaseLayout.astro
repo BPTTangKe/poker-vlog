@@ -24,11 +24,14 @@ const {
 } = Astro.props;
 
 const siteURL = Astro.site?.origin ?? '';
+const baseURL = import.meta.env.BASE_URL;
 const pageURL = canonicalURL ?? Astro.url.href;
 const fullTitle = `${title} | Free Poker Tracker & Strategy`;
 
-// X/Twitter 不支持 SVG 卡片图片，转换为 PNG
-const socialImage = image.replace(/\.svg$/i, '.png');
+// X/Twitter 不支持 SVG 卡片图片，转换为 PNG；
+// 同时拼上 BASE_URL，保证 GitHub Pages 子路径部署时 og:image 指向本站可访问地址
+// （此前 new URL('/images/x.png', site) 会落到根域名，GitHub Pages 上必然 404）
+const socialImage = `${baseURL}${image.replace(/^\//, '')}`.replace(/\.svg$/i, '.png');
 ---
 
 <!doctype html>

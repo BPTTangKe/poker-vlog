@@ -24,7 +24,8 @@ function formatDate(d: Date): string {
       class="vlog-card-thumb"
       width="80"
       height="80"
-      loading="lazy"
+      loading={isLatest ? 'eager' : 'lazy'}
+      fetchpriority={isLatest ? 'high' : undefined}
     />
     <div class="vlog-card-body">
       <div class="vlog-card-header">
