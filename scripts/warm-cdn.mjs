@@ -31,6 +31,8 @@ const VLOG_DIR = path.join(PROJECT_DIR, 'src', 'content', 'vlog');
 // raw.githubusercontent.com。若只匹配旧的 jsDelivr 直链会收集到 0 条，
 // 预热脚本将空转失效，新封面在 GitHub 上仍会出现"短暂 404 不显示"。
 const RAW_BASE = 'https://raw.githubusercontent.com/BPTTangKe/poker-vlog/main/images';
+// README 封面现用 GitHub Pages 绝对地址，camo 回源的是 Pages CDN，需一并预热
+const PAGES_BASE = 'https://bpttangke.github.io/poker-vlog/images';
 function collectCdnUrls() {
   const urls = new Set();
   const names = new Set();
@@ -59,8 +61,9 @@ function collectCdnUrls() {
     }
   }
 
-  // 3. 相对路径 -> raw.githubusercontent 绝对 URL（GitHub camo 的回源地址）
+  // 3. 封面名 -> Pages CDN 与 raw 两个回源地址都预热
   for (const n of names) {
+    urls.add(`${PAGES_BASE}/${n}`);
     urls.add(`${RAW_BASE}/${n}`);
   }
 
