@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-24 — GTO vs Exploitative Play: Finding the Right Balance
+
+![GTO vs Exploitative Play: Finding the Right Balance](https://bpttangke.github.io/poker-vlog/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-24.png)
+
+[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-10-24.md)
+
 ### 2026-10-23 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
 
 ![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](https://bpttangke.github.io/poker-vlog/images/from-001002-to-12-my-5-year-poker-journey-2026-10-23.png)
@@ -38,12 +44,6 @@
 ![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://bpttangke.github.io/poker-vlog/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
 
 [Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.md)
-
-### 2026-10-17 — Tournament ICM: Making Correct Bubble Decisions
-
-![Tournament ICM: Making Correct Bubble Decisions](https://bpttangke.github.io/poker-vlog/images/tournament-icm-making-correct-bubble-decisions-2026-10-17.png)
-
-[Read full article](src/content/vlog/tournament-icm-making-correct-bubble-decisions-2026-10-17.md)
 
 
 ## About
