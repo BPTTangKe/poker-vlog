@@ -22,11 +22,14 @@ const TOPIC_FILE = '/tmp/poker-vlog-topic.txt';
 // README 自动更新相关
 const README_PATH = path.resolve(__dirname, '..', 'README.md');
 // README 封面图地址前缀：
-// README 使用相对路径 images/xxx.png 时，GitHub 会把 <img> 重写为 /raw/main/... 并 302 到
-// raw.githubusercontent.com，该域名及 camo.githubusercontent.com 境内常被污染/阻断，
-// 导致仓库主页封面成片裂开（仓库里文件本身是存在的）。改用 GitHub Pages 绝对地址，
-// 由 Pages CDN 直出，推送后 Actions 部署完成即可访问。
-const README_IMAGE_BASE = 'https://bpttangke.github.io/poker-vlog/images';
+// 1) 相对路径 images/xxx.png：GitHub 会重写为 /raw/main/... 并 302 到
+//    raw.githubusercontent.com，该域名及 camo.githubusercontent.com 境内常被污染/阻断。
+// 2) bpttangke.github.io：Pages 直出本身没问题，但该域名在境内经常整域不可达，
+//    且新图必须等 Actions 部署完成（1~3 分钟）后才 200，README 抢先生效时是裂图。
+// 结论：README 统一走 jsDelivr（GitHub 仓库 CDN，境内可直连、提交后即可用，
+// @main 分支路径会随最新提交自动更新）。
+// 注意：站点页面内的封面不依赖此常量，由 frontmatter.image + BASE_URL 渲染。
+const README_IMAGE_BASE = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images';
 const README_MAX_ENTRIES = 7;
 const README_SECTION = '## Latest Vlogs';
 
