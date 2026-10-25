@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-25 — Preflop 3-Bet Ranges: When to Light 3-Bet
+
+![Preflop 3-Bet Ranges: When to Light 3-Bet](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/preflop-3-bet-ranges-when-to-light-3-bet-2026-10-25.png)
+
+[Read full article](src/content/vlog/preflop-3-bet-ranges-when-to-light-3-bet-2026-10-25.md)
+
 ### 2026-10-24 — GTO vs Exploitative Play: Finding the Right Balance
 
 ![GTO vs Exploitative Play: Finding the Right Balance](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-24.png)
@@ -38,12 +44,6 @@
 ![Bankroll Management: How Many Buy-ins Do You Really Need?](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png)
 
 [Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.md)
-
-### 2026-10-18 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
-
-![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.png)
-
-[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-10-18.md)
 
 
 ## About
