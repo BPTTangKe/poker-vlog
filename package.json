@@ -12,7 +12,8 @@
     "generate-vlog": "node scripts/generate-vlog.js",
     "publish-social": "node scripts/publish-social.mjs",
     "daily-schedule": "bash scripts/daily-schedule.sh",
-    "clean": "rm -rf dist/"
+    "clean": "rm -rf dist/",
+    "warm-cdn": "node scripts/warm-cdn.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.11",

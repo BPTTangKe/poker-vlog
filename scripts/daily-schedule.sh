@@ -85,7 +85,8 @@ log "步骤 4/5: Git 提交和推送..."
 if [ -z "$(git status --porcelain 2>/dev/null)" ]; then
   log "没有文件变更，跳过 git 提交"
 else
-  git add src/content/vlog/ dist/
+  # 需覆盖 README.md 与 images/（README 封面、封面图本身），否则推送后缺图
+  git add -A
 
   COMMIT_MSG="feat: daily vlog update $(date '+%Y-%m-%d')"
   git commit -m "$COMMIT_MSG" 2>&1 | tee -a "$LOG_FILE"

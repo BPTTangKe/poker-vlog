@@ -13,9 +13,27 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
+import os from 'node:os';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const VLOG_DIR = path.resolve(__dirname, '..', 'src', 'content', 'vlog');
+
+/** 读取项目根目录 .env（供 X 官方 API 模式使用；已存在的环境变量优先） */
+function loadEnvFile() {
+  const envPath = path.resolve(__dirname, '..', '.env');
+  if (!fs.existsSync(envPath)) return;
+  for (const line of fs.readFileSync(envPath, 'utf8').split('\n')) {
+    const m = line.match(/^\s*([A-Za-z0-9_]+)\s*=\s*(.*?)\s*$/);
+    if (!m) continue;
+    let val = m[2];
+    if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+      val = val.slice(1, -1);
+    }
+    if (process.env[m[1]] === undefined) process.env[m[1]] = val;
+  }
+}
+loadEnvFile();
+
 const SITE_URL = process.env.SITE_URL || 'https://poker-vlog.pages.dev';
 
 // 系统 Chrome 可执行路径
@@ -83,6 +101,8 @@ function intentFallback(tweetText) {
 }
 
 const CDP_PORT = 9222;
+// 专供自动化发推的独立 Chrome 配置目录（与日常浏览器隔离，首次需登录一次 X）
+const CDP_PROFILE = process.env.X_CHROME_PROFILE || path.join(os.homedir(), '.poker-vlog-x-chrome');
 const CDP_URL = `http://127.0.0.1:${CDP_PORT}`;
 
 /**
@@ -111,23 +131,12 @@ function ensureChromeWithCDP() {
     return { wasRunning: true, launched: false };
   }
 
-  // 检查 Chrome 是否正在运行（但没有 CDP）
-  // 如果 Chrome 已在运行，不强行 killall——非 GUI 环境下重启会失败
-  // 直接抛出错误让上层降级到 intent fallback
-  let chromeRunning = false;
-  try {
-    execSync('pgrep -x "Google Chrome"', { encoding: 'utf-8' });
-    chromeRunning = true;
-    console.log('Chrome is running without CDP. Skipping Playwright mode (cannot restart in headless env).');
-    throw new Error('Chrome already running without CDP — use intent fallback');
-  } catch (e) {
-    if (e.message.includes('without CDP')) throw e;
-    /* Chrome not running at all — try to launch it */
-  }
-
-  console.log('Launching Chrome with remote debugging...');
+  // 日常使用的 Chrome 通常不带 --remote-debugging-port，且不能强杀用户浏览器。
+  // 因此这里用「独立 user-data-dir」再起一个 Chrome 实例：与日常浏览器完全隔离，
+  // 不影响用户已开的窗口，又能稳定提供 CDP。首次需在该窗口登录一次 X，cookie 会持久化。
+  console.log(`Launching dedicated Chrome (profile: ${CDP_PROFILE}) with remote debugging...`);
   execSync(
-    `nohup "${CHROME_EXE}" --remote-debugging-port=${CDP_PORT} --no-first-run --restore-last-session=false --disable-session-crashed-bubble --disable-extensions --disable-background-networking --disable-sync > /dev/null 2>&1 &`,
+    `nohup "${CHROME_EXE}" --remote-debugging-port=${CDP_PORT} --user-data-dir="${CDP_PROFILE}" --no-first-run --no-default-browser-check --restore-last-session=false --disable-session-crashed-bubble --disable-background-networking > /dev/null 2>&1 &`,
     { stdio: 'ignore' }
   );
 
@@ -144,6 +153,78 @@ function ensureChromeWithCDP() {
 
   console.log('Chrome launched with CDP.');
   return { wasRunning: false, launched: true };
+}
+
+// ── X 官方 API 模式（首选，无需 GUI / Chrome）────────────────────────────
+const X_API_KEYS = [
+  'TWITTER_API_KEY',
+  'TWITTER_API_SECRET',
+  'TWITTER_ACCESS_TOKEN',
+  'TWITTER_ACCESS_SECRET',
+];
+
+async function apiMode(tweetText) {
+  const missing = X_API_KEYS.filter((k) => !process.env[k]);
+  if (missing.length > 0) throw new Error(`X API 凭证缺失: ${missing.join(', ')}`);
+
+  const { TwitterApi } = await import('twitter-api-v2');
+  const client = new TwitterApi({
+    appKey: process.env.TWITTER_API_KEY,
+    appSecret: process.env.TWITTER_API_SECRET,
+    accessToken: process.env.TWITTER_ACCESS_TOKEN,
+    accessSecret: process.env.TWITTER_ACCESS_SECRET,
+  });
+
+  const { data } = await client.v2.tweet(tweetText);
+  return {
+    mode: 'api',
+    success: true,
+    tweetId: data.id,
+    url: `https://x.com/i/status/${data.id}`,
+  };
+}
+
+// ── 发布前置检查：确认文章与封面已可访问（规避 push 后 Pages 部署延迟导致 404）──
+async function probeOk(url, timeoutMs = 15000) {
+  try {
+    const res = await fetch(url, {
+      redirect: 'follow',
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    return { ok: res.ok, status: res.status };
+  } catch (e) {
+    return { ok: false, status: e.name || 'ERR' };
+  }
+}
+
+async function waitReachable(urls, maxWaitMs = 90000, intervalMs = 5000) {
+  const deadline = Date.now() + maxWaitMs;
+  let pending = urls;
+  let last = {};
+  while (pending.length > 0) {
+    const results = await Promise.all(pending.map(async (u) => ({ u, r: await probeOk(u) })));
+    last = Object.fromEntries(results.map(({ u, r }) => [u, r.status]));
+    pending = results.filter(({ r }) => !r.ok).map(({ u }) => u);
+    if (pending.length === 0) return { ready: true, statuses: last };
+    if (Date.now() >= deadline) break;
+    await new Promise((r) => setTimeout(r, intervalMs));
+  }
+  return { ready: pending.length === 0, statuses: last };
+}
+
+async function preflight(vlog) {
+  const origin = SITE_URL.replace(/\/$/, '');
+  const articleUrl = `${origin}/vlog/${vlog.slug}`;
+  const coverUrl = `${origin}/images/${vlog.slug}.png`;
+  console.log(`[PREFLIGHT] 等待文章与封面可访问（最长 90s）...`);
+  const r = await waitReachable([articleUrl, coverUrl]);
+  for (const [u, s] of Object.entries(r.statuses)) {
+    console.log(`[PREFLIGHT] ${s} ${u}`);
+  }
+  if (!r.ready) {
+    console.warn('[PREFLIGHT] 仍有资源未就绪，推文照常发送（稍后可自动恢复）');
+  }
+  return r;
 }
 
 async function playwrightMode(tweetText) {
@@ -220,11 +301,20 @@ async function main() {
 
   const vlog = getLatestVlog(slug);
   const tweetText = buildTweet(vlog);
+  const dryRun = args.includes('--dry-run');
 
   console.log(`Vlog: ${vlog.title}`);
   console.log(`Tweet (${tweetText.length} chars):`);
   console.log(tweetText);
   console.log('');
+
+  await preflight(vlog);
+
+  if (dryRun) {
+    console.log('[DRY-RUN] 跳过实际发推');
+    console.log(JSON.stringify({ mode: 'dry-run', success: true, textLen: tweetText.length }));
+    return;
+  }
 
   // 强制 intent-only 模式
   if (intentOnly) {
@@ -233,15 +323,28 @@ async function main() {
     return;
   }
 
-  // 先尝试 Playwright 自动发推，失败则降级
+  // 1) 首选官方 API（无需 GUI，可全自动）
+  try {
+    const result = await apiMode(tweetText);
+    console.log('[OK] X API 发布成功');
+    console.log(JSON.stringify(result));
+    return;
+  } catch (err) {
+    console.error(`X API 模式失败: ${err.message}`);
+  }
+
+  // 2) 降级 Playwright（需要带 CDP 的 Chrome）
   try {
     const result = await playwrightMode(tweetText);
     console.log(JSON.stringify(result));
+    return;
   } catch (err) {
     console.error(`Playwright mode failed: ${err.message}`);
-    const result = intentFallback(tweetText);
-    console.log(JSON.stringify(result));
   }
+
+  // 3) 最后降级：intent 预填，人工点发送
+  const result = intentFallback(tweetText);
+  console.log(JSON.stringify(result));
 }
 
 main().catch(err => {
