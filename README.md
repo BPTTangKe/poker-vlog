@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-26 — Floating the Flop: When and Why to Call Without a Hand
+
+![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-10-26.png)
+
+[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-10-26.md)
+
 ### 2026-10-25 — Preflop 3-Bet Ranges: When to Light 3-Bet
 
 ![Preflop 3-Bet Ranges: When to Light 3-Bet](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/preflop-3-bet-ranges-when-to-light-3-bet-2026-10-25.png)
@@ -38,12 +44,6 @@
 ![Tilt Control: How I Saved 3 Buy-ins by Walking Away](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.png)
 
 [Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.md)
-
-### 2026-10-19 — Bankroll Management: How Many Buy-ins Do You Really Need?
-
-![Bankroll Management: How Many Buy-ins Do You Really Need?](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.png)
-
-[Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-10-19.md)
 
 
 ## About
