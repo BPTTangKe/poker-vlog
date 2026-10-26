@@ -212,12 +212,36 @@ async function waitReachable(urls, maxWaitMs = 90000, intervalMs = 5000) {
   return { ready: pending.length === 0, statuses: last };
 }
 
+/**
+ * README 封面预热：README 用 jsDelivr / GitHub Pages 绝对地址，新图在 jsDelivr
+ * 属惰性拉取；首次被 GitHub camo 抓取时若尚未回源会 404 并被缓存，
+ * 表现为「GitHub 上图片不显示」。发推前主动 GET 一次，把负缓存窗口提前消掉。
+ */
+async function warmReadmeCover(slug) {
+  const urls = [
+    `https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/${slug}.png`,
+    `https://bpttangke.github.io/poker-vlog/images/${slug}.png`,
+  ];
+  for (const u of urls) {
+    for (let i = 1; i <= 3; i++) {
+      const r = await probeOk(u, 10000);
+      if (r.ok) {
+        console.log(`[WARM] ${r.status} ${u}`);
+        break;
+      }
+      if (i === 3) console.warn(`[WARM] 未就绪(${r.status}) ${u}`);
+      else await new Promise((res) => setTimeout(res, 4000));
+    }
+  }
+}
+
 async function preflight(vlog) {
   const origin = SITE_URL.replace(/\/$/, '');
   const articleUrl = `${origin}/vlog/${vlog.slug}`;
   const coverUrl = `${origin}/images/${vlog.slug}.png`;
   console.log(`[PREFLIGHT] 等待文章与封面可访问（最长 90s）...`);
   const r = await waitReachable([articleUrl, coverUrl]);
+  await warmReadmeCover(vlog.slug);
   for (const [u, s] of Object.entries(r.statuses)) {
     console.log(`[PREFLIGHT] ${s} ${u}`);
   }
@@ -292,12 +316,47 @@ async function playwrightMode(tweetText) {
   }
 }
 
+/**
+ * 登录引导模式（--login）：Playwright 发推失败最常见原因是专用 Chrome profile
+ * 里没有 X 登录态（auth_token）。此处打开登录页并由用户手动完成一次登录
+ * （不代替用户输入密码、不绕过任何验证码），检测到 auth_token 后即退出。
+ */
+async function loginMode() {
+  const { chromium } = await import('playwright');
+  ensureChromeWithCDP();
+  const browser = await chromium.connectOverCDP(CDP_URL);
+  try {
+    const context = browser.contexts()[0];
+    const page = context.pages().length > 0 ? context.pages()[0] : await context.newPage();
+    await page.goto('https://x.com/login', { waitUntil: 'domcontentloaded', timeout: 60000 });
+    console.log('[LOGIN] 请在打开的 Chrome 窗口中完成 X 登录（最长等待 10 分钟）...');
+    const deadline = Date.now() + 10 * 60 * 1000;
+    while (Date.now() < deadline) {
+      const cookies = await context.cookies('https://x.com').catch(() => []);
+      if (cookies.some((c) => c.name === 'auth_token' && c.value)) {
+        console.log('[LOGIN] 已检测到 auth_token，登录态已持久化到专用 profile，后续发推可全自动。');
+        return { mode: 'login', success: true };
+      }
+      await new Promise((r) => setTimeout(r, 3000));
+    }
+    throw new Error('登录等待超时（10 分钟未检测到 auth_token）');
+  } finally {
+    await browser.close().catch(() => {});
+  }
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const slug = args.includes('--vlog-slug')
     ? args[args.indexOf('--vlog-slug') + 1]
     : null;
   const intentOnly = args.includes('--intent-only');
+
+  if (args.includes('--login')) {
+    const r = await loginMode();
+    console.log(JSON.stringify(r));
+    return;
+  }
 
   const vlog = getLatestVlog(slug);
   const tweetText = buildTweet(vlog);
