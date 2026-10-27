@@ -1,10 +1,18 @@
 ---
 title: "Floating the Flop: When and Why to Call Without a Hand"
 date: 2026-10-26
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
-tags: ["bankroll", "strategy", "math"]
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+tags: ["poker", "strategy"]
 image: "/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-10-26.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_3e23db2bd14311f18460525400393706
+    ReservedCode1: b2qIgPGw9q2FzQz2Ro/or/vZI8v0fWvlBMai+LCgMBwNrRtIiGUNj6E1D0Y+ScTNSQHQrfK3+CEk/CFxksLTupUtGlmAfdKkoIEug37wKyqWJSLgtdK8zytDU9rmCU0x5IEqJ+FmF01LHyr0F0aPYkXgfmb2eIxdv+IbgedhTzor3uA/hWAz4tLZhnw=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_3e23db2bd14311f18460525400393706
+    ReservedCode2: b2qIgPGw9q2FzQz2Ro/or/vZI8v0fWvlBMai+LCgMBwNrRtIiGUNj6E1D0Y+ScTNSQHQrfK3+CEk/CFxksLTupUtGlmAfdKkoIEug37wKyqWJSLgtdK8zytDU9rmCU0x5IEqJ+FmF01LHyr0F0aPYkXgfmb2eIxdv+IbgedhTzor3uA/hWAz4tLZhnw=
 ---
 
 # Floating the Flop: When and Why to Call Without a Hand
@@ -37,3 +45,4 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*

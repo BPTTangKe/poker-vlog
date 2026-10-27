@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-27 — GTO vs Exploitative Play: Finding the Right Balance
+
+![GTO vs Exploitative Play: Finding the Right Balance](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-27.png)
+
+[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-10-27.md)
+
 ### 2026-10-26 — Floating the Flop: When and Why to Call Without a Hand
 
 ![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-10-26.png)
@@ -38,12 +44,6 @@
 ![Block Betting on the River: Thin Value and Bluff Inducers](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.png)
 
 [Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.md)
-
-### 2026-10-20 — Tilt Control: How I Saved 3 Buy-ins by Walking Away
-
-![Tilt Control: How I Saved 3 Buy-ins by Walking Away](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.png)
-
-[Read full article](src/content/vlog/tilt-control-how-i-saved-3-buy-ins-by-walking-away-2026-10-20.md)
 
 
 ## About
