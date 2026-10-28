@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-28 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
+
+![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-28.png)
+
+[Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-28.md)
+
 ### 2026-10-27 — GTO vs Exploitative Play: Finding the Right Balance
 
 ![GTO vs Exploitative Play: Finding the Right Balance](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-27.png)
@@ -38,12 +44,6 @@
 ![GTO vs Exploitative Play: Finding the Right Balance](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-22.png)
 
 [Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-10-22.md)
-
-### 2026-10-21 — Block Betting on the River: Thin Value and Bluff Inducers
-
-![Block Betting on the River: Thin Value and Bluff Inducers](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.png)
-
-[Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-10-21.md)
 
 
 ## About
