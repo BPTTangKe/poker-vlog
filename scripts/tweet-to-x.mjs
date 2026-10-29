@@ -197,7 +197,7 @@ async function probeOk(url, timeoutMs = 15000) {
   }
 }
 
-async function waitReachable(urls, maxWaitMs = 90000, intervalMs = 5000) {
+async function waitReachable(urls, maxWaitMs = 240000, intervalMs = 5000) {
   const deadline = Date.now() + maxWaitMs;
   let pending = urls;
   let last = {};
@@ -239,7 +239,7 @@ async function preflight(vlog) {
   const origin = SITE_URL.replace(/\/$/, '');
   const articleUrl = `${origin}/vlog/${vlog.slug}`;
   const coverUrl = `${origin}/images/${vlog.slug}.png`;
-  console.log(`[PREFLIGHT] 等待文章与封面可访问（最长 90s）...`);
+  console.log(`[PREFLIGHT] 等待文章与封面可访问（最长 240s，覆盖 GitHub Pages 部署延迟）...`);
   const r = await waitReachable([articleUrl, coverUrl]);
   await warmReadmeCover(vlog.slug);
   for (const [u, s] of Object.entries(r.statuses)) {
