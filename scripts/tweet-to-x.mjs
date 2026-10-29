@@ -259,7 +259,7 @@ async function playwrightMode(tweetText) {
   let browser;
   try {
     console.log('Connecting to Chrome via CDP...');
-    browser = await chromium.connectOverCDP(CDP_URL);
+    browser = await chromium.connectOverCDP(CDP_URL, { timeout: 60000 });
 
     // 获取已有页面或创建新页面
     const context = browser.contexts()[0];
@@ -324,7 +324,7 @@ async function playwrightMode(tweetText) {
 async function loginMode() {
   const { chromium } = await import('playwright');
   ensureChromeWithCDP();
-  const browser = await chromium.connectOverCDP(CDP_URL);
+  const browser = await chromium.connectOverCDP(CDP_URL, { timeout: 60000 });
   try {
     const context = browser.contexts()[0];
     const page = context.pages().length > 0 ? context.pages()[0] : await context.newPage();

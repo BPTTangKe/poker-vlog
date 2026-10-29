@@ -20,12 +20,12 @@
     "@astrojs/sitemap": "^3.3.0",
     "astro": "^5.12.2",
     "openai": "^4.79.1",
-    "playwright": "^1.61.1",
     "snoowrap": "^1.23.0",
     "twitter-api-v2": "^1.18.2"
   },
   "devDependencies": {
     "@types/node": "^22.13.0",
+    "playwright": "^1.64.1",
     "typescript": "^5.7.3"
   }
 }
