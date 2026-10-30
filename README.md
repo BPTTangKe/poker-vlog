@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-10-30 — Reading Tells in Live Poker: Eye Movements and Betting Patterns
+
+![Reading Tells in Live Poker: Eye Movements and Betting Patterns](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-10-30.png)
+
+[Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-10-30.md)
+
 ### 2026-10-29 — Check-Raise Bluffing: Board Textures That Favor the Defender
 
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-10-29.png)
@@ -38,12 +44,6 @@
 ![GTO vs Exploitative Play: Finding the Right Balance](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-24.png)
 
 [Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-10-24.md)
-
-### 2026-10-23 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
-
-![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/from-001002-to-12-my-5-year-poker-journey-2026-10-23.png)
-
-[Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-10-23.md)
 
 
 ## About
