@@ -222,15 +222,19 @@ async function warmReadmeCover(slug) {
     `https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/${slug}.png`,
     `https://bpttangke.github.io/poker-vlog/images/${slug}.png`,
   ];
+  // GitHub Pages 从 push 到新图真正可访问实测约 60~120s；旧逻辑仅重试 3 次（约 8s），
+  // 必然记录 404。一旦 GitHub camo 在此时抓到 404 会缓存失败结果，表现为
+  // github.com 上 README 封面长时间不显示。这里改为退避重试，单条 URL 最多约 3 分钟。
+  const delays = [3000, 4000, 6000, 10000, 15000, 20000, 20000, 20000, 20000, 20000, 20000, 20000];
   for (const u of urls) {
-    for (let i = 1; i <= 3; i++) {
+    for (let i = 0; i < delays.length; i++) {
       const r = await probeOk(u, 10000);
       if (r.ok) {
         console.log(`[WARM] ${r.status} ${u}`);
         break;
       }
-      if (i === 3) console.warn(`[WARM] 未就绪(${r.status}) ${u}`);
-      else await new Promise((res) => setTimeout(res, 4000));
+      if (i === delays.length - 1) console.warn(`[WARM] 未就绪(${r.status}) ${u}`);
+      else await new Promise((res) => setTimeout(res, delays[i]));
     }
   }
 }
