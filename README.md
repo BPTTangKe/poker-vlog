@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-01 — The Mental Game: Dealing with Downswings Like a Pro
+
+![The Mental Game: Dealing with Downswings Like a Pro](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/the-mental-game-dealing-with-downswings-like-a-pro-2026-11-01.png)
+
+[Read full article](src/content/vlog/the-mental-game-dealing-with-downswings-like-a-pro-2026-11-01.md)
+
 ### 2026-10-31 — Exploiting Weak Players: How to Maximize Value Against Calling Stations
 
 ![Exploiting Weak Players: How to Maximize Value Against Calling Stations](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-10-31.png)
@@ -38,12 +44,6 @@
 ![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-10-26.png)
 
 [Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-10-26.md)
-
-### 2026-10-25 — Preflop 3-Bet Ranges: When to Light 3-Bet
-
-![Preflop 3-Bet Ranges: When to Light 3-Bet](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/preflop-3-bet-ranges-when-to-light-3-bet-2026-10-25.png)
-
-[Read full article](src/content/vlog/preflop-3-bet-ranges-when-to-light-3-bet-2026-10-25.md)
 
 
 ## About
