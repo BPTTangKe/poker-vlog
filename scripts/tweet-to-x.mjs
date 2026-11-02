@@ -217,11 +217,32 @@ async function waitReachable(urls, maxWaitMs = 240000, intervalMs = 5000) {
  * 属惰性拉取；首次被 GitHub camo 抓取时若尚未回源会 404 并被缓存，
  * 表现为「GitHub 上图片不显示」。发推前主动 GET 一次，把负缓存窗口提前消掉。
  */
+async function purgeJsdelivr(url) {
+  try {
+    const u = new URL(url);
+    if (!u.hostname.endsWith('jsdelivr.net') || !u.pathname.startsWith('/gh/')) return false;
+    const res = await fetch(`https://purge.jsdelivr.net${u.pathname}`, { method: 'GET', redirect: 'follow' });
+    const text = await res.text();
+    const ok = res.ok && /"status"\s*:\s*"(finished|pending)"/.test(text);
+    console.log(`[PURGE] ${ok ? 'ok' : `status=${res.status}`} ${u.pathname}`);
+    return ok;
+  } catch (e) {
+    console.warn(`[PURGE] 失败 ${e.message}`);
+    return false;
+  }
+}
+
 async function warmReadmeCover(slug) {
   const urls = [
     `https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/${slug}.png`,
     `https://bpttangke.github.io/poker-vlog/images/${slug}.png`,
   ];
+
+  // jsDelivr 对「首次拉取失败」的 @main 路径会缓存 404（负缓存），仅反复 GET 无法自愈，
+  // 必须先调 purge 接口清缓存再回源。否则 GitHub camo 会持续拿到 404，README 长期裂图。
+  for (const u of urls) {
+    if (await purgeJsdelivr(u)) await new Promise((res) => setTimeout(res, 3000));
+  }
   // GitHub Pages 从 push 到新图真正可访问实测约 60~120s；旧逻辑仅重试 3 次（约 8s），
   // 必然记录 404。一旦 GitHub camo 在此时抓到 404 会缓存失败结果，表现为
   // github.com 上 README 封面长时间不显示。这里改为退避重试，单条 URL 最多约 3 分钟。
