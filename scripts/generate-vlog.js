@@ -21,15 +21,16 @@ const TOPIC_FILE = '/tmp/poker-vlog-topic.txt';
 
 // README 自动更新相关
 const README_PATH = path.resolve(__dirname, '..', 'README.md');
-// README 封面图地址前缀：
-// 1) 相对路径 images/xxx.png：GitHub 会重写为 /raw/main/... 并 302 到
-//    raw.githubusercontent.com，该域名及 camo.githubusercontent.com 境内常被污染/阻断。
-// 2) bpttangke.github.io：Pages 直出本身没问题，但该域名在境内经常整域不可达，
-//    且新图必须等 Actions 部署完成（1~3 分钟）后才 200，README 抢先生效时是裂图。
-// 结论：README 统一走 jsDelivr（GitHub 仓库 CDN，境内可直连、提交后即可用，
-// @main 分支路径会随最新提交自动更新）。
+// README 封面图地址前缀（2026-11-02 改为仓库内相对路径）：
+// 1) jsDelivr（旧方案）：@main 惰性索引，新封面首抓必 404，且 404 会被 jsDelivr
+//    与 GitHub camo 双重负缓存，README 长时间裂图——这是"GitHub 上图片不显示"的主因。
+// 2) bpttangke.github.io（Pages 绝对地址）：新图要等 Actions 部署完成（1~3 分钟）才 200，
+//    README 抢先生效时是裂图；且该域名境内常整域不可达。
+// 结论：改用相对路径 images/xxx.png。图片与 README 在同一次提交里，GitHub camo 回源
+// raw.githubusercontent.com（境外）即可取到，无第三方索引延迟，无负缓存窗口。
+// 用户浏览器实际加载的是 camo.githubusercontent.com，不直接暴露 raw 域名。
 // 注意：站点页面内的封面不依赖此常量，由 frontmatter.image + BASE_URL 渲染。
-const README_IMAGE_BASE = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images';
+const README_IMAGE_BASE = 'images';
 const README_MAX_ENTRIES = 7;
 const README_SECTION = '## Latest Vlogs';
 
@@ -487,8 +488,7 @@ function updateReadme({ slug, title, dateStr }) {
     return;
   }
 
-  // 封面写 GitHub Pages 绝对地址：GitHub 仓库页渲染 README 时不会再去 302 到
-  // raw.githubusercontent.com（境内被污染会裂图），同时也不受 jsDelivr @main 索引延迟影响。
+  // 封面写仓库内相对路径：与 README 同一次提交，camo 立即可回源，无 CDN 索引延迟。
   const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_BASE}/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
