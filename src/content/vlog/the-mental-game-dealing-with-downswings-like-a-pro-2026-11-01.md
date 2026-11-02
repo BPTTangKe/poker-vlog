@@ -1,10 +1,18 @@
 ---
 title: "The Mental Game: Dealing with Downswings Like a Pro"
 date: 2026-11-01
-excerpt: "Tilt has cost me more money than any bad run of cards ever could. Today I want to share the three most expensive tilt-induced mistakes I've made, and the system"
-tags: ["bankroll", "mental-game", "bad-beat"]
+excerpt: "Tilt has cost me more money than any bad run of cards ever could. Today I want to share the three most expensive tilt-induced mistakes I've made, and the system I built to stop them from happening aga"
+tags: ["poker", "strategy"]
 image: "/images/the-mental-game-dealing-with-downswings-like-a-pro-2026-11-01.png"
-seo_description: "Tilt has cost me more money than any bad run of cards ever could. Today I want to share the three most expensive tilt-induced mistakes I've made, and the system"
+seo_description: "Tilt has cost me more money than any bad run of cards ever could. Today I want to share the three most expensive tilt-induced mistakes I've made, and the system I built to stop them from happening aga"
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_be42a55dd60511f180d5525400248c00
+    ReservedCode1: FGiwOcuKCEBQPQFk8H+vhYsnA2w9/w+ICbYDfRm+yBj3W/XfaJ/NHDXGjw2vcn29FNd3wsq+uDOPvd7b4WU9AggefPZDlUnsW5+ShkeohLsBc+MhSkVYiv77zEGZEsP6Hs+7WS7TZoqHJgqn43FSm5Vrnxvze158rlAUQdVVVkLEUJ02AYawLTggLc8=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_be42a55dd60511f180d5525400248c00
+    ReservedCode2: FGiwOcuKCEBQPQFk8H+vhYsnA2w9/w+ICbYDfRm+yBj3W/XfaJ/NHDXGjw2vcn29FNd3wsq+uDOPvd7b4WU9AggefPZDlUnsW5+ShkeohLsBc+MhSkVYiv77zEGZEsP6Hs+7WS7TZoqHJgqn43FSm5Vrnxvze158rlAUQdVVVkLEUJ02AYawLTggLc8=
 ---
 
 # The Mental Game: Dealing with Downswings Like a Pro
@@ -39,3 +47,4 @@ Tilt management isn't about never getting angry — it's about having a system t
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*
