@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-03 — Reading Tells in Live Poker: Eye Movements and Betting Patterns
+
+![Reading Tells in Live Poker: Eye Movements and Betting Patterns](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-03.png)
+
+[Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-03.md)
+
 ### 2026-11-02 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
 
 ![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-11-02.png)
@@ -38,12 +44,6 @@
 ![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-28.png)
 
 [Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-10-28.md)
-
-### 2026-10-27 — GTO vs Exploitative Play: Finding the Right Balance
-
-![GTO vs Exploitative Play: Finding the Right Balance](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-vs-exploitative-play-finding-the-right-balance-2026-10-27.png)
-
-[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-10-27.md)
 
 
 ## About
