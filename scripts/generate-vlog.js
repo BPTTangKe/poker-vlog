@@ -26,8 +26,14 @@ const README_PATH = path.resolve(__dirname, '..', 'README.md');
 //    raw.githubusercontent.com，该域名及 camo.githubusercontent.com 境内常被污染/阻断。
 // 2) bpttangke.github.io：Pages 直出本身没问题，但该域名在境内经常整域不可达，
 //    且新图必须等 Actions 部署完成（1~3 分钟）后才 200，README 抢先生效时是裂图。
-// 结论：README 统一走 jsDelivr（GitHub 仓库 CDN，境内可直连、提交后即可用，
+// 结论：README 统一走 jsDelivr（GitHub 仓库 CDN，提交后即可用，
 // @main 分支路径会随最新提交自动更新）。
+// 关键补充：GitHub 仓库页渲染 README 时会把外链图片统一改写为
+// camo.githubusercontent.com 代理地址，用户浏览器请求的是 camo 而不是源站。
+// 因此源站（jsDelivr / raw）只影响 camo 能否回源成功；某次回源 404 后，
+// GitHub 会对该 camo URL 做负缓存，即使源站恢复，页面仍长期裂图。
+// 对策：图片 URL 追加 ?v=<日期> 版本参数，每篇新文章都是全新 URL，
+// 强制 camo 重新回源，绕开历史 404 负缓存。
 // 注意：站点页面内的封面不依赖此常量，由 frontmatter.image + BASE_URL 渲染。
 const README_IMAGE_BASE = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images';
 const README_MAX_ENTRIES = 7;
@@ -487,9 +493,9 @@ function updateReadme({ slug, title, dateStr }) {
     return;
   }
 
-  // 封面写 GitHub Pages 绝对地址：GitHub 仓库页渲染 README 时不会再去 302 到
-  // raw.githubusercontent.com（境内被污染会裂图），同时也不受 jsDelivr @main 索引延迟影响。
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_BASE}/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  // 封面走 jsDelivr 并带日期版本参数：GitHub 渲染 README 时统一改写成 camo 代理，
+  // 版本参数可避免命中 camo 历史 404 负缓存（详见文件顶部 README_IMAGE_BASE 注释）。
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_BASE}/${slug}.png?v=${dateStr})\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);
