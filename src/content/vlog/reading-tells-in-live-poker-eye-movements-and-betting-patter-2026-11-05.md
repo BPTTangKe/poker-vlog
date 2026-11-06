@@ -1,10 +1,18 @@
 ---
 title: "Reading Tells in Live Poker: Eye Movements and Betting Patterns"
 date: 2026-11-05
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
-tags: ["bankroll", "live-poker", "math"]
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+tags: ["poker", "strategy"]
 image: "/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-05.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_c03fd0c9d92e11f19232525400248c00
+    ReservedCode1: yKT8xFDP1U8xRf27Zn2LW66MLEzVRlGcw4w9GKB57ybhVfGPCwH0TrTuQldmNaW4q167SeKR5yAerWJGpIsB91cstOTYujjmlAx+sruTVvUjEUoSVTn1WGyDkYtA2mMYx00lz3IWb7HZT/0du5Vl5LtB7TZNvFYrPgdfph/0pD+i73A/RVZ6rBUEWEU=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_c03fd0c9d92e11f19232525400248c00
+    ReservedCode2: yKT8xFDP1U8xRf27Zn2LW66MLEzVRlGcw4w9GKB57ybhVfGPCwH0TrTuQldmNaW4q167SeKR5yAerWJGpIsB91cstOTYujjmlAx+sruTVvUjEUoSVTn1WGyDkYtA2mMYx00lz3IWb7HZT/0du5Vl5LtB7TZNvFYrPgdfph/0pD+i73A/RVZ6rBUEWEU=
 ---
 
 # Reading Tells in Live Poker: Eye Movements and Betting Patterns
@@ -37,3 +45,4 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*
