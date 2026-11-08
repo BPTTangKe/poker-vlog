@@ -1,10 +1,18 @@
 ---
 title: "Continuation Betting in 3-Bet Pots: Sizing and Frequency"
 date: 2026-11-08
-excerpt: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviat"
-tags: ["preflop", "3bet", "cash-game", "bankroll"]
+excerpt: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviating from standard charts and adding ligh"
+tags: ["poker", "strategy"]
 image: "/images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-11-08.png"
-seo_description: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviat"
+seo_description: "Preflop play is where most money is won or lost before the flop even hits. Today I want to dive deep into 3-bet ranges — specifically, when you should be deviating from standard charts and adding ligh"
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_610fe1eedb5411f19232525400248c00
+    ReservedCode1: XJvbgzS0J4OzLs5Yuhkh9riu1AG8MGwyEUyjycvniAzA5qRaRFwBFpcEjZZBCCU6PMfi9jeSjt+Iz3WxroOjugJR2wltzXnVfOj39CtziJHgEQ6CXVY+tvWS2YkyRBdq7X/o/Thz5C+XEwB2xZ1beLKcFe3WTkwpiTF841cCh5sn7mPiOQ2rSX0eyWk=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_610fe1eedb5411f19232525400248c00
+    ReservedCode2: XJvbgzS0J4OzLs5Yuhkh9riu1AG8MGwyEUyjycvniAzA5qRaRFwBFpcEjZZBCCU6PMfi9jeSjt+Iz3WxroOjugJR2wltzXnVfOj39CtziJHgEQ6CXVY+tvWS2YkyRBdq7X/o/Thz5C+XEwB2xZ1beLKcFe3WTkwpiTF841cCh5sn7mPiOQ2rSX0eyWk=
 ---
 
 # Continuation Betting in 3-Bet Pots: Sizing and Frequency
@@ -37,3 +45,4 @@ The key takeaway: your 3-bet range should be fluid, not static. Adjust to your o
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*
