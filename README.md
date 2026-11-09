@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-09 — Check-Raise Bluffing: Board Textures That Favor the Defender
+
+![Check-Raise Bluffing: Board Textures That Favor the Defender](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-09.png?v=2026-11-09)
+
+[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-09.md)
+
 ### 2026-11-08 — Continuation Betting in 3-Bet Pots: Sizing and Frequency
 
 ![Continuation Betting in 3-Bet Pots: Sizing and Frequency](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-11-08.png?v=2026-11-08)
@@ -38,12 +44,6 @@
 ![Reading Tells in Live Poker: Eye Movements and Betting Patterns](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-03.png?v=2026-11-03)
 
 [Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-03.md)
-
-### 2026-11-02 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
-
-![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-11-02.png?v=2026-11-02)
-
-[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-11-02.md)
 
 
 ## About
