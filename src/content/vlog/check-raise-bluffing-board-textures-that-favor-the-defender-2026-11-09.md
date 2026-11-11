@@ -1,10 +1,18 @@
 ---
 title: "Check-Raise Bluffing: Board Textures That Favor the Defender"
 date: 2026-11-09
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
-tags: ["bankroll", "bluffing", "math"]
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+tags: ["poker", "strategy"]
 image: "/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-09.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_018204e5dc5011f19280525400393706
+    ReservedCode1: 6JAJZrgR42w6PMooCT/afKqgZg3uIG3w/zri006FZhz/xSD2JHlBvTlulxDjkYYzh6Gbvqgi+Z5Wwa1E7VAN55EuhwGCjRi3hN+WXkNayUN3g9fy6xNmHQDxpOOY5og/QFlACutwMpSGjGcYeaLiyuPajAuFgBXEIgYWLTVOPMF7PPKoduITUOa8/gw=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_018204e5dc5011f19280525400393706
+    ReservedCode2: 6JAJZrgR42w6PMooCT/afKqgZg3uIG3w/zri006FZhz/xSD2JHlBvTlulxDjkYYzh6Gbvqgi+Z5Wwa1E7VAN55EuhwGCjRi3hN+WXkNayUN3g9fy6xNmHQDxpOOY5og/QFlACutwMpSGjGcYeaLiyuPajAuFgBXEIgYWLTVOPMF7PPKoduITUOa8/gw=
 ---
 
 # Check-Raise Bluffing: Board Textures That Favor the Defender
@@ -37,3 +45,4 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*

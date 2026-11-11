@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-11 — Building a Study Routine: 30 Minutes a Day to Crush Your Stake
+
+![Building a Study Routine: 30 Minutes a Day to Crush Your Stake](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-11-11.png?v=2026-11-11)
+
+[Read full article](src/content/vlog/building-a-study-routine-30-minutes-a-day-to-crush-your-stak-2026-11-11.md)
+
 ### 2026-11-09 — Check-Raise Bluffing: Board Textures That Favor the Defender
 
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-09.png?v=2026-11-09)
@@ -38,12 +44,6 @@
 ![Online vs Live Poker: Adjusting Your Strategy for Each](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-11-04.png?v=2026-11-04)
 
 [Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-11-04.md)
-
-### 2026-11-03 — Reading Tells in Live Poker: Eye Movements and Betting Patterns
-
-![Reading Tells in Live Poker: Eye Movements and Betting Patterns](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-03.png?v=2026-11-03)
-
-[Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-03.md)
 
 
 ## About
