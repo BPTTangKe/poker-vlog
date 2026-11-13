@@ -8,6 +8,7 @@
     "start": "astro dev",
     "prebuild": "node scripts/ensure-frontmatter.mjs",
     "build": "astro build",
+    "build:gh": "BASE_PATH=/poker-vlog/ SITE_URL=https://bpttangke.github.io npm run build",
     "preview": "astro preview",
     "generate-vlog": "node scripts/generate-vlog.js",
     "publish-social": "node scripts/publish-social.mjs",
