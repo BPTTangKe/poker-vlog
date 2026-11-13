@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-13 — Block Betting on the River: Thin Value and Bluff Inducers
+
+![Block Betting on the River: Thin Value and Bluff Inducers](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.png?v=2026-11-13)
+
+[Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.md)
+
 ### 2026-11-12 — Check-Raise Bluffing: Board Textures That Favor the Defender
 
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-12.png?v=2026-11-12)
@@ -38,12 +44,6 @@
 ![Multiway Pots: Why You Should Play Tighter Than You Think](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-11-06.png?v=2026-11-06)
 
 [Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-11-06.md)
-
-### 2026-11-05 — Reading Tells in Live Poker: Eye Movements and Betting Patterns
-
-![Reading Tells in Live Poker: Eye Movements and Betting Patterns](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-05.png?v=2026-11-05)
-
-[Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-05.md)
 
 
 ## About
