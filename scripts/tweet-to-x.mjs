@@ -185,24 +185,38 @@ async function apiMode(tweetText) {
 }
 
 // ── 发布前置检查：确认文章与封面已可访问（规避 push 后 Pages 部署延迟导致 404）──
-async function probeOk(url, timeoutMs = 15000) {
+async function probeOk(url, timeoutMs = 15000, marker = null) {
   try {
     const res = await fetch(url, {
       redirect: 'follow',
       signal: AbortSignal.timeout(timeoutMs),
     });
-    return { ok: res.ok, status: res.status };
+    if (!res.ok) return { ok: false, status: res.status };
+    const ct = (res.headers.get('content-type') || '').toLowerCase();
+    const isImage = /\.(png|jpe?g|gif|webp|svg|avif)$/i.test(new URL(url).pathname);
+    // 图片必须回 image/*：Cloudflare Pages / SPA 回退会以 200 + text/html 返回，
+    // 只看状态码会把「图不存在」误判为就绪，推文就会带上裂图。
+    if (isImage && !ct.startsWith('image/')) return { ok: false, status: 'NOT_IMAGE' };
+    if (!isImage) {
+      if (ct && !ct.includes('text/html')) return { ok: false, status: 'NOT_HTML' };
+      // 文章页回退同样返回 200 通用页，需用正文特征串二次确认是真页面。
+      if (marker) {
+        const body = await res.text();
+        if (!body.includes(marker)) return { ok: false, status: 'FALLBACK_PAGE' };
+      }
+    }
+    return { ok: true, status: res.status };
   } catch (e) {
     return { ok: false, status: e.name || 'ERR' };
   }
 }
 
-async function waitReachable(urls, maxWaitMs = 240000, intervalMs = 5000) {
+async function waitReachable(urls, maxWaitMs = 240000, intervalMs = 5000, markers = {}) {
   const deadline = Date.now() + maxWaitMs;
   let pending = urls;
   let last = {};
   while (pending.length > 0) {
-    const results = await Promise.all(pending.map(async (u) => ({ u, r: await probeOk(u) })));
+    const results = await Promise.all(pending.map(async (u) => ({ u, r: await probeOk(u, 15000, markers[u] || null) })));
     last = Object.fromEntries(results.map(({ u, r }) => [u, r.status]));
     pending = results.filter(({ r }) => !r.ok).map(({ u }) => u);
     if (pending.length === 0) return { ready: true, statuses: last };
@@ -265,7 +279,9 @@ async function preflight(vlog) {
   const articleUrl = `${origin}/vlog/${vlog.slug}`;
   const coverUrl = `${origin}/images/${vlog.slug}.png`;
   console.log(`[PREFLIGHT] 等待文章与封面可访问（最长 240s，覆盖 GitHub Pages 部署延迟）...`);
-  const r = await waitReachable([articleUrl, coverUrl]);
+  const r = await waitReachable([articleUrl, coverUrl], 240000, 5000, {
+    [articleUrl]: vlog.slug.slice(0, 24),
+  });
   await warmReadmeCover(vlog.slug);
   for (const [u, s] of Object.entries(r.statuses)) {
     console.log(`[PREFLIGHT] ${s} ${u}`);
