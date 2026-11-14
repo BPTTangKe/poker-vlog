@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-14 — Exploiting Weak Players: How to Maximize Value Against Calling Stations
+
+![Exploiting Weak Players: How to Maximize Value Against Calling Stations](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-11-14.png?v=2026-11-14)
+
+[Read full article](src/content/vlog/exploiting-weak-players-how-to-maximize-value-against-callin-2026-11-14.md)
+
 ### 2026-11-13 — Block Betting on the River: Thin Value and Bluff Inducers
 
 ![Block Betting on the River: Thin Value and Bluff Inducers](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.png?v=2026-11-13)
@@ -38,12 +44,6 @@
 ![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-11-07.png?v=2026-11-07)
 
 [Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-11-07.md)
-
-### 2026-11-06 — Multiway Pots: Why You Should Play Tighter Than You Think
-
-![Multiway Pots: Why You Should Play Tighter Than You Think](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-11-06.png?v=2026-11-06)
-
-[Read full article](src/content/vlog/multiway-pots-why-you-should-play-tighter-than-you-think-2026-11-06.md)
 
 
 ## About

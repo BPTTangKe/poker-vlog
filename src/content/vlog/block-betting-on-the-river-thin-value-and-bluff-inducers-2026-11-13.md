@@ -1,10 +1,18 @@
 ---
 title: "Block Betting on the River: Thin Value and Bluff Inducers"
 date: 2026-11-13
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
-tags: ["bankroll", "bluffing", "math"]
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+tags: ["poker", "strategy"]
 image: "/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_da8a3d98df7311f1913b525400393706
+    ReservedCode1: qUgcJb4yWwKke87r0pF4irXjsCZGn10i5Dqk4ZcE/1QhiozHlJKtOdP+cO5sAQ8eDNomEAgVSPXhT6cN7/f9o+g307fY9ujj/BgAADPPR8iVj6R88vHG/6Eknqiji/N1GxUa5r+JCd6guPkIRFAdkV3JX6308dfZL4eX7wxPOlwlooCw3zCabIfyzt4=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_da8a3d98df7311f1913b525400393706
+    ReservedCode2: qUgcJb4yWwKke87r0pF4irXjsCZGn10i5Dqk4ZcE/1QhiozHlJKtOdP+cO5sAQ8eDNomEAgVSPXhT6cN7/f9o+g307fY9ujj/BgAADPPR8iVj6R88vHG/6Eknqiji/N1GxUa5r+JCd6guPkIRFAdkV3JX6308dfZL4eX7wxPOlwlooCw3zCabIfyzt4=
 ---
 
 # Block Betting on the River: Thin Value and Bluff Inducers
@@ -37,3 +45,4 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*
