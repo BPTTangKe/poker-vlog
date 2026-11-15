@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-15 — GTO vs Exploitative Play: Finding the Right Balance
+
+![GTO vs Exploitative Play: Finding the Right Balance](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/gto-vs-exploitative-play-finding-the-right-balance-2026-11-15.png?v=2026-11-15)
+
+[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-11-15.md)
+
 ### 2026-11-14 — Exploiting Weak Players: How to Maximize Value Against Calling Stations
 
 ![Exploiting Weak Players: How to Maximize Value Against Calling Stations](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-11-14.png?v=2026-11-14)
@@ -38,12 +44,6 @@
 ![Continuation Betting in 3-Bet Pots: Sizing and Frequency](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-11-08.png?v=2026-11-08)
 
 [Read full article](src/content/vlog/continuation-betting-in-3-bet-pots-sizing-and-frequency-2026-11-08.md)
-
-### 2026-11-07 — Hand Review: The Biggest Pot I Ever Lost (and What I Learned)
-
-![Hand Review: The Biggest Pot I Ever Lost (and What I Learned)](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-11-07.png?v=2026-11-07)
-
-[Read full article](src/content/vlog/hand-review-the-biggest-pot-i-ever-lost-and-what-i-learned-2026-11-07.md)
 
 
 ## About
