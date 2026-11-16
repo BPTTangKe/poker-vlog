@@ -442,6 +442,29 @@ async function main() {
     console.error(`Playwright mode failed: ${err.message}`);
   }
 
+  // 2.5) CDP 直连模式：Chrome 157 起 Playwright 的 connectOverCDP 会因
+  //      "Browser.setDownloadBehavior: Browser context management is not supported" 失败，
+  //      此处绕开 Playwright，直接用 DevTools Protocol 打开 intent 页并点击 Post。
+  try {
+    const intentUrl = `https://x.com/intent/tweet?text=${encodeURIComponent(tweetText)}`;
+    const script = path.join(__dirname, 'tweet-via-cdp.mjs');
+    const out = execSync(`node "${script}" --url "$X_INTENT_URL"`, {
+      encoding: 'utf-8',
+      timeout: 180000,
+      env: { ...process.env, X_INTENT_URL: intentUrl },
+    });
+    console.log(out.trim().split('\n').slice(-2).join('\n'));
+    const lastLine = out.trim().split('\n').pop();
+    const parsed = JSON.parse(lastLine);
+    if (parsed.success) {
+      console.log('[OK] CDP 直连发布成功');
+      return;
+    }
+    throw new Error('CDP 模式未确认发布成功');
+  } catch (err) {
+    console.error(`CDP mode failed: ${err.message}`);
+  }
+
   // 3) 最后降级：intent 预填，人工点发送
   const result = intentFallback(tweetText);
   console.log(JSON.stringify(result));
