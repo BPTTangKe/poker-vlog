@@ -493,9 +493,9 @@ function updateReadme({ slug, title, dateStr }) {
     return;
   }
 
-  // 封面走 jsDelivr 并带日期版本参数：GitHub 渲染 README 时统一改写成 camo 代理，
-  // 版本参数可避免命中 camo 历史 404 负缓存（详见文件顶部 README_IMAGE_BASE 注释）。
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_BASE}/${slug}.png?v=${dateStr})\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  // 封面走仓库内相对路径（public/images），GitHub 直接渲染，不经 camo 代理，
+  // 避免 camo 回源失败导致的仓库页裂图（详见文件顶部 README_IMAGE_BASE 注释）。
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_BASE}/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);
