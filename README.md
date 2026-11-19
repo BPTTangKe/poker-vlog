@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-19 — Floating the Flop: When and Why to Call Without a Hand
+
+![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.png)
+
+[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.md)
+
 ### 2026-11-18 — Check-Raise Bluffing: Board Textures That Favor the Defender
 
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](public/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-18.png)
@@ -38,12 +44,6 @@
 ![Block Betting on the River: Thin Value and Bluff Inducers](public/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.png)
 
 [Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.md)
-
-### 2026-11-12 — Check-Raise Bluffing: Board Textures That Favor the Defender
-
-![Check-Raise Bluffing: Board Textures That Favor the Defender](public/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-12.png)
-
-[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-12.md)
 
 
 ## About
