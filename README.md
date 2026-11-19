@@ -5,7 +5,7 @@
 ## Latest Vlogs
 ### 2026-11-19 — Floating the Flop: When and Why to Call Without a Hand
 
-![Floating the Flop: When and Why to Call Without a Hand](https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.png)
+![Floating the Flop: When and Why to Call Without a Hand](public/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.png)
 
 [Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.md)
 

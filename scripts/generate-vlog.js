@@ -495,7 +495,10 @@ function updateReadme({ slug, title, dateStr }) {
 
   // 封面走仓库内相对路径（public/images），GitHub 直接渲染，不经 camo 代理，
   // 避免 camo 回源失败导致的仓库页裂图（详见文件顶部 README_IMAGE_BASE 注释）。
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](${README_IMAGE_BASE}/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  // 注意：早期此处使用 README_IMAGE_BASE（jsDelivr 外链），会被 GitHub 改写为
+  // camo.githubusercontent.com 代理，回源失败/负缓存会导致仓库页长期裂图。
+  // 现统一改为仓库内相对路径，与历史条目保持一致。
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](public/images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);
