@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-20 — Reading Tells in Live Poker: Eye Movements and Betting Patterns
+
+![Reading Tells in Live Poker: Eye Movements and Betting Patterns](public/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-20.png)
+
+[Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-20.md)
+
 ### 2026-11-19 — Floating the Flop: When and Why to Call Without a Hand
 
 ![Floating the Flop: When and Why to Call Without a Hand](public/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.png)
@@ -38,12 +44,6 @@
 ![Exploiting Weak Players: How to Maximize Value Against Calling Stations](public/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-11-14.png)
 
 [Read full article](src/content/vlog/exploiting-weak-players-how-to-maximize-value-against-callin-2026-11-14.md)
-
-### 2026-11-13 — Block Betting on the River: Thin Value and Bluff Inducers
-
-![Block Betting on the River: Thin Value and Bluff Inducers](public/images/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.png)
-
-[Read full article](src/content/vlog/block-betting-on-the-river-thin-value-and-bluff-inducers-2026-11-13.md)
 
 
 ## About
