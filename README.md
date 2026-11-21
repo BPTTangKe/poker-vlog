@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-21 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
+
+![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](public/images/from-001002-to-12-my-5-year-poker-journey-2026-11-21.png)
+
+[Read full article](src/content/vlog/from-001002-to-12-my-5-year-poker-journey-2026-11-21.md)
+
 ### 2026-11-20 — Reading Tells in Live Poker: Eye Movements and Betting Patterns
 
 ![Reading Tells in Live Poker: Eye Movements and Betting Patterns](public/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-20.png)
@@ -38,12 +44,6 @@
 ![GTO vs Exploitative Play: Finding the Right Balance](public/images/gto-vs-exploitative-play-finding-the-right-balance-2026-11-15.png)
 
 [Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-11-15.md)
-
-### 2026-11-14 — Exploiting Weak Players: How to Maximize Value Against Calling Stations
-
-![Exploiting Weak Players: How to Maximize Value Against Calling Stations](public/images/exploiting-weak-players-how-to-maximize-value-against-callin-2026-11-14.png)
-
-[Read full article](src/content/vlog/exploiting-weak-players-how-to-maximize-value-against-callin-2026-11-14.md)
 
 
 ## About
