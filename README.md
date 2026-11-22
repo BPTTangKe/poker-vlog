@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-22 — Bankroll Management: How Many Buy-ins Do You Really Need?
+
+![Bankroll Management: How Many Buy-ins Do You Really Need?](public/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-11-22.png)
+
+[Read full article](src/content/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-11-22.md)
+
 ### 2026-11-21 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
 
 ![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](public/images/from-001002-to-12-my-5-year-poker-journey-2026-11-21.png)
@@ -38,12 +44,6 @@
 ![Check-Raise Bluffing: Board Textures That Favor the Defender](public/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-16.png)
 
 [Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-16.md)
-
-### 2026-11-15 — GTO vs Exploitative Play: Finding the Right Balance
-
-![GTO vs Exploitative Play: Finding the Right Balance](public/images/gto-vs-exploitative-play-finding-the-right-balance-2026-11-15.png)
-
-[Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-11-15.md)
 
 
 ## About
