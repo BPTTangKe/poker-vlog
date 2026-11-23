@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-23 — Reading Tells in Live Poker: Eye Movements and Betting Patterns
+
+![Reading Tells in Live Poker: Eye Movements and Betting Patterns](public/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-23.png)
+
+[Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-23.md)
+
 ### 2026-11-22 — Bankroll Management: How Many Buy-ins Do You Really Need?
 
 ![Bankroll Management: How Many Buy-ins Do You Really Need?](public/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-11-22.png)
@@ -38,12 +44,6 @@
 ![GTO vs Exploitative Play: Finding the Right Balance](public/images/gto-vs-exploitative-play-finding-the-right-balance-2026-11-17.png)
 
 [Read full article](src/content/vlog/gto-vs-exploitative-play-finding-the-right-balance-2026-11-17.md)
-
-### 2026-11-16 — Check-Raise Bluffing: Board Textures That Favor the Defender
-
-![Check-Raise Bluffing: Board Textures That Favor the Defender](public/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-16.png)
-
-[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-16.md)
 
 
 ## About
