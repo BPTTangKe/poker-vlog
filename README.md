@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-25 — Sunday Million Deep Run: Key Hands from My Tournament
+
+![Sunday Million Deep Run: Key Hands from My Tournament](public/images/sunday-million-deep-run-key-hands-from-my-tournament-2026-11-25.png)
+
+[Read full article](src/content/vlog/sunday-million-deep-run-key-hands-from-my-tournament-2026-11-25.md)
+
 ### 2026-11-24 — Multiway Pots: Why You Should Play Tighter Than You Think
 
 ![Multiway Pots: Why You Should Play Tighter Than You Think](public/images/multiway-pots-why-you-should-play-tighter-than-you-think-2026-11-24.png)
@@ -38,12 +44,6 @@
 ![Floating the Flop: When and Why to Call Without a Hand](public/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.png)
 
 [Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.md)
-
-### 2026-11-18 — Check-Raise Bluffing: Board Textures That Favor the Defender
-
-![Check-Raise Bluffing: Board Textures That Favor the Defender](public/images/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-18.png)
-
-[Read full article](src/content/vlog/check-raise-bluffing-board-textures-that-favor-the-defender-2026-11-18.md)
 
 
 ## About
