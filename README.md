@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-26 — Online vs Live Poker: Adjusting Your Strategy for Each
+
+![Online vs Live Poker: Adjusting Your Strategy for Each](public/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-11-26.png)
+
+[Read full article](src/content/vlog/online-vs-live-poker-adjusting-your-strategy-for-each-2026-11-26.md)
+
 ### 2026-11-25 — Sunday Million Deep Run: Key Hands from My Tournament
 
 ![Sunday Million Deep Run: Key Hands from My Tournament](public/images/sunday-million-deep-run-key-hands-from-my-tournament-2026-11-25.png)
@@ -38,12 +44,6 @@
 ![Reading Tells in Live Poker: Eye Movements and Betting Patterns](public/images/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-20.png)
 
 [Read full article](src/content/vlog/reading-tells-in-live-poker-eye-movements-and-betting-patter-2026-11-20.md)
-
-### 2026-11-19 — Floating the Flop: When and Why to Call Without a Hand
-
-![Floating the Flop: When and Why to Call Without a Hand](public/images/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.png)
-
-[Read full article](src/content/vlog/floating-the-flop-when-and-why-to-call-without-a-hand-2026-11-19.md)
 
 
 ## About
