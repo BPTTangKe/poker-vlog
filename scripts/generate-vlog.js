@@ -36,6 +36,10 @@ const README_PATH = path.resolve(__dirname, '..', 'README.md');
 // 强制 camo 重新回源，绕开历史 404 负缓存。
 // 注意：站点页面内的封面不依赖此常量，由 frontmatter.image + BASE_URL 渲染。
 const README_IMAGE_BASE = 'https://cdn.jsdelivr.net/gh/BPTTangKe/poker-vlog@main/images';
+// README 内「Read full article」指向线上文章页（而非仓库内 src/content/*.md 源文件），
+// 否则在 GitHub 点开只能看到 markdown 源码，文章页封面不会渲染。
+// 选用 Cloudflare Pages 域名：境内可达性优于 bpttangke.github.io。
+const README_ARTICLE_BASE = 'https://poker-vlog.pages.dev/vlog';
 const README_MAX_ENTRIES = 7;
 const README_SECTION = '## Latest Vlogs';
 
@@ -66,6 +70,34 @@ function randomPick(arr) {
   return arr[Math.floor(Math.random() * arr.length)];
 }
 
+/**
+ * 读取最近 N 天已生成 vlog 的主题，用于随机选择时排重，
+ * 避免连续多日出现同一主题（会导致标题与封面图完全相同，视觉上像"图片没更新"）。
+ */
+function getRecentTopics(days = 14) {
+  try {
+    if (!fs.existsSync(VLOG_DIR)) return [];
+    const cutoff = Date.now() - days * 24 * 60 * 60 * 1000;
+    const used = [];
+    for (const name of fs.readdirSync(VLOG_DIR)) {
+      if (!name.endsWith('.md')) continue;
+      const content = fs.readFileSync(path.join(VLOG_DIR, name), 'utf-8');
+      const dateMatch = content.match(/^date:\s*["']?(\d{4}-\d{2}-\d{2})/m);
+      const nameMatch = name.match(/(\d{4}-\d{2}-\d{2})\.md$/);
+      const dateRaw = (dateMatch && dateMatch[1]) || (nameMatch && nameMatch[1]);
+      if (!dateRaw) continue;
+      const ts = Date.parse(dateRaw);
+      if (Number.isNaN(ts) || ts < cutoff) continue;
+      const titleMatch = content.match(/^title:\s*["']?(.*?)["']?\s*$/m);
+      if (titleMatch && titleMatch[1].trim()) used.push(titleMatch[1].trim());
+    }
+    return used;
+  } catch (err) {
+    logError(`读取近期主题失败: ${err.message}`);
+    return [];
+  }
+}
+
 function log(msg) {
   const ts = new Date().toISOString();
   console.log(`[${ts}] ${msg}`);
@@ -91,7 +123,12 @@ function getTopic() {
   } catch (err) {
     log(`读取 ${TOPIC_FILE} 失败: ${err.message}，使用随机主题`);
   }
-  const topic = randomPick(POKER_TOPICS);
+  const recent = getRecentTopics(14);
+  const pool = POKER_TOPICS.filter((t) => !recent.includes(t));
+  if (recent.length > 0) {
+    log(`近期已用主题 ${recent.length} 个，本次候选池 ${pool.length} 个`);
+  }
+  const topic = randomPick(pool.length > 0 ? pool : POKER_TOPICS);
   log(`使用随机主题: ${topic}`);
   return topic;
 }
@@ -498,7 +535,7 @@ function updateReadme({ slug, title, dateStr }) {
   // 注意：早期此处使用 README_IMAGE_BASE（jsDelivr 外链），会被 GitHub 改写为
   // camo.githubusercontent.com 代理，回源失败/负缓存会导致仓库页长期裂图。
   // 现统一改为仓库内相对路径，与历史条目保持一致。
-  const entry = `### ${dateStr} — ${title}\n\n![${title}](public/images/${slug}.png)\n\n[Read full article](src/content/vlog/${slug}.md)\n\n`;
+  const entry = `### ${dateStr} — ${title}\n\n![${title}](public/images/${slug}.png)\n\n[Read full article](${README_ARTICLE_BASE}/${slug})\n\n`;
 
   // 幂等：已存在当日条目则跳过
   const headAfterSection = readme.slice(sectionIdx + README_SECTION.length);
