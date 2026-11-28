@@ -3,6 +3,12 @@
 每日自动发布的德州扑克策略 Vlog，记录从 $0.01/$0.02 到 $1/$2 的五年扑克旅程。
 
 ## Latest Vlogs
+### 2026-11-28 — Tournament ICM: Making Correct Bubble Decisions
+
+![Tournament ICM: Making Correct Bubble Decisions](public/images/tournament-icm-making-correct-bubble-decisions-2026-11-28.png)
+
+[Read full article](https://poker-vlog.pages.dev/vlog/tournament-icm-making-correct-bubble-decisions-2026-11-28)
+
 ### 2026-11-27 — Online vs Live Poker: Adjusting Your Strategy for Each
 
 ![Online vs Live Poker: Adjusting Your Strategy for Each](public/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-11-27.png)
@@ -38,12 +44,6 @@
 ![Bankroll Management: How Many Buy-ins Do You Really Need?](public/images/bankroll-management-how-many-buy-ins-do-you-really-need-2026-11-22.png)
 
 [Read full article](https://poker-vlog.pages.dev/vlog/bankroll-management-how-many-buy-ins-do-you-really-need-2026-11-22)
-
-### 2026-11-21 — From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey
-
-![From $0.01/$0.02 to $1/$2: My 5-Year Poker Journey](public/images/from-001002-to-12-my-5-year-poker-journey-2026-11-21.png)
-
-[Read full article](https://poker-vlog.pages.dev/vlog/from-001002-to-12-my-5-year-poker-journey-2026-11-21)
 
 
 ## About

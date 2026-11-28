@@ -1,10 +1,18 @@
 ---
 title: "Online vs Live Poker: Adjusting Your Strategy for Each"
 date: 2026-11-27
-excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
-tags: ["bankroll", "live-poker", "online-poker", "math"]
+excerpt: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+tags: ["poker", "strategy"]
 image: "/images/online-vs-live-poker-adjusting-your-strategy-for-each-2026-11-27.png"
-seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently.    Pok"
+seo_description: "Every session at the poker table teaches something new. Today I want to share a key insight that's been making a real difference in my win rate recently."
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: ab20d8aff180ed14d0ce262937a7b993_2c229754ea7111f1a20652540072b1e8
+    ReservedCode1: V8IrlfYUyN0M6MNEMWMmsBI999Ls9R/gLzmgu7bupsyxoGO4SbH8NFLi/lf//rdTxZ0S3NAvNPZJ8VVRJGFjrVkDoyUVBkt55HlI47oxZn2JX/rXF0J2S2YnHsRTYX0zefSkL7/ldDdeWkFTMLqowaJ6it2B6HWJrq8xTqiDbfGXM2KEUPSzY3N0zVU=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: ab20d8aff180ed14d0ce262937a7b993_2c229754ea7111f1a20652540072b1e8
+    ReservedCode2: V8IrlfYUyN0M6MNEMWMmsBI999Ls9R/gLzmgu7bupsyxoGO4SbH8NFLi/lf//rdTxZ0S3NAvNPZJ8VVRJGFjrVkDoyUVBkt55HlI47oxZn2JX/rXF0J2S2YnHsRTYX0zefSkL7/ldDdeWkFTMLqowaJ6it2B6HWJrq8xTqiDbfGXM2KEUPSzY3N0zVU=
 ---
 
 # Online vs Live Poker: Adjusting Your Strategy for Each
@@ -37,3 +45,4 @@ Trust the math. Trust the process. The results will follow — but only if you p
 
 *This vlog is part of the daily Poker Vlog series. For more strategy content, download the BPT App — the best free poker tracker with session logging and bankroll management.*
 
+*（内容由AI生成，仅供参考）*
